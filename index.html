@@ -3,44 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>泰山品保戰情室 (診斷模式)</title>
+    <title>瓦城品保檢驗戰情室</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f9; padding: 20px; font-family: "Microsoft JhengHei", sans-serif; }
-        .card { border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .status-badge { padding: 5px 10px; border-radius: 12px; font-size: 0.85rem; color: white; font-weight: bold; }
-        .bg-pass { background-color: #28a745; }
-        .bg-fail { background-color: #dc3545; }
-        .bg-warn { background-color: #ffc107; color: #000; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; border-radius: 10px; }
+        .card-header { background-color: #fff; border-bottom: 1px solid #eee; font-weight: bold; border-radius: 10px 10px 0 0 !important; }
+        .kpi-num { font-size: 2.2rem; font-weight: 800; color: #2c3e50; }
+        .kpi-label { font-size: 0.9rem; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* 診斷區塊樣式 */
-        #debug-panel {
-            background-color: #333;
-            color: #0f0;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: monospace;
-            margin-bottom: 20px;
-            white-space: pre-wrap;
-            border: 2px solid #0f0;
-        }
+        /* 狀態標籤樣式 */
+        .status-badge { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; color: white; font-weight: bold; box-shadow: 0 2px 2px rgba(0,0,0,0.1); }
+        .bg-pass { background-color: #2ecc71; } /* 鮮綠色 */
+        .bg-fail { background-color: #e74c3c; } /* 鮮紅色 */
+        .bg-warn { background-color: #f1c40f; color: #333; } /* 黃色 */
+        
+        #loader { text-align: center; margin-top: 50px; }
+        #dashboard { display: none; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
 
     <div class="container-fluid">
-        <h2>🔧 系統診斷模式</h2>
-        
-        <div id="debug-panel">正在分析資料結構...請稍候...</div>
-
-        <div id="dashboard" style="opacity: 0.5;">
-            <div class="row">
-                <div class="col-md-3"><div class="card p-3">總筆數: <span id="total-count">0</span></div></div>
-                <div class="col-md-3"><div class="card p-3">合格率: <span id="pass-rate">0%</span></div></div>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="fw-bold">🛡️ 瓦城品保檢驗戰情室</h2>
+                <small class="text-muted">最後更新時間: <span id="last-update-time">-</span></small>
             </div>
+            <a href="javascript:location.reload()" class="btn btn-outline-primary btn-sm">🔄 重新整理</a>
+        </div>
+
+        <div id="loader">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+            <p class="mt-3 text-primary fw-bold">正在分析 494 筆檢驗數據...</p>
+        </div>
+
+        <div id="dashboard">
+            <div class="row g-3 mb-4">
+                <div class="col-md-3">
+                    <div class="card p-3 text-center h-100 justify-content-center">
+                        <div class="kpi-label">總檢驗筆數</div>
+                        <div class="kpi-num" id="total-count">0</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center h-100 justify-content-center">
+                        <div class="kpi-label">合格率 (Yield)</div>
+                        <div class="kpi-num text-success" id="pass-rate">0%</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center h-100 justify-content-center">
+                        <div class="kpi-label">異常/不合格數</div>
+                        <div class="kpi-num text-danger" id="fail-count">0</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3 text-center h-100 justify-content-center">
+                        <div class="kpi-label">最近檢驗日期</div>
+                        <div class="kpi-num text-primary" id="latest-date" style="font-size: 1.8rem;">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-header">📅 每日檢驗量趨勢</div>
+                        <div class="card-body">
+                            <canvas id="dailyChart" style="max-height: 300px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header">📊 檢驗結果佔比</div>
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <canvas id="statusChart" style="max-height: 250px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-12"><div class="card p-3"><canvas id="dailyChart" height="50"></canvas></div></div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header text-danger d-flex align-items-center">
+                            <span class="fs-5">⚠️ 異常與不合格監控清單</span>
+                        </div>
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover table-striped align-middle mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>廠商</th>
+                                        <th>品名</th>
+                                        <th>判定結果</th>
+                                        <th>異常狀況說明</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="abnormal-table-body">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -49,77 +118,124 @@
         const apiURL = './data.json'; 
 
         async function init() {
-            const debugPanel = document.getElementById('debug-panel');
             try {
-                // 強制刷新不快取
+                // 強制加上時間戳記，避免讀到舊快取
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
-                if (!response.ok) throw new Error("找不到 data.json (404)");
-                
                 const rawData = await response.json();
                 
-                // --- 診斷報告 ---
-                let report = "✅ 成功讀取 data.json\n";
-                report += "--------------------------------\n";
-                report += `📊 資料總筆數: ${rawData.length} 筆\n`;
+                // 設定最後更新時間為當前時間
+                const now = new Date();
+                document.getElementById('last-update-time').innerText = now.toLocaleString('zh-TW');
 
-                if (rawData.length === 0) {
-                    report += "⚠️ 警告: 資料是空的！\n   -> 請檢查 Apps Script 是否抓錯工作表？\n   -> 請檢查 Google Sheet 是否有資料？";
+                if (rawData.length > 0) {
+                    processData(rawData);
                 } else {
-                    // 顯示第一筆資料的完整內容，讓我們看標題到底長怎樣
-                    const firstRow = rawData[0];
-                    const keys = Object.keys(firstRow);
-                    
-                    report += `🔑 偵測到的欄位名稱 (Keys):\n[ ${keys.join(', ')} ]\n\n`;
-                    report += "--------------------------------\n";
-                    report += "🔍 欄位匹配測試:\n";
-                    
-                    const statusKey = keys.find(k => k.includes("判定")) || "❌ 未找到 (判定)";
-                    const dateKey = keys.find(k => k.includes("日")) || "❌ 未找到 (日期)";
-                    
-                    report += `1. 判定欄位: ${statusKey}\n`;
-                    report += `2. 日期欄位: ${dateKey}\n`;
-                    
-                    if (statusKey.includes("❌") || dateKey.includes("❌")) {
-                        report += "\n❌ 失敗原因: 找不到關鍵欄位，請截圖此畫面給 AI 修正程式碼。";
-                    } else {
-                        report += `\n✅ 匹配成功！第一筆判定值: "${firstRow[statusKey]}"`;
-                        processData(rawData); // 嘗試執行圖表
-                    }
+                    alert("讀取成功，但檔案內沒有資料 (0筆)");
+                    document.getElementById('loader').style.display = 'none';
                 }
-                
-                debugPanel.innerText = report;
 
             } catch (error) {
-                debugPanel.innerText = "❌ 嚴重錯誤:\n" + error.message;
-                debugPanel.style.color = "red";
-                debugPanel.style.borderColor = "red";
+                console.error(error);
+                document.getElementById('loader').innerHTML = `<h4 class="text-danger">❌ 資料讀取失敗</h4><p>請檢查 GitHub 上的 data.json 是否存在</p>`;
             }
         }
 
         function processData(data) {
-            // 簡化版繪圖，僅測試用
-            let total = data.length;
-            let passCount = 0;
+            // 1. 欄位自動對應邏輯 (這段最重要)
+            // 找出包含 "判定" 的那個欄位名稱 (解決 \n 換行問題)
             const keys = Object.keys(data[0]);
-            const statusKey = keys.find(k => k.includes("判定"));
             
+            // 使用 includes 模糊比對，不管你是 "判定" 還是 "判定\n合格..." 都能抓到
+            const statusKey = keys.find(k => k.includes("判定")) || "判定";
+            const dateKey = keys.find(k => k.includes("日")) || "進貨/生產日";
+            const abnormalKey = keys.find(k => k.includes("異常")) || "異常狀況";
+            const vendorKey = keys.find(k => k.includes("廠商")) || "廠商";
+            const itemKey = keys.find(k => k.includes("品名")) || "品名";
+
+            console.log("偵測到的判定欄位:", statusKey); // Debug用
+
+            let total = 0, passCount = 0, failCount = 0;
+            let dateMap = {};
+            let abnormalList = [];
+            let dates = [];
+
             data.forEach(item => {
-                if(item[statusKey] && String(item[statusKey]).includes("合格")) passCount++;
+                // 安全讀取資料 (轉成字串並去除前後空白)
+                let status = String(item[statusKey] || "").trim();
+                let date = String(item[dateKey] || "").trim();
+                let issue = String(item[abnormalKey] || "").trim();
+
+                // 跳過空行
+                if (!status && !date) return;
+
+                total++;
+
+                // 判定邏輯
+                let isFail = status.includes("不合格");
+
+                if (isFail) {
+                    failCount++;
+                    abnormalList.push(item);
+                } else {
+                    passCount++;
+                }
+
+                // 雖然合格但有異常說明，也要列出來
+                if (!isFail && issue !== "") {
+                    abnormalList.push(item);
+                }
+
+                // 日期統計
+                if (date) {
+                    let dateStr = date.substring(0, 10); // 取前10碼 (YYYY-MM-DD)
+                    dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
+                    dates.push(dateStr);
+                }
             });
 
+            dates.sort();
+            const latestDate = dates.length > 0 ? dates[dates.length - 1] : "N/A";
+
+            // 2. 更新 KPI 數字
             document.getElementById('total-count').innerText = total;
-            document.getElementById('pass-rate').innerText = Math.round((passCount/total)*100) + "%";
-            
+            document.getElementById('pass-rate').innerText = total > 0 ? Math.round((passCount / total) * 100) + "%" : "0%";
+            document.getElementById('fail-count').innerText = abnormalList.length;
+            document.getElementById('latest-date').innerText = latestDate;
+
+            // 3. 繪製每日趨勢圖
+            const sortedDates = Object.keys(dateMap).sort();
             new Chart(document.getElementById('dailyChart'), {
                 type: 'bar',
                 data: {
-                    labels: ['測試'],
-                    datasets: [{ label: '測試數據', data: [total], backgroundColor: 'blue' }]
-                }
+                    labels: sortedDates,
+                    datasets: [{
+                        label: '檢驗筆數',
+                        data: sortedDates.map(d => dateMap[d]),
+                        backgroundColor: '#3498db',
+                        borderRadius: 4
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } }
             });
-        }
 
-        init();
-    </script>
-</body>
-</html>
+            // 4. 繪製圓餅圖
+            new Chart(document.getElementById('statusChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['合格', '異常/不合格'],
+                    datasets: [{
+                        data: [passCount, failCount],
+                        backgroundColor: ['#2ecc71', '#e74c3c']
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // 5. 填寫異常表格
+            const tableBody = document.getElementById('abnormal-table-body');
+            if (abnormalList.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5" class="text-center p-4">✨ 太棒了！近期無異常紀錄</td></tr>';
+            } else {
+                let html = "";
+                // 為了效能，只顯示最近 100 筆異常 (如果有太多的話)
+                abnormalList.reverse().slice(0
