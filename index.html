@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>泰山品保戰情室 (無敵版)</title>
+    <title>泰山品保戰情室 (暴力偵測版)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f9; padding: 20px; font-family: "Microsoft JhengHei", sans-serif; }
@@ -13,61 +13,28 @@
         .bg-fail { background-color: #dc3545; }
         .bg-warn { background-color: #ffc107; color: #000; }
         
-        /* --- 自製 CSS 長條圖 (不需外部元件) --- */
-        .bar-chart-container { 
-            display: flex; 
-            align-items: flex-end; 
-            height: 250px; 
-            gap: 5px; 
-            overflow-x: auto; 
-            padding-bottom: 30px; 
-            padding-top: 20px;
-            border-bottom: 1px solid #ccc;
-        }
-        .bar-wrapper { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            min-width: 45px; 
-            flex: 1; 
-            position: relative;
-        }
-        .bar { 
-            width: 70%; 
-            background-color: #3498db; 
-            border-radius: 4px 4px 0 0; 
-            transition: height 0.5s; 
-            position: relative;
-        }
+        /* CSS 長條圖 */
+        .bar-chart-container { display: flex; align-items: flex-end; height: 250px; gap: 5px; overflow-x: auto; padding-bottom: 30px; border-bottom: 1px solid #ccc; }
+        .bar-wrapper { display: flex; flex-direction: column; align-items: center; min-width: 45px; flex: 1; position: relative;}
+        .bar { width: 70%; background-color: #3498db; border-radius: 4px 4px 0 0; transition: height 0.5s; }
         .bar:hover { background-color: #2980b9; opacity: 0.8; }
-        .bar-value { 
-            font-size: 0.75rem; 
-            margin-bottom: 2px; 
-            color: #555; 
-            font-weight: bold; 
-        }
-        .bar-label { 
-            font-size: 0.7rem; 
-            color: #555; 
-            margin-top: 8px; 
-            transform: rotate(-45deg); 
-            white-space: nowrap; 
-            text-align: center;
-        }
+        .bar-value { font-size: 0.75rem; margin-bottom: 2px; color: #555; font-weight: bold; }
+        .bar-label { font-size: 0.7rem; color: #555; margin-top: 8px; transform: rotate(-45deg); white-space: nowrap; text-align: center;}
         
-        /* --- 自製 CSS 進度條圓餅圖替代方案 --- */
+        /* CSS 進度條 */
         .progress-stacked { height: 40px; border-radius: 20px; overflow: hidden; display: flex; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); }
-        .progress-pass { background-color: #2ecc71; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: width 1s;}
-        .progress-fail { background-color: #e74c3c; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: width 1s;}
+        .progress-pass { background-color: #2ecc71; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+        .progress-fail { background-color: #e74c3c; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
 
         #loader { text-align: center; margin-top: 50px; }
+        #debug-info { margin-top: 30px; padding: 15px; background: #333; color: #0f0; font-family: monospace; font-size: 0.8rem; border-radius: 5px; white-space: pre-wrap; display: none; }
     </style>
 </head>
 <body>
 
     <div class="container-fluid">
         <h2 class="fw-bold mb-3">🛡️ 泰山品保檢驗戰情室</h2>
-        <p class="text-muted">系統狀態：防火牆穿透模式 (Pure HTML/CSS)</p>
+        <p class="text-muted">模式：內容暴力偵測 (Auto-Detect Content)</p>
 
         <div id="loader">
             <div class="spinner-border text-primary" role="status"></div>
@@ -85,19 +52,18 @@
             <div class="row g-3 mb-4">
                 <div class="col-md-8">
                     <div class="card p-3">
-                        <h5 class="mb-4">📅 每日檢驗趨勢圖</h5>
+                        <h5 class="mb-4">📅 每日檢驗趨勢</h5>
                         <div class="bar-chart-container" id="css-bar-chart"></div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-3">
-                        <h5 class="mb-4">📊 合格 vs 異常佔比</h5>
+                        <h5 class="mb-4">📊 合格 vs 異常</h5>
                         <div class="mt-5">
-                            <div class="progress-stacked" id="css-progress-chart">
-                                </div>
+                            <div class="progress-stacked" id="css-progress-chart"></div>
                             <div class="d-flex justify-content-between mt-3 px-2">
-                                <span class="text-success fw-bold">■ 合格 (<span id="txt-pass">0</span>)</span>
-                                <span class="text-danger fw-bold">■ 異常/不合格 (<span id="txt-fail">0</span>)</span>
+                                <span class="text-success fw-bold">■ 合格</span>
+                                <span class="text-danger fw-bold">■ 異常</span>
                             </div>
                         </div>
                     </div>
@@ -105,7 +71,7 @@
             </div>
 
             <div class="card p-3">
-                <h5 class="text-danger">⚠️ 異常與不合格監控清單</h5>
+                <h5 class="text-danger">⚠️ 異常監控清單</h5>
                 <div class="table-responsive">
                     <table class="table table-hover table-striped">
                         <thead class="table-dark"><tr><th>日期</th><th>廠商</th><th>品名</th><th>判定</th><th>說明</th></tr></thead>
@@ -114,6 +80,8 @@
                 </div>
             </div>
         </div>
+        
+        <div id="debug-info"></div>
     </div>
 
     <script>
@@ -122,13 +90,11 @@
         async function init() {
             try {
                 document.getElementById('loader-text').innerText = "下載資料中...";
-                
-                // 1. 抓取 JSON
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
                 if (!response.ok) throw new Error("無法讀取 data.json");
                 const rawData = await response.json();
                 
-                document.getElementById('loader-text').innerText = "分析資料中...";
+                document.getElementById('loader-text').innerText = "智能分析資料中...";
                 processData(rawData);
 
             } catch (error) {
@@ -137,26 +103,78 @@
         }
 
         function processData(data) {
-            // 自動對應欄位 (模糊搜尋)
-            const keys = Object.keys(data[0]);
-            const statusKey = keys.find(k => k.includes("判定")) || "判定";
-            const dateKey = keys.find(k => k.includes("日")) || "進貨/生產日";
-            const abnormalKey = keys.find(k => k.includes("異常")) || "異常狀況";
-            const vendorKey = keys.find(k => k.includes("廠商")) || "廠商";
-            const itemKey = keys.find(k => k.includes("品名")) || "品名";
+            let debugMsg = "🔍 系統診斷報告:\n";
+            debugMsg += `資料總筆數: ${data.length}\n`;
 
+            if (data.length === 0) {
+                alert("資料是空的！");
+                return;
+            }
+
+            // --- 暴力偵測欄位邏輯 ---
+            const keys = Object.keys(data[0]);
+            let statusKey = "";
+            let dateKey = "";
+            let abnormalKey = "";
+            let vendorKey = "";
+            let itemKey = "";
+
+            // 1. 先試著用名字找
+            statusKey = keys.find(k => k.includes("判定"));
+            dateKey = keys.find(k => k.includes("日") || k.includes("Date"));
+            abnormalKey = keys.find(k => k.includes("異常"));
+            vendorKey = keys.find(k => k.includes("廠商"));
+            itemKey = keys.find(k => k.includes("品名"));
+
+            debugMsg += `初步名稱匹配:\n 判定欄: ${statusKey}\n 日期欄: ${dateKey}\n`;
+
+            // 2. 如果名稱找不到，或是找到但資料是空的，就啟用「內容偵測」
+            // 掃描前 50 筆資料來判斷每一欄是什麼
+            if (!statusKey || !dateKey) {
+                debugMsg += "⚠️ 名稱匹配有疑慮，啟用內容暴力偵測...\n";
+                
+                keys.forEach(key => {
+                    // 檢查這一欄的前幾筆數據
+                    for (let i = 0; i < Math.min(data.length, 50); i++) {
+                        let val = String(data[i][key] || "");
+                        
+                        // 如果內容包含 "合格" 或 "不合格"，這就是判定欄
+                        if (!statusKey && (val.includes("合格") || val.includes("不合格"))) {
+                            statusKey = key;
+                            debugMsg += `-> 找到判定欄 (依內容): ${key}\n`;
+                        }
+                        
+                        // 如果內容像是日期 (2025-...)，這就是日期欄
+                        if (!dateKey && (val.match(/^\d{4}-\d{2}-\d{2}/) || val.match(/\d{4}\/\d{2}\/\d{2}/))) {
+                            dateKey = key;
+                            debugMsg += `-> 找到日期欄 (依內容): ${key}\n`;
+                        }
+                    }
+                });
+            }
+
+            // 最終確認
+            if (!statusKey) statusKey = keys[9]; // 真的找不到就猜第 10 欄 (J欄)
+            if (!dateKey) dateKey = keys[2];     // 真的找不到就猜第 3 欄 (C欄)
+
+            debugMsg += `\n🎯 最終使用欄位:\n 判定: [${statusKey}]\n 日期: [${dateKey}]\n`;
+            document.getElementById('debug-info').innerText = debugMsg;
+            document.getElementById('debug-info').style.display = 'block';
+
+            // --- 開始統計 ---
             let total = 0, passCount = 0, failCount = 0;
             let dateMap = {};
             let abnormalList = [];
             let dates = [];
 
-            // 處理資料
             data.forEach(item => {
                 let status = String(item[statusKey] || "").trim();
                 let date = String(item[dateKey] || "").trim();
                 let issue = String(item[abnormalKey] || "").trim();
 
+                // 如果這行沒有判定結果，視為無效行
                 if (!status && !date) return;
+                
                 total++;
 
                 let isFail = status.includes("不合格");
@@ -166,21 +184,23 @@
                 } else {
                     passCount++;
                 }
-                
-                // 即使合格，有備註異常也要列出
+
                 if (!isFail && issue !== "") abnormalList.push(item);
 
-                // 日期統計
                 if (date) {
+                    // 處理日期格式 (只取 YYYY-MM-DD)
                     let dateStr = date.substring(0, 10);
-                    dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
-                    if(!dates.includes(dateStr)) dates.push(dateStr);
+                    // 簡單驗證是否為日期格式
+                    if (dateStr.length >= 8) {
+                        dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
+                        if(!dates.includes(dateStr)) dates.push(dateStr);
+                    }
                 }
             });
 
             dates.sort();
-            
-            // --- 1. 更新 KPI 數字 ---
+
+            // 更新畫面
             let passRate = total > 0 ? Math.round((passCount / total) * 100) : 0;
             let failRate = total > 0 ? 100 - passRate : 0;
 
@@ -188,47 +208,38 @@
             document.getElementById('pass-rate').innerText = passRate + "%";
             document.getElementById('fail-count').innerText = abnormalList.length;
             document.getElementById('latest-date').innerText = dates.length > 0 ? dates[dates.length - 1] : "-";
-            document.getElementById('txt-pass').innerText = passCount;
-            document.getElementById('txt-fail').innerText = failCount;
-
-            // --- 2. 繪製 CSS 長條圖 (免外掛) ---
-            const chartContainer = document.getElementById('css-bar-chart');
             
-            // 找出當天最多的筆數，用來當作 100% 高度
+            // 繪製長條圖
+            const chartContainer = document.getElementById('css-bar-chart');
             let maxVal = 0;
             dates.forEach(d => { if(dateMap[d] > maxVal) maxVal = dateMap[d]; });
 
             let barHtml = "";
             dates.forEach(d => {
                 let val = dateMap[d];
-                // 計算高度百分比 (至少給 15% 讓它看得到)
                 let percent = maxVal > 0 ? (val / maxVal) * 100 : 0;
                 let height = percent < 15 ? 15 : percent; 
-                
                 barHtml += `
                     <div class="bar-wrapper">
                         <div class="bar-value">${val}</div>
                         <div class="bar" style="height: ${height}%;" title="${d}: ${val}筆"></div>
-                        <div class="bar-label">${d.substring(5)}</div> </div>
-                `;
+                        <div class="bar-label">${d.substring(5)}</div>
+                    </div>`;
             });
-            chartContainer.innerHTML = barHtml || "<p>無日期數據</p>";
+            chartContainer.innerHTML = barHtml || "<p class='p-3'>無有效日期數據</p>";
 
-            // --- 3. 繪製 CSS 進度條圖 (免外掛) ---
+            // 繪製圓餅圖
             document.getElementById('css-progress-chart').innerHTML = `
                 <div class="progress-pass" style="width: ${passRate}%">${passRate}%</div>
                 <div class="progress-fail" style="width: ${failRate}%">${failRate}%</div>
             `;
 
-            // --- 4. 填寫表格 ---
+            // 異常表格
             const tableBody = document.getElementById('abnormal-table-body');
             let tableHtml = "";
-            
-            // 只顯示最後 100 筆，避免瀏覽器太卡
             abnormalList.reverse().slice(0, 100).forEach(item => {
                 let status = String(item[statusKey] || "");
                 let badge = status.includes("不合格") ? "bg-fail" : "bg-warn";
-                
                 tableHtml += `<tr>
                     <td>${(item[dateKey]||"").substring(0,10)}</td>
                     <td>${item[vendorKey]||""}</td>
@@ -239,7 +250,6 @@
             });
             tableBody.innerHTML = tableHtml || '<tr><td colspan="5" class="text-center p-3">✨ 無異常資料</td></tr>';
 
-            // 顯示儀表板
             document.getElementById('loader').style.display = 'none';
             document.getElementById('dashboard').style.display = 'block';
         }
