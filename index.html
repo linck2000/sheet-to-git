@@ -3,208 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>泰山品保戰情室 (位置鎖定版)</title>
+    <title>倉管驗收檢驗看板</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f4f6f9; padding: 20px; font-family: "Microsoft JhengHei", sans-serif; }
-        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; border-radius: 8px; }
-        .status-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.85rem; color: white; font-weight: bold; }
-        .bg-pass { background-color: #28a745; }
-        .bg-fail { background-color: #dc3545; }
-        .bg-warn { background-color: #ffc107; color: #000; }
+        body { background-color: #e9ecef; padding: 10px; font-family: "Microsoft JhengHei", sans-serif; }
         
-        /* CSS 長條圖 */
-        .bar-chart-container { display: flex; align-items: flex-end; height: 250px; gap: 5px; overflow-x: auto; padding-bottom: 30px; border-bottom: 1px solid #ccc; }
-        .bar-wrapper { display: flex; flex-direction: column; align-items: center; min-width: 45px; flex: 1; position: relative;}
-        .bar { width: 70%; background-color: #3498db; border-radius: 4px 4px 0 0; transition: height 0.5s; }
-        .bar:hover { background-color: #2980b9; opacity: 0.8; }
-        .bar-value { font-size: 0.75rem; margin-bottom: 2px; color: #555; font-weight: bold; }
-        .bar-label { font-size: 0.7rem; color: #555; margin-top: 8px; transform: rotate(-45deg); white-space: nowrap; text-align: center;}
-        
-        /* CSS 進度條 */
-        .progress-stacked { height: 40px; border-radius: 20px; overflow: hidden; display: flex; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); }
-        .progress-pass { background-color: #2ecc71; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
-        .progress-fail { background-color: #e74c3c; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+        /* 頂部標題區 */
+        .header-bar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        #loader { text-align: center; margin-top: 50px; }
+        /* 分頁按鈕樣式 */
+        .nav-pills .nav-link {
+            border-radius: 50px;
+            padding: 10px 25px;
+            font-weight: bold;
+            color: #495057;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            margin-right: 10px;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd; /* 原料用藍色 */
+            color: white;
+            border-color: #0d6efd;
+        }
+        /* 成品分頁激活時改用綠色 */
+        #pills-finished-tab.active {
+            background-color: #198754;
+            border-color: #198754;
+        }
+
+        /* 日期摺疊卡片 */
+        .accordion-item { border: none; margin-bottom: 10px; border-radius: 8px !important; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .accordion-button { font-size: 1.1rem; font-weight: bold; background-color: #fff; }
+        .accordion-button:not(.collapsed) {
+            background-color: #e7f1ff; color: #0d6efd; box-shadow: none;
+        }
+        /* 成品區的日期展開顏色 */
+        .finished-goods-section .accordion-button:not(.collapsed) {
+            background-color: #d1e7dd; color: #0f5132;
+        }
+
+        /* 狀態標籤 */
+        .status-badge { padding: 5px 10px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; display: inline-block; min-width: 60px; text-align: center;}
+        .bg-pass { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; } /* 淺綠底深綠字 */
+        .bg-fail { background-color: #f8d7da; color: #842029; border: 1px solid #f5c2c7; } /* 淺紅底深紅字 */
+
+        /* 表格優化 */
+        .table th { background-color: #f8f9fa; font-size: 0.9rem; color: #6c757d; }
+        .table td { vertical-align: middle; font-size: 0.95rem; }
+        
+        /* 手機版優化 */
+        @media (max-width: 576px) {
+            .table { font-size: 0.85rem; }
+            .status-badge { padding: 2px 6px; font-size: 0.8rem; }
+            .hide-on-mobile { display: none; } /* 手機上隱藏較不重要的廠商欄位，視情況而定 */
+        }
     </style>
 </head>
 <body>
 
-    <div class="container-fluid">
-        <h2 class="fw-bold mb-3">🛡️ 泰山品保檢驗戰情室</h2>
-        <p class="text-muted">模式：欄位位置鎖定 (Column Index Locking)</p>
-
-        <div id="loader">
-            <div class="spinner-border text-primary" role="status"></div>
-            <p class="mt-2" id="loader-text">讀取中...</p>
+    <div class="container-fluid" style="max-width: 1000px;">
+        <div class="header-bar">
+            <h4 class="m-0 fw-bold">📦 倉管收貨檢驗看板</h4>
+            <small id="update-time">更新中...</small>
         </div>
 
-        <div id="dashboard" style="display: none;">
-            <div class="row g-3 mb-4">
-                <div class="col-md-3"><div class="card p-3 text-center"><h5>總筆數</h5><h2 id="total-count">0</h2></div></div>
-                <div class="col-md-3"><div class="card p-3 text-center"><h5>合格率</h5><h2 class="text-success" id="pass-rate">0%</h2></div></div>
-                <div class="col-md-3"><div class="card p-3 text-center"><h5>異常數</h5><h2 class="text-danger" id="fail-count">0</h2></div></div>
-                <div class="col-md-3"><div class="card p-3 text-center"><h5>最新日期</h5><h4 class="text-primary" id="latest-date">-</h4></div></div>
-            </div>
-            
-            <div class="row g-3 mb-4">
-                <div class="col-md-8">
-                    <div class="card p-3">
-                        <h5 class="mb-4">📅 每日檢驗趨勢</h5>
-                        <div class="bar-chart-container" id="css-bar-chart"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5 class="mb-4">📊 合格 vs 異常</h5>
-                        <div class="mt-5">
-                            <div class="progress-stacked" id="css-progress-chart"></div>
-                            <div class="d-flex justify-content-between mt-3 px-2">
-                                <span class="text-success fw-bold">■ 合格</span>
-                                <span class="text-danger fw-bold">■ 異常</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="loader" class="text-center py-5">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p class="mt-2 text-muted">正在同步檢驗資料...</p>
+        </div>
 
-            <div class="card p-3">
-                <h5 class="text-danger">⚠️ 異常監控清單</h5>
-                <div class="table-responsive">
-                    <table class="table table-hover table-striped">
-                        <thead class="table-dark"><tr><th>日期</th><th>廠商</th><th>品名</th><th>判定</th><th>說明</th></tr></thead>
-                        <tbody id="abnormal-table-body"></tbody>
-                    </table>
+        <div id="main-content" style="display: none;">
+            
+            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-raw-tab" data-bs-toggle="pill" data-bs-target="#pills-raw" type="button" role="tab">
+                        📦 原料進貨檢驗
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-finished-tab" data-bs-toggle="pill" data-bs-target="#pills-finished" type="button" role="tab">
+                        🏭 成品生產檢驗
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+                
+                <div class="tab-pane fade show active" id="pills-raw" role="tabpanel">
+                    <div class="accordion" id="accordionRaw">
+                        </div>
                 </div>
+
+                <div class="tab-pane fade finished-goods-section" id="pills-finished" role="tabpanel">
+                    <div class="accordion" id="accordionFinished">
+                        </div>
+                </div>
+
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         const apiURL = './data.json'; 
 
         async function init() {
             try {
-                document.getElementById('loader-text').innerText = "下載資料中...";
+                // 加上時間參數避免快取
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
-                if (!response.ok) throw new Error("無法讀取 data.json");
+                if (!response.ok) throw new Error("資料讀取失敗");
                 const rawData = await response.json();
                 
-                document.getElementById('loader-text').innerText = "鎖定位置分析中...";
+                // 更新時間
+                const now = new Date();
+                document.getElementById('update-time').innerText = 
+                    `${now.getMonth()+1}/${now.getDate()} ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
                 processData(rawData);
 
             } catch (error) {
-                document.getElementById('loader').innerHTML = `<h3 class="text-danger">讀取失敗</h3><pre>${error.message}</pre>`;
+                document.getElementById('loader').innerHTML = `<p class="text-danger">❌ 資料載入失敗: ${error.message}</p>`;
             }
         }
 
         function processData(data) {
-            let total = 0, passCount = 0, failCount = 0;
-            let dateMap = {};
-            let abnormalList = [];
-            let dates = [];
+            // 核彈級位置鎖定 (Index-Based)
+            // 0:類別(原料/成品), 1:廠商, 2:日期, 3:料號, 4:品名, 9:判定
+            const TYPE_INDEX = 0;   // 原料/成品
+            const VENDOR_INDEX = 1; // 廠商
+            const DATE_INDEX = 2;   // 進貨/生產日
+            const ID_INDEX = 3;     // 料號
+            const NAME_INDEX = 4;   // 品名
+            const STATUS_INDEX = 9; // 判定
 
-            // ⚠️ 核彈級設定：直接指定欄位位置 (Index)
-            // 0:原料/成品, 1:廠商, 2:日期, 3:料號, 4:品名 ... 9:判定, 11:異常
-            const DATE_INDEX = 2;  // C欄
-            const VENDOR_INDEX = 1; // B欄
-            const ITEM_INDEX = 4;   // E欄
-            const STATUS_INDEX = 9; // J欄 (判定)
-            const ABNORMAL_INDEX = 11; // L欄 (異常狀況)
+            let rawDataMap = {};     // 原料資料 (按日期分組)
+            let finishedDataMap = {}; // 成品資料 (按日期分組)
 
             data.forEach(item => {
-                // 將物件轉為陣列 (Object.values) 依序取值
                 let values = Object.values(item);
                 
-                // 安全取值
+                let type = String(values[TYPE_INDEX] || "").trim();
+                let dateStr = String(values[DATE_INDEX] || "").trim().substring(0, 10);
                 let status = String(values[STATUS_INDEX] || "").trim();
-                let date = String(values[DATE_INDEX] || "").trim();
-                let issue = String(values[ABNORMAL_INDEX] || "").trim();
-                let vendor = String(values[VENDOR_INDEX] || "");
-                let itemName = String(values[ITEM_INDEX] || "");
 
-                // 如果這行沒日期也沒判定，就跳過
-                if (!status && !date) return;
-                
-                total++;
+                // 簡單過濾無效資料
+                if (!status && !dateStr) return;
 
-                let isFail = status.includes("不合格");
-                if (isFail) {
-                    failCount++;
-                    abnormalList.push({date, vendor, itemName, status, issue});
+                let record = {
+                    id: values[ID_INDEX] || "-",
+                    vendor: values[VENDOR_INDEX] || "-",
+                    name: values[NAME_INDEX] || "未知品項",
+                    status: status
+                };
+
+                // 分類邏輯：檢查第0欄是否有 "原料" 或 "成品"
+                if (type.includes("原料")) {
+                    if (!rawDataMap[dateStr]) rawDataMap[dateStr] = [];
+                    rawDataMap[dateStr].push(record);
+                } else if (type.includes("成品")) {
+                    if (!finishedDataMap[dateStr]) finishedDataMap[dateStr] = [];
+                    finishedDataMap[dateStr].push(record);
                 } else {
-                    passCount++;
-                }
-
-                // 雖然合格但有異常說明，也要列出來
-                if (!isFail && issue !== "") {
-                    abnormalList.push({date, vendor, itemName, status, issue});
-                }
-
-                if (date) {
-                    // 格式化日期 (YYYY-MM-DD)
-                    let dateStr = date.substring(0, 10);
-                    if (dateStr.length >= 8) {
-                        dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
-                        if(!dates.includes(dateStr)) dates.push(dateStr);
-                    }
+                    // 如果第0欄沒寫清楚，為了保險起見，我們可以預設丟到原料或忽略
+                    // 這邊先假設一定有分類
                 }
             });
 
-            dates.sort();
-
-            // 更新畫面
-            let passRate = total > 0 ? Math.round((passCount / total) * 100) : 0;
-            let failRate = total > 0 ? 100 - passRate : 0;
-
-            document.getElementById('total-count').innerText = total;
-            document.getElementById('pass-rate').innerText = passRate + "%";
-            document.getElementById('fail-count').innerText = abnormalList.length;
-            document.getElementById('latest-date').innerText = dates.length > 0 ? dates[dates.length - 1] : "-";
-            
-            // 繪製 CSS 長條圖
-            const chartContainer = document.getElementById('css-bar-chart');
-            let maxVal = 0;
-            dates.forEach(d => { if(dateMap[d] > maxVal) maxVal = dateMap[d]; });
-
-            let barHtml = "";
-            dates.forEach(d => {
-                let val = dateMap[d];
-                let percent = maxVal > 0 ? (val / maxVal) * 100 : 0;
-                let height = percent < 15 ? 15 : percent; 
-                barHtml += `
-                    <div class="bar-wrapper">
-                        <div class="bar-value">${val}</div>
-                        <div class="bar" style="height: ${height}%;" title="${d}: ${val}筆"></div>
-                        <div class="bar-label">${d.substring(5)}</div>
-                    </div>`;
-            });
-            chartContainer.innerHTML = barHtml || "<p class='p-3'>無有效日期數據</p>";
-
-            // 繪製 CSS 圓餅圖
-            document.getElementById('css-progress-chart').innerHTML = `
-                <div class="progress-pass" style="width: ${passRate}%">${passRate}%</div>
-                <div class="progress-fail" style="width: ${failRate}%">${failRate}%</div>
-            `;
-
-            // 異常表格
-            const tableBody = document.getElementById('abnormal-table-body');
-            let tableHtml = "";
-            abnormalList.reverse().slice(0, 100).forEach(item => {
-                let badge = item.status.includes("不合格") ? "bg-fail" : "bg-warn";
-                tableHtml += `<tr>
-                    <td>${item.date.substring(0,10)}</td>
-                    <td>${item.vendor}</td>
-                    <td>${item.itemName}</td>
-                    <td><span class="status-badge ${badge}">${item.status}</span></td>
-                    <td class="text-danger">${item.issue}</td>
-                </tr>`;
-            });
-            tableBody.innerHTML = tableHtml || '<tr><td colspan="5" class="text-center p-3">✨ 無異常資料</td></tr>';
+            // 渲染兩個區塊
+            renderAccordion('accordionRaw', rawDataMap);
+            renderAccordion('accordionFinished', finishedDataMap);
 
             document.getElementById('loader').style.display = 'none';
-            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('main-content').style.display = 'block';
+        }
+
+        function renderAccordion(elementId, dataMap) {
+            const container = document.getElementById(elementId);
+            // 日期排序 (新到舊)
+            const sortedDates = Object.keys(dataMap).sort().reverse();
+
+            if (sortedDates.length === 0) {
+                container.innerHTML = '<div class="text-center text-muted py-4">無相關資料</div>';
+                return;
+            }
+
+            let html = "";
+            sortedDates.forEach((date, index) => {
+                let items = dataMap[date];
+                let isFirst = index === 0; // 第一個日期預設展開
+                let collapseClass = isFirst ? "collapse show" : "collapse";
+                let buttonClass = isFirst ? "accordion-button" : "accordion-button collapsed";
+                let countBadge = `<span class="badge bg-secondary ms-2">${items.length} 筆</span>`;
+
+                // 產生表格列
+                let rows = items.map(item => {
+                    let badgeClass = item.status.includes("不合格") ? "bg-fail" : "bg-pass";
+                    return `
+                        <tr>
+                            <td class="fw-bold text-primary">${item.id}</td>
+                            <td>${item.vendor}</td>
+                            <td>${item.name}</td>
+                            <td class="text-end"><span class="status-badge ${badgeClass}">${item.status}</span></td>
+                        </tr>
+                    `;
+                }).join("");
+
+                html += `
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-${elementId}-${index}">
+                            <button class="${buttonClass}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${elementId}-${index}">
+                                📅 ${date} ${countBadge}
+                            </button>
+                        </h2>
+                        <div id="collapse-${elementId}-${index}" class="${collapseClass}" data-bs-parent="#${elementId}">
+                            <div class="accordion-body p-0">
+                                <table class="table table-hover mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th width="20%">料號</th>
+                                            <th width="30%">供應商</th>
+                                            <th width="30%">品名</th>
+                                            <th width="20%" class="text-end">判定</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>${rows}</tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
         }
 
         init();
