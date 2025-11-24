@@ -13,31 +13,52 @@
             color: white;
             padding: 15px 20px;
             border-radius: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
+        /* 搜尋欄樣式 */
+        .search-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            border-radius: 50px;
+            padding-left: 40px;
+            border: 2px solid #ddd;
+            transition: border-color 0.3s;
+        }
+        .search-input:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+        }
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
         /* 分頁按鈕優化 */
         .nav-pills .nav-link {
             border-radius: 50px;
-            padding: 12px 30px;
+            padding: 10px 25px;
             font-weight: bold;
             color: #666;
             background-color: white;
             border: 1px solid #ddd;
-            margin: 0 10px;
+            margin: 0 5px;
             transition: all 0.3s;
         }
-        .nav-pills .nav-link:hover { background-color: #f8f9fa; }
-        
         .nav-pills .nav-link.active#pills-raw-tab {
-            background-color: #0d6efd; color: white; border-color: #0d6efd; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+            background-color: #0d6efd; color: white; border-color: #0d6efd;
         }
         .nav-pills .nav-link.active#pills-finished-tab {
-            background-color: #198754; color: white; border-color: #198754; box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+            background-color: #198754; color: white; border-color: #198754;
         }
 
         /* 摺疊卡片 */
@@ -48,20 +69,16 @@
         .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0d6efd; box-shadow: none; }
         .finished-goods-section .accordion-button:not(.collapsed) { background-color: #d1e7dd; color: #0f5132; }
 
-        /* 狀態標籤 */
         .status-badge { 
             padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; 
             display: inline-block; min-width: 70px; text-align: center;
         }
         .bg-pass { background-color: #d4efdf; color: #1e8449; } /* 綠 */
         .bg-fail { background-color: #fadbd8; color: #c0392b; } /* 紅 */
-        .bg-wait { background-color: #fcf3cf; color: #b7950b; } /* 黃 */
+        .bg-wait { background-color: #fcf3cf; color: #b7950b; } /* 黃 (待驗中) */
 
-        /* 表格微調 */
         .table th { background-color: #f8f9fa; color: #777; font-weight: 600; font-size: 0.9rem; }
         .table td { vertical-align: middle; font-size: 0.95rem; }
-        
-        /* 料號字體 */
         .item-id { font-family: monospace; font-weight: bold; font-size: 1rem; color: #0d6efd; }
     </style>
 </head>
@@ -71,11 +88,10 @@
         <div class="header-bar">
             <div>
                 <h4 class="m-0 fw-bold">📦 倉管收貨檢驗看板</h4>
-                <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 5px;">資料來源: GitHub / Google Sheets</div>
             </div>
             <div class="text-end">
-                <div id="update-time" class="fw-bold">更新中...</div>
-                <button onclick="location.reload()" class="btn btn-sm btn-outline-light mt-1">🔄 刷新</button>
+                <div id="update-time" style="font-size: 0.9rem; opacity: 0.9;">更新中...</div>
+                <small style="opacity: 0.7; font-size: 0.75rem;">Source: GitHub</small>
             </div>
         </div>
 
@@ -86,7 +102,7 @@
 
         <div id="main-content" style="display: none;">
             
-            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+            <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
                     <button class="nav-link active" id="pills-raw-tab" data-bs-toggle="pill" data-bs-target="#pills-raw" type="button">
                         📦 原料進貨
@@ -98,6 +114,11 @@
                     </button>
                 </li>
             </ul>
+
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="快速搜尋：料號、廠商、品名、判定結果...">
+            </div>
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-raw">
@@ -123,7 +144,6 @@
                 
                 const data = await response.json();
                 
-                // 更新時間顯示
                 const now = new Date();
                 document.getElementById('update-time').innerText = 
                     `${String(now.getMonth()+1).padStart(2,'0')}/${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
@@ -145,14 +165,12 @@
             let finishedDataMap = {};
 
             data.forEach(item => {
-                // 因為後端 Apps Script 已經把 Key 清洗過了，這裡直接用！
-                // 結構: { type, vendor, date, id, name, status, issue }
-                
+                // 使用 Apps Script 清洗過的乾淨 Key
                 let type = item.type || "";
                 let dateStr = (item.date || "").substring(0, 10);
                 let status = item.status || "";
 
-                if (!type || !dateStr) return; // 跳過無效資料
+                if (!type || !dateStr) return; 
 
                 let record = {
                     id: item.id || "-",
@@ -162,7 +180,7 @@
                     issue: item.issue || ""
                 };
 
-                // 分流：原料 vs 成品
+                // 分流
                 if (type.includes("原料")) {
                     if (!rawDataMap[dateStr]) rawDataMap[dateStr] = [];
                     rawDataMap[dateStr].push(record);
@@ -175,13 +193,16 @@
             renderAccordion('accordionRaw', rawDataMap, '原料');
             renderAccordion('accordionFinished', finishedDataMap, '成品');
 
+            // 啟動搜尋功能
+            enableSearch();
+
             document.getElementById('loader').style.display = 'none';
             document.getElementById('main-content').style.display = 'block';
         }
 
         function renderAccordion(elementId, dataMap, label) {
             const container = document.getElementById(elementId);
-            const sortedDates = Object.keys(dataMap).sort().reverse(); // 日期新 -> 舊
+            const sortedDates = Object.keys(dataMap).sort().reverse(); 
 
             if (sortedDates.length === 0) {
                 container.innerHTML = `<div class="text-center py-5 text-muted">無${label}檢驗紀錄</div>`;
@@ -192,20 +213,18 @@
             sortedDates.forEach((date, index) => {
                 let items = dataMap[date];
                 
-                // 預設展開第一個日期
-                let isFirst = (index === 0);
-                let collapseClass = isFirst ? "collapse show" : "collapse";
-                let buttonClass = isFirst ? "accordion-button" : "accordion-button collapsed";
+                // ⚠️ 修改：全部預設收合 (collapsed)
+                // 不再判斷 isFirst，統一都是 collapsed
+                let collapseClass = "collapse"; 
+                let buttonClass = "accordion-button collapsed";
                 let countBadge = `<span class="badge bg-secondary ms-2 rounded-pill">${items.length} 筆</span>`;
 
-                // 產生每一列
                 let rows = items.map(item => {
                     let s = item.status;
-                    let badgeClass = "bg-wait"; // 預設黃色
+                    let badgeClass = "bg-wait"; 
                     if (s.includes("合格") && !s.includes("不合格")) badgeClass = "bg-pass";
                     if (s.includes("不合格")) badgeClass = "bg-fail";
 
-                    // 如果有異常狀況，加個紅色驚嘆號提醒
                     let warnIcon = item.issue ? `<span class="text-danger fw-bold ms-1" title="${item.issue}">⚠️</span>` : "";
 
                     return `
@@ -225,7 +244,7 @@
                                 📅 ${date} ${countBadge}
                             </button>
                         </h2>
-                        <div id="collapse-${elementId}-${index}" class="${collapseClass}" data-bs-parent="#${elementId}">
+                        <div id="collapse-${elementId}-${index}" class="accordion-collapse ${collapseClass}" data-bs-parent="#${elementId}">
                             <div class="accordion-body p-0">
                                 <table class="table table-hover mb-0 table-striped">
                                     <thead class="table-light">
@@ -244,6 +263,57 @@
                 `;
             });
             container.innerHTML = html;
+        }
+
+        // 🔍 搜尋功能邏輯
+        function enableSearch() {
+            const searchInput = document.getElementById('globalSearch');
+            
+            searchInput.addEventListener('input', function(e) {
+                const keyword = e.target.value.toLowerCase().trim();
+                const allAccordionItems = document.querySelectorAll('.accordion-item');
+
+                allAccordionItems.forEach(accItem => {
+                    const rows = accItem.querySelectorAll('tbody tr');
+                    let hasMatch = false;
+
+                    rows.forEach(row => {
+                        const text = row.innerText.toLowerCase();
+                        if (text.includes(keyword)) {
+                            row.style.display = ''; // 顯示符合的列
+                            hasMatch = true;
+                        } else {
+                            row.style.display = 'none'; // 隱藏不符合的列
+                        }
+                    });
+
+                    // 處理摺疊面板
+                    const collapseDiv = accItem.querySelector('.accordion-collapse');
+                    const btn = accItem.querySelector('.accordion-button');
+
+                    if (hasMatch) {
+                        accItem.style.display = ''; // 顯示該日期區塊
+                        
+                        // 如果有搜尋關鍵字，自動展開方便查看
+                        if (keyword !== "") {
+                            collapseDiv.classList.add('show');
+                            btn.classList.remove('collapsed');
+                            btn.setAttribute('aria-expanded', 'true');
+                        }
+                    } else {
+                        accItem.style.display = 'none'; // 隱藏該日期區塊
+                    }
+
+                    // 如果搜尋被清空，恢復全收合狀態 (可選，這裡設定為保持展開或讓使用者自己關)
+                    if (keyword === "") {
+                         collapseDiv.classList.remove('show');
+                         btn.classList.add('collapsed');
+                         btn.setAttribute('aria-expanded', 'false');
+                         // 恢復所有列顯示
+                         rows.forEach(r => r.style.display = '');
+                    }
+                });
+            });
         }
 
         init();
