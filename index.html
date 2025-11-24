@@ -59,7 +59,7 @@
 </head>
 <body>
 
-    <div class="container-fluid" style="max-width: 1100px;">
+    <div class="container-fluid" style="max-width: 1200px;">
         <div class="header-bar">
             <div>
                 <h4 class="m-0 fw-bold">📦 倉管收貨檢驗看板</h4>
@@ -92,7 +92,7 @@
 
             <div class="search-container">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="搜尋：料號、廠商、品名、異常原因...">
+                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="搜尋：料號、廠商、品名、效期、異常...">
             </div>
 
             <div class="tab-content" id="pills-tabContent">
@@ -149,6 +149,7 @@
                     id: item.id || "-",
                     vendor: item.vendor || "-",
                     name: item.name || "未知品項",
+                    expiry: item.expiry || "", // 新增有效日期
                     status: status,
                     issue: item.issue || ""
                 };
@@ -162,7 +163,6 @@
                 }
             });
 
-            // ⚠️ 這裡就是修改的重點：傳入特定的日期標籤
             renderAccordion('accordionRaw', rawDataMap, '原料', '入貨日');
             renderAccordion('accordionFinished', finishedDataMap, '成品', '製造日');
 
@@ -172,7 +172,6 @@
             document.getElementById('main-content').style.display = 'block';
         }
 
-        // ⚠️ 新增了一個參數 datePrefix
         function renderAccordion(elementId, dataMap, label, datePrefix) {
             const container = document.getElementById(elementId);
             const sortedDates = Object.keys(dataMap).sort().reverse(); 
@@ -186,7 +185,6 @@
             sortedDates.forEach((date, index) => {
                 let items = dataMap[date];
                 
-                // 預設全收合
                 let collapseClass = "collapse"; 
                 let buttonClass = "accordion-button collapsed";
                 let countBadge = `<span class="badge bg-secondary ms-2 rounded-pill">${items.length} 筆</span>`;
@@ -204,13 +202,12 @@
                             <td class="item-id">${item.id}</td>
                             <td class="d-none d-sm-table-cell">${item.vendor}</td>
                             <td>${item.name}</td>
-                            <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
+                            <td>${item.expiry}</td> <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
                             <td>${issueDisplay}</td>
                         </tr>
                     `;
                 }).join("");
 
-                // ⚠️ 標題顯示邏輯：📅 [入貨日]: 2025-11-21
                 html += `
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading-${elementId}-${index}">
@@ -223,11 +220,11 @@
                                 <table class="table table-hover mb-0 table-striped">
                                     <thead class="table-light">
                                         <tr>
-                                            <th width="15%">料號</th>
-                                            <th width="20%" class="d-none d-sm-table-cell">廠商</th>
-                                            <th width="25%">品名</th>
-                                            <th width="15%" class="text-center">判定</th>
-                                            <th width="25%">異常狀況</th>
+                                            <th width="12%">料號</th>
+                                            <th width="18%" class="d-none d-sm-table-cell">廠商</th>
+                                            <th width="20%">品名</th>
+                                            <th width="15%">有效日期</th> <th width="15%" class="text-center">判定</th>
+                                            <th width="20%">異常狀況</th>
                                         </tr>
                                     </thead>
                                     <tbody>${rows}</tbody>
