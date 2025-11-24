@@ -3,29 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>泰山品保戰情室 (除錯版)</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>泰山品保戰情室 (無敵版)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f9; padding: 20px; font-family: "Microsoft JhengHei", sans-serif; }
-        .status-badge { padding: 5px 10px; border-radius: 12px; font-size: 0.85rem; color: white; font-weight: bold; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; border-radius: 8px; }
+        .status-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.85rem; color: white; font-weight: bold; }
         .bg-pass { background-color: #28a745; }
         .bg-fail { background-color: #dc3545; }
         .bg-warn { background-color: #ffc107; color: #000; }
+        
+        /* --- 自製 CSS 長條圖 (不需外部元件) --- */
+        .bar-chart-container { 
+            display: flex; 
+            align-items: flex-end; 
+            height: 250px; 
+            gap: 5px; 
+            overflow-x: auto; 
+            padding-bottom: 30px; 
+            padding-top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .bar-wrapper { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            min-width: 45px; 
+            flex: 1; 
+            position: relative;
+        }
+        .bar { 
+            width: 70%; 
+            background-color: #3498db; 
+            border-radius: 4px 4px 0 0; 
+            transition: height 0.5s; 
+            position: relative;
+        }
+        .bar:hover { background-color: #2980b9; opacity: 0.8; }
+        .bar-value { 
+            font-size: 0.75rem; 
+            margin-bottom: 2px; 
+            color: #555; 
+            font-weight: bold; 
+        }
+        .bar-label { 
+            font-size: 0.7rem; 
+            color: #555; 
+            margin-top: 8px; 
+            transform: rotate(-45deg); 
+            white-space: nowrap; 
+            text-align: center;
+        }
+        
+        /* --- 自製 CSS 進度條圓餅圖替代方案 --- */
+        .progress-stacked { height: 40px; border-radius: 20px; overflow: hidden; display: flex; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); }
+        .progress-pass { background-color: #2ecc71; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: width 1s;}
+        .progress-fail { background-color: #e74c3c; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: width 1s;}
+
         #loader { text-align: center; margin-top: 50px; }
-        #error-box { display: none; text-align: left; background: #333; color: #ff5555; padding: 20px; margin-top: 20px; border-radius: 8px; font-family: monospace; white-space: pre-wrap; }
     </style>
 </head>
 <body>
 
     <div class="container-fluid">
         <h2 class="fw-bold mb-3">🛡️ 泰山品保檢驗戰情室</h2>
-
-        <div id="error-box"></div>
+        <p class="text-muted">系統狀態：防火牆穿透模式 (Pure HTML/CSS)</p>
 
         <div id="loader">
             <div class="spinner-border text-primary" role="status"></div>
-            <p class="mt-2" id="loader-text">正在連接資料庫...</p>
+            <p class="mt-2" id="loader-text">讀取中...</p>
         </div>
 
         <div id="dashboard" style="display: none;">
@@ -37,14 +83,31 @@
             </div>
             
             <div class="row g-3 mb-4">
-                <div class="col-md-8"><div class="card p-3"><canvas id="dailyChart" style="max-height: 300px;"></canvas></div></div>
-                <div class="col-md-4"><div class="card p-3"><canvas id="statusChart" style="max-height: 300px;"></canvas></div></div>
+                <div class="col-md-8">
+                    <div class="card p-3">
+                        <h5 class="mb-4">📅 每日檢驗趨勢圖</h5>
+                        <div class="bar-chart-container" id="css-bar-chart"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5 class="mb-4">📊 合格 vs 異常佔比</h5>
+                        <div class="mt-5">
+                            <div class="progress-stacked" id="css-progress-chart">
+                                </div>
+                            <div class="d-flex justify-content-between mt-3 px-2">
+                                <span class="text-success fw-bold">■ 合格 (<span id="txt-pass">0</span>)</span>
+                                <span class="text-danger fw-bold">■ 異常/不合格 (<span id="txt-fail">0</span>)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="card p-3">
-                <h5 class="text-danger">⚠️ 異常清單</h5>
+                <h5 class="text-danger">⚠️ 異常與不合格監控清單</h5>
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-hover table-striped">
                         <thead class="table-dark"><tr><th>日期</th><th>廠商</th><th>品名</th><th>判定</th><th>說明</th></tr></thead>
                         <tbody id="abnormal-table-body"></tbody>
                     </table>
@@ -54,139 +117,131 @@
     </div>
 
     <script>
-        // 顯示錯誤的工具函式
-        function showError(step, detail) {
-            document.getElementById('loader').style.display = 'none';
-            const box = document.getElementById('error-box');
-            box.style.display = 'block';
-            box.innerHTML = `❌ 錯誤發生在：[${step}]\n--------------------------\n${detail}\n\n請截圖此畫面給工程師 (AI)`;
-        }
-
         const apiURL = './data.json'; 
 
         async function init() {
             try {
-                // 步驟 1: 抓資料
-                document.getElementById('loader-text').innerText = "步驟 1/4: 下載資料中...";
+                document.getElementById('loader-text').innerText = "下載資料中...";
+                
+                // 1. 抓取 JSON
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
-                if (!response.ok) throw new Error(`HTTP 錯誤: ${response.status}`);
+                if (!response.ok) throw new Error("無法讀取 data.json");
                 const rawData = await response.json();
                 
-                // 步驟 2: 檢查資料
-                document.getElementById('loader-text').innerText = `步驟 2/4: 資料檢核 (共${rawData.length}筆)...`;
-                if (!rawData || rawData.length === 0) throw new Error("資料是空的 (0筆)");
-
-                // 步驟 3: 處理資料
-                document.getElementById('loader-text').innerText = "步驟 3/4: 開始運算...";
+                document.getElementById('loader-text').innerText = "分析資料中...";
                 processData(rawData);
 
             } catch (error) {
-                showError("初始化階段", error.message + "\n" + error.stack);
+                document.getElementById('loader').innerHTML = `<h3 class="text-danger">讀取失敗</h3><pre>${error.message}</pre>`;
             }
         }
 
         function processData(data) {
-            try {
-                // 自動抓欄位
-                const keys = Object.keys(data[0]);
-                const statusKey = keys.find(k => k.includes("判定")) || "判定";
-                const dateKey = keys.find(k => k.includes("日")) || "進貨/生產日";
-                const abnormalKey = keys.find(k => k.includes("異常")) || "異常狀況";
-                const vendorKey = keys.find(k => k.includes("廠商")) || "廠商";
-                const itemKey = keys.find(k => k.includes("品名")) || "品名";
+            // 自動對應欄位 (模糊搜尋)
+            const keys = Object.keys(data[0]);
+            const statusKey = keys.find(k => k.includes("判定")) || "判定";
+            const dateKey = keys.find(k => k.includes("日")) || "進貨/生產日";
+            const abnormalKey = keys.find(k => k.includes("異常")) || "異常狀況";
+            const vendorKey = keys.find(k => k.includes("廠商")) || "廠商";
+            const itemKey = keys.find(k => k.includes("品名")) || "品名";
 
-                let total = 0, passCount = 0, failCount = 0;
-                let dateMap = {};
-                let abnormalList = [];
-                let dates = [];
+            let total = 0, passCount = 0, failCount = 0;
+            let dateMap = {};
+            let abnormalList = [];
+            let dates = [];
 
-                data.forEach((item, index) => {
-                    try {
-                        let status = String(item[statusKey] || "").trim();
-                        let date = String(item[dateKey] || "").trim();
-                        let issue = String(item[abnormalKey] || "").trim();
+            // 處理資料
+            data.forEach(item => {
+                let status = String(item[statusKey] || "").trim();
+                let date = String(item[dateKey] || "").trim();
+                let issue = String(item[abnormalKey] || "").trim();
 
-                        if (!status && !date) return;
-                        total++;
+                if (!status && !date) return;
+                total++;
 
-                        let isFail = status.includes("不合格");
-                        if (isFail) {
-                            failCount++;
-                            abnormalList.push(item);
-                        } else {
-                            passCount++;
-                        }
-                        if (!isFail && issue !== "") abnormalList.push(item);
-
-                        if (date) {
-                            // 修正：有些日期可能是 Excel 序列號，轉成字串
-                            let dateStr = date.substring(0, 10);
-                            dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
-                            dates.push(dateStr);
-                        }
-                    } catch (err) {
-                        console.warn(`第 ${index} 筆資料有問題，跳過:`, err);
-                    }
-                });
-
-                dates.sort();
+                let isFail = status.includes("不合格");
+                if (isFail) {
+                    failCount++;
+                    abnormalList.push(item);
+                } else {
+                    passCount++;
+                }
                 
-                // 更新數字
-                document.getElementById('total-count').innerText = total;
-                document.getElementById('pass-rate').innerText = total > 0 ? Math.round((passCount / total) * 100) + "%" : "0%";
-                document.getElementById('fail-count').innerText = abnormalList.length;
-                document.getElementById('latest-date').innerText = dates.length > 0 ? dates[dates.length - 1] : "-";
+                // 即使合格，有備註異常也要列出
+                if (!isFail && issue !== "") abnormalList.push(item);
 
-                // 步驟 4: 繪圖
-                document.getElementById('loader-text').innerText = "步驟 4/4: 繪製圖表...";
+                // 日期統計
+                if (date) {
+                    let dateStr = date.substring(0, 10);
+                    dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
+                    if(!dates.includes(dateStr)) dates.push(dateStr);
+                }
+            });
+
+            dates.sort();
+            
+            // --- 1. 更新 KPI 數字 ---
+            let passRate = total > 0 ? Math.round((passCount / total) * 100) : 0;
+            let failRate = total > 0 ? 100 - passRate : 0;
+
+            document.getElementById('total-count').innerText = total;
+            document.getElementById('pass-rate').innerText = passRate + "%";
+            document.getElementById('fail-count').innerText = abnormalList.length;
+            document.getElementById('latest-date').innerText = dates.length > 0 ? dates[dates.length - 1] : "-";
+            document.getElementById('txt-pass').innerText = passCount;
+            document.getElementById('txt-fail').innerText = failCount;
+
+            // --- 2. 繪製 CSS 長條圖 (免外掛) ---
+            const chartContainer = document.getElementById('css-bar-chart');
+            
+            // 找出當天最多的筆數，用來當作 100% 高度
+            let maxVal = 0;
+            dates.forEach(d => { if(dateMap[d] > maxVal) maxVal = dateMap[d]; });
+
+            let barHtml = "";
+            dates.forEach(d => {
+                let val = dateMap[d];
+                // 計算高度百分比 (至少給 15% 讓它看得到)
+                let percent = maxVal > 0 ? (val / maxVal) * 100 : 0;
+                let height = percent < 15 ? 15 : percent; 
                 
-                if (typeof Chart === 'undefined') throw new Error("Chart.js 函式庫載入失敗 (可能是公司網路擋住了 CDN)");
+                barHtml += `
+                    <div class="bar-wrapper">
+                        <div class="bar-value">${val}</div>
+                        <div class="bar" style="height: ${height}%;" title="${d}: ${val}筆"></div>
+                        <div class="bar-label">${d.substring(5)}</div> </div>
+                `;
+            });
+            chartContainer.innerHTML = barHtml || "<p>無日期數據</p>";
 
-                const sortedDates = Object.keys(dateMap).sort();
+            // --- 3. 繪製 CSS 進度條圖 (免外掛) ---
+            document.getElementById('css-progress-chart').innerHTML = `
+                <div class="progress-pass" style="width: ${passRate}%">${passRate}%</div>
+                <div class="progress-fail" style="width: ${failRate}%">${failRate}%</div>
+            `;
+
+            // --- 4. 填寫表格 ---
+            const tableBody = document.getElementById('abnormal-table-body');
+            let tableHtml = "";
+            
+            // 只顯示最後 100 筆，避免瀏覽器太卡
+            abnormalList.reverse().slice(0, 100).forEach(item => {
+                let status = String(item[statusKey] || "");
+                let badge = status.includes("不合格") ? "bg-fail" : "bg-warn";
                 
-                // 每日圖表
-                new Chart(document.getElementById('dailyChart'), {
-                    type: 'bar',
-                    data: {
-                        labels: sortedDates,
-                        datasets: [{ label: '檢驗量', data: sortedDates.map(d => dateMap[d]), backgroundColor: '#3498db' }]
-                    },
-                    options: { responsive: true, maintainAspectRatio: false }
-                });
+                tableHtml += `<tr>
+                    <td>${(item[dateKey]||"").substring(0,10)}</td>
+                    <td>${item[vendorKey]||""}</td>
+                    <td>${item[itemKey]||""}</td>
+                    <td><span class="status-badge ${badge}">${status}</span></td>
+                    <td class="text-danger">${item[abnormalKey]||""}</td>
+                </tr>`;
+            });
+            tableBody.innerHTML = tableHtml || '<tr><td colspan="5" class="text-center p-3">✨ 無異常資料</td></tr>';
 
-                // 圓餅圖
-                new Chart(document.getElementById('statusChart'), {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['合格', '異常'],
-                        datasets: [{ data: [passCount, failCount], backgroundColor: ['#2ecc71', '#e74c3c'] }]
-                    },
-                    options: { responsive: true, maintainAspectRatio: false }
-                });
-
-                // 填表
-                const tableBody = document.getElementById('abnormal-table-body');
-                let html = "";
-                abnormalList.slice(0, 50).forEach(item => { // 只顯示前50筆避免卡頓
-                    let s = String(item[statusKey]||"");
-                    let badge = s.includes("不合格") ? "bg-fail" : "bg-warn";
-                    html += `<tr>
-                        <td>${(item[dateKey]||"").substring(0,10)}</td>
-                        <td>${item[vendorKey]||""}</td>
-                        <td>${item[itemKey]||""}</td>
-                        <td><span class="status-badge ${badge}">${s}</span></td>
-                        <td class="text-danger">${item[abnormalKey]||""}</td>
-                    </tr>`;
-                });
-                tableBody.innerHTML = html || '<tr><td colspan="5" class="text-center">無異常</td></tr>';
-
-                // 完成
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('dashboard').style.display = 'block';
-
-            } catch (error) {
-                showError("數據處理階段", error.message + "\n" + error.stack);
-            }
+            // 顯示儀表板
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
         }
 
         init();
