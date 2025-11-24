@@ -92,7 +92,7 @@
 
             <div class="search-container">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="搜尋：料號、廠商、品名、效期、異常...">
+                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="搜尋：料號、廠商、品名、批號、異常...">
             </div>
 
             <div class="tab-content" id="pills-tabContent">
@@ -149,7 +149,8 @@
                     id: item.id || "-",
                     vendor: item.vendor || "-",
                     name: item.name || "未知品項",
-                    expiry: item.expiry || "", // 新增有效日期
+                    expiry: item.expiry || "",
+                    batch: item.batch || "", // 批號
                     status: status,
                     issue: item.issue || ""
                 };
@@ -163,8 +164,12 @@
                 }
             });
 
-            renderAccordion('accordionRaw', rawDataMap, '原料', '入貨日');
-            renderAccordion('accordionFinished', finishedDataMap, '成品', '製造日');
+            // ⚠️ 關鍵修改：呼叫時傳入不同的參數
+            // 原料 -> 標籤: 入貨日, 欄位標題: 有效日期, 資料KEY: expiry
+            renderAccordion('accordionRaw', rawDataMap, '原料', '入貨日', '有效日期', 'expiry');
+            
+            // 成品 -> 標籤: 製造日, 欄位標題: 批號, 資料KEY: batch
+            renderAccordion('accordionFinished', finishedDataMap, '成品', '製造日', '批號', 'batch');
 
             enableSearch();
 
@@ -172,7 +177,8 @@
             document.getElementById('main-content').style.display = 'block';
         }
 
-        function renderAccordion(elementId, dataMap, label, datePrefix) {
+        // 新增了 colLabel (標題名稱) 和 dataKey (要抓哪個欄位的資料)
+        function renderAccordion(elementId, dataMap, label, datePrefix, colLabel, dataKey) {
             const container = document.getElementById(elementId);
             const sortedDates = Object.keys(dataMap).sort().reverse(); 
 
@@ -196,13 +202,16 @@
                     if (s.includes("不合格")) badgeClass = "bg-fail";
 
                     let issueDisplay = item.issue ? `<span class="issue-text">${item.issue}</span>` : "";
+                    
+                    // ⚠️ 這裡會根據 dataKey 動態抓取 (item.expiry 或 item.batch)
+                    let dynamicColValue = item[dataKey] || "-";
 
                     return `
                         <tr>
                             <td class="item-id">${item.id}</td>
                             <td class="d-none d-sm-table-cell">${item.vendor}</td>
                             <td>${item.name}</td>
-                            <td>${item.expiry}</td> <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
+                            <td>${dynamicColValue}</td> <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
                             <td>${issueDisplay}</td>
                         </tr>
                     `;
@@ -223,7 +232,7 @@
                                             <th width="12%">料號</th>
                                             <th width="18%" class="d-none d-sm-table-cell">廠商</th>
                                             <th width="20%">品名</th>
-                                            <th width="15%">有效日期</th> <th width="15%" class="text-center">判定</th>
+                                            <th width="15%">${colLabel}</th> <th width="15%" class="text-center">判定</th>
                                             <th width="20%">異常狀況</th>
                                         </tr>
                                     </thead>
@@ -237,7 +246,6 @@
             container.innerHTML = html;
         }
 
-        // 搜尋功能
         function enableSearch() {
             const searchInput = document.getElementById('globalSearch');
             
