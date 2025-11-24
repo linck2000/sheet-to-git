@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>泰山品保戰情室 (暴力偵測版)</title>
+    <title>泰山品保戰情室 (位置鎖定版)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f9; padding: 20px; font-family: "Microsoft JhengHei", sans-serif; }
@@ -27,14 +27,13 @@
         .progress-fail { background-color: #e74c3c; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
 
         #loader { text-align: center; margin-top: 50px; }
-        #debug-info { margin-top: 30px; padding: 15px; background: #333; color: #0f0; font-family: monospace; font-size: 0.8rem; border-radius: 5px; white-space: pre-wrap; display: none; }
     </style>
 </head>
 <body>
 
     <div class="container-fluid">
         <h2 class="fw-bold mb-3">🛡️ 泰山品保檢驗戰情室</h2>
-        <p class="text-muted">模式：內容暴力偵測 (Auto-Detect Content)</p>
+        <p class="text-muted">模式：欄位位置鎖定 (Column Index Locking)</p>
 
         <div id="loader">
             <div class="spinner-border text-primary" role="status"></div>
@@ -80,8 +79,6 @@
                 </div>
             </div>
         </div>
-        
-        <div id="debug-info"></div>
     </div>
 
     <script>
@@ -94,7 +91,7 @@
                 if (!response.ok) throw new Error("無法讀取 data.json");
                 const rawData = await response.json();
                 
-                document.getElementById('loader-text').innerText = "智能分析資料中...";
+                document.getElementById('loader-text').innerText = "鎖定位置分析中...";
                 processData(rawData);
 
             } catch (error) {
@@ -103,76 +100,31 @@
         }
 
         function processData(data) {
-            let debugMsg = "🔍 系統診斷報告:\n";
-            debugMsg += `資料總筆數: ${data.length}\n`;
-
-            if (data.length === 0) {
-                alert("資料是空的！");
-                return;
-            }
-
-            // --- 暴力偵測欄位邏輯 ---
-            const keys = Object.keys(data[0]);
-            let statusKey = "";
-            let dateKey = "";
-            let abnormalKey = "";
-            let vendorKey = "";
-            let itemKey = "";
-
-            // 1. 先試著用名字找
-            statusKey = keys.find(k => k.includes("判定"));
-            dateKey = keys.find(k => k.includes("日") || k.includes("Date"));
-            abnormalKey = keys.find(k => k.includes("異常"));
-            vendorKey = keys.find(k => k.includes("廠商"));
-            itemKey = keys.find(k => k.includes("品名"));
-
-            debugMsg += `初步名稱匹配:\n 判定欄: ${statusKey}\n 日期欄: ${dateKey}\n`;
-
-            // 2. 如果名稱找不到，或是找到但資料是空的，就啟用「內容偵測」
-            // 掃描前 50 筆資料來判斷每一欄是什麼
-            if (!statusKey || !dateKey) {
-                debugMsg += "⚠️ 名稱匹配有疑慮，啟用內容暴力偵測...\n";
-                
-                keys.forEach(key => {
-                    // 檢查這一欄的前幾筆數據
-                    for (let i = 0; i < Math.min(data.length, 50); i++) {
-                        let val = String(data[i][key] || "");
-                        
-                        // 如果內容包含 "合格" 或 "不合格"，這就是判定欄
-                        if (!statusKey && (val.includes("合格") || val.includes("不合格"))) {
-                            statusKey = key;
-                            debugMsg += `-> 找到判定欄 (依內容): ${key}\n`;
-                        }
-                        
-                        // 如果內容像是日期 (2025-...)，這就是日期欄
-                        if (!dateKey && (val.match(/^\d{4}-\d{2}-\d{2}/) || val.match(/\d{4}\/\d{2}\/\d{2}/))) {
-                            dateKey = key;
-                            debugMsg += `-> 找到日期欄 (依內容): ${key}\n`;
-                        }
-                    }
-                });
-            }
-
-            // 最終確認
-            if (!statusKey) statusKey = keys[9]; // 真的找不到就猜第 10 欄 (J欄)
-            if (!dateKey) dateKey = keys[2];     // 真的找不到就猜第 3 欄 (C欄)
-
-            debugMsg += `\n🎯 最終使用欄位:\n 判定: [${statusKey}]\n 日期: [${dateKey}]\n`;
-            document.getElementById('debug-info').innerText = debugMsg;
-            document.getElementById('debug-info').style.display = 'block';
-
-            // --- 開始統計 ---
             let total = 0, passCount = 0, failCount = 0;
             let dateMap = {};
             let abnormalList = [];
             let dates = [];
 
-            data.forEach(item => {
-                let status = String(item[statusKey] || "").trim();
-                let date = String(item[dateKey] || "").trim();
-                let issue = String(item[abnormalKey] || "").trim();
+            // ⚠️ 核彈級設定：直接指定欄位位置 (Index)
+            // 0:原料/成品, 1:廠商, 2:日期, 3:料號, 4:品名 ... 9:判定, 11:異常
+            const DATE_INDEX = 2;  // C欄
+            const VENDOR_INDEX = 1; // B欄
+            const ITEM_INDEX = 4;   // E欄
+            const STATUS_INDEX = 9; // J欄 (判定)
+            const ABNORMAL_INDEX = 11; // L欄 (異常狀況)
 
-                // 如果這行沒有判定結果，視為無效行
+            data.forEach(item => {
+                // 將物件轉為陣列 (Object.values) 依序取值
+                let values = Object.values(item);
+                
+                // 安全取值
+                let status = String(values[STATUS_INDEX] || "").trim();
+                let date = String(values[DATE_INDEX] || "").trim();
+                let issue = String(values[ABNORMAL_INDEX] || "").trim();
+                let vendor = String(values[VENDOR_INDEX] || "");
+                let itemName = String(values[ITEM_INDEX] || "");
+
+                // 如果這行沒日期也沒判定，就跳過
                 if (!status && !date) return;
                 
                 total++;
@@ -180,17 +132,19 @@
                 let isFail = status.includes("不合格");
                 if (isFail) {
                     failCount++;
-                    abnormalList.push(item);
+                    abnormalList.push({date, vendor, itemName, status, issue});
                 } else {
                     passCount++;
                 }
 
-                if (!isFail && issue !== "") abnormalList.push(item);
+                // 雖然合格但有異常說明，也要列出來
+                if (!isFail && issue !== "") {
+                    abnormalList.push({date, vendor, itemName, status, issue});
+                }
 
                 if (date) {
-                    // 處理日期格式 (只取 YYYY-MM-DD)
+                    // 格式化日期 (YYYY-MM-DD)
                     let dateStr = date.substring(0, 10);
-                    // 簡單驗證是否為日期格式
                     if (dateStr.length >= 8) {
                         dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
                         if(!dates.includes(dateStr)) dates.push(dateStr);
@@ -209,7 +163,7 @@
             document.getElementById('fail-count').innerText = abnormalList.length;
             document.getElementById('latest-date').innerText = dates.length > 0 ? dates[dates.length - 1] : "-";
             
-            // 繪製長條圖
+            // 繪製 CSS 長條圖
             const chartContainer = document.getElementById('css-bar-chart');
             let maxVal = 0;
             dates.forEach(d => { if(dateMap[d] > maxVal) maxVal = dateMap[d]; });
@@ -228,7 +182,7 @@
             });
             chartContainer.innerHTML = barHtml || "<p class='p-3'>無有效日期數據</p>";
 
-            // 繪製圓餅圖
+            // 繪製 CSS 圓餅圖
             document.getElementById('css-progress-chart').innerHTML = `
                 <div class="progress-pass" style="width: ${passRate}%">${passRate}%</div>
                 <div class="progress-fail" style="width: ${failRate}%">${failRate}%</div>
@@ -238,14 +192,13 @@
             const tableBody = document.getElementById('abnormal-table-body');
             let tableHtml = "";
             abnormalList.reverse().slice(0, 100).forEach(item => {
-                let status = String(item[statusKey] || "");
-                let badge = status.includes("不合格") ? "bg-fail" : "bg-warn";
+                let badge = item.status.includes("不合格") ? "bg-fail" : "bg-warn";
                 tableHtml += `<tr>
-                    <td>${(item[dateKey]||"").substring(0,10)}</td>
-                    <td>${item[vendorKey]||""}</td>
-                    <td>${item[itemKey]||""}</td>
-                    <td><span class="status-badge ${badge}">${status}</span></td>
-                    <td class="text-danger">${item[abnormalKey]||""}</td>
+                    <td>${item.date.substring(0,10)}</td>
+                    <td>${item.vendor}</td>
+                    <td>${item.itemName}</td>
+                    <td><span class="status-badge ${badge}">${item.status}</span></td>
+                    <td class="text-danger">${item.issue}</td>
                 </tr>`;
             });
             tableBody.innerHTML = tableHtml || '<tr><td colspan="5" class="text-center p-3">✨ 無異常資料</td></tr>';
