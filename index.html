@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品保檢驗戰情看板</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f6f9; padding: 20px; font-family: "Microsoft JhengHei", sans-serif; }
+        .card { border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .card-header { background-color: #fff; border-bottom: 1px solid #eee; font-weight: bold; }
+        .kpi-num { font-size: 2rem; font-weight: bold; color: #2c3e50; }
+        .kpi-label { font-size: 0.9rem; color: #7f8c8d; }
+        .status-badge { padding: 5px 10px; border-radius: 12px; font-size: 0.8rem; color: white;}
+        .bg-pass { background-color: #28a745; }
+        .bg-fail { background-color: #dc3545; }
+        #loader { text-align: center; margin-top: 50px; }
+        #dashboard { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h2 class="mb-4">📋 品保檢驗紀錄儀表板 (CSV版)</h2>
+
+        <div id="loader">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p>正在讀取資料...</p>
+        </div>
+
+        <div id="dashboard">
+            <div class="row">
+                <div class="col-md-3"><div class="card p-3 text-center"><div class="kpi-label">總檢驗筆數</div><div class="kpi-num" id="total-count">0</div></div></div>
+                <div class="col-md-3"><div class="card p-3 text-center"><div class="kpi-label">合格率 (Yield)</div><div class="kpi-num text-success" id="pass-rate">0%</div></div></div>
+                <div class="col-md-3"><div class="card p-3 text-center"><div class="kpi-label">異常/不合格數</div><div class="kpi-num text-danger" id="fail-count">0</div></div></div>
+                <div class="col-md-3"><div class="card p-3 text-center"><div class="kpi-label">最近檢驗日期</div><div class="kpi-num" id="latest-date" style="font-size: 1.5rem;">-</div></div></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8"><div class="card"><div class="card-header">📅 近期每日檢驗量</div><div class="card-body"><canvas id="dailyChart" height="100"></canvas></div></div></div>
+                <div class="col-md-4"><div class="card"><div class="card-header">📊 合格狀況分佈</div><div class="card-body"><canvas id="statusChart" height="220"></canvas></div></div></div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header text-danger">⚠️ 異常與不合格清單</div>
+                        <div class="card-body table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr><th>日期</th><th>廠商</th><th>品名</th><th>判定結果</th><th>異常狀況</th></tr>
+                                </thead>
+                                <tbody id="abnormal-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 🔴 請在這裡貼上你剛剛複製的「發布到網路」的 CSV 網址 🔴
+        const csvURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCxQ7YIbDhkrCED_95koQmVzaY7tFY_NmbgKlJn7TWe4gvra7gVfs3gAJ_phQ0Db7NYDzLz78WaYGC/pub?gid=0&single=true&output=csv';
+
+        function init() {
+            Papa.parse(csvURL, {
+                download: true,
+                header: true, // 告訴程式第一行是標題
+                complete: function(results) {
+                    console.log("資料讀取成功", results.data);
+                    processData(results.data);
+                },
+                error: function(err) {
+                    console.error("讀取失敗:", err);
+                    alert("無法讀取資料，可能是公司網域限制了「發布到網路」的權限。");
+                    document.getElementById('loader').innerHTML = "<p class='text-danger'>資料讀取受限，請聯繫管理員或改用 Looker Studio。</p>";
+                }
+            });
+        }
+
+        function processData(data) {
+            let total = 0, passCount = 0, failCount = 0;
+            let dateMap = {};
+            let abnormalList = [];
+
+            // 嘗試自動抓取欄位名稱，防止名稱有微小差異
+            const keys = data.length > 0 ? Object.keys(data[0]) : [];
+            const statusKey = keys.find(k => k.includes("判定")) || "判定";
+            const dateKey = keys.find(k => k.includes("日")) || "進貨/生產日";
+            const abnormalKey = keys.find(k => k.includes("異常")) || "異常狀況";
+            const vendorKey = keys.find(k => k.includes("廠商")) || "廠商";
+            const itemKey = keys.find(k => k.includes("品名")) || "品名";
+
+            let dates = [];
+
+            data.forEach(item => {
+                // 過濾掉空行
+                if (!item[statusKey] && !item[dateKey]) return;
+
+                total++;
+                let status = item[statusKey] || "";
+                let date = item[dateKey] || "";
+                let issue = item[abnormalKey] || "";
+
+                if (status.includes("不合格")) {
+                    failCount++;
+                    abnormalList.push(item);
+                } else {
+                    passCount++;
+                }
+
+                // 異常狀況有寫字也要列入
+                if (issue && issue.trim() !== "" && !status.includes("不合格")) {
+                    abnormalList.push(item);
+                }
+
+                // 日期處理
+                if (date) {
+                    // 如果 CSV 日期格式是 2025-11-19
+                    let cleanDate = date.substring(0, 10);
+                    dateMap[cleanDate] = (dateMap[cleanDate] || 0) + 1;
+                    dates.push(cleanDate);
+                }
+            });
+
+            dates.sort();
+            let latestDate = dates[dates.length - 1] || "-";
+
+            // 更新畫面
+            document.getElementById('total-count').innerText = total;
+            document.getElementById('pass-rate').innerText = total > 0 ? Math.round((passCount / total) * 100) + "%" : "0%";
+            document.getElementById('fail-count').innerText = abnormalList.length;
+            document.getElementById('latest-date').innerText = latestDate;
+
+            // 圖表
+            const sortedDates = Object.keys(dateMap).sort();
+            new Chart(document.getElementById('dailyChart'), {
+                type: 'bar',
+                data: {
+                    labels: sortedDates,
+                    datasets: [{ label: '檢驗筆數', data: sortedDates.map(d => dateMap[d]), backgroundColor: '#3498db' }]
+                }
+            });
+
+            new Chart(document.getElementById('statusChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['合格', '不合格/異常'],
+                    datasets: [{ data: [passCount, failCount], backgroundColor: ['#2ecc71', '#e74c3c'] }]
+                }
+            });
+
+            // 表格
+            const tableBody = document.getElementById('abnormal-table-body');
+            if (abnormalList.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5" class="text-center">✨ 無異常資料</td></tr>';
+            } else {
+                abnormalList.forEach(item => {
+                    let badgeClass = (item[statusKey] || "").includes("不合格") ? "bg-fail" : "bg-warning text-dark";
+                    tableBody.innerHTML += `
+                        <tr>
+                            <td>${(item[dateKey] || "").substring(0, 10)}</td>
+                            <td>${item[vendorKey] || ''}</td>
+                            <td>${item[itemKey] || ''}</td>
+                            <td><span class="status-badge ${badgeClass}">${item[statusKey] || ''}</span></td>
+                            <td class="text-danger">${item[abnormalKey] || ''}</td>
+                        </tr>`;
+                });
+            }
+
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+        }
+
+        init();
+    </script>
+</body>
+</html>
