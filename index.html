@@ -20,78 +20,55 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* 搜尋欄樣式 */
-        .search-container {
-            position: relative;
-            margin-bottom: 20px;
-        }
+        /* 搜尋欄 */
+        .search-container { position: relative; margin-bottom: 20px; }
         .search-input {
-            border-radius: 50px;
-            padding-left: 40px;
-            border: 2px solid #ddd;
-            transition: border-color 0.3s;
+            border-radius: 50px; padding-left: 40px; border: 2px solid #ddd; transition: border-color 0.3s;
         }
-        .search-input:focus {
-            border-color: #0d6efd;
-            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
-        }
-        .search-icon {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #aaa;
-        }
+        .search-input:focus { border-color: #0d6efd; box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15); }
+        .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #aaa; }
 
-        /* 分頁按鈕優化 */
+        /* 分頁按鈕 */
         .nav-pills .nav-link {
-            border-radius: 50px;
-            padding: 10px 25px;
-            font-weight: bold;
-            color: #666;
-            background-color: white;
-            border: 1px solid #ddd;
-            margin: 0 5px;
-            transition: all 0.3s;
+            border-radius: 50px; padding: 10px 25px; font-weight: bold; color: #666;
+            background-color: white; border: 1px solid #ddd; margin: 0 5px; transition: all 0.3s;
         }
-        .nav-pills .nav-link.active#pills-raw-tab {
-            background-color: #0d6efd; color: white; border-color: #0d6efd;
-        }
-        .nav-pills .nav-link.active#pills-finished-tab {
-            background-color: #198754; color: white; border-color: #198754;
-        }
+        .nav-pills .nav-link.active#pills-raw-tab { background-color: #0d6efd; color: white; border-color: #0d6efd; }
+        .nav-pills .nav-link.active#pills-finished-tab { background-color: #198754; color: white; border-color: #198754; }
 
         /* 摺疊卡片 */
         .accordion-item { border: none; margin-bottom: 12px; border-radius: 8px !important; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .accordion-button { font-size: 1.05rem; font-weight: bold; color: #444; background-color: #fff; }
-        
-        /* 展開時的顏色 */
         .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0d6efd; box-shadow: none; }
         .finished-goods-section .accordion-button:not(.collapsed) { background-color: #d1e7dd; color: #0f5132; }
 
+        /* 狀態標籤 */
         .status-badge { 
-            padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; 
-            display: inline-block; min-width: 70px; text-align: center;
+            padding: 6px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; 
+            display: inline-block; min-width: 65px; text-align: center;
         }
-        .bg-pass { background-color: #d4efdf; color: #1e8449; } /* 綠 */
-        .bg-fail { background-color: #fadbd8; color: #c0392b; } /* 紅 */
-        .bg-wait { background-color: #fcf3cf; color: #b7950b; } /* 黃 (待驗中) */
+        .bg-pass { background-color: #d4efdf; color: #1e8449; }
+        .bg-fail { background-color: #fadbd8; color: #c0392b; }
+        .bg-wait { background-color: #fcf3cf; color: #b7950b; }
 
         .table th { background-color: #f8f9fa; color: #777; font-weight: 600; font-size: 0.9rem; }
         .table td { vertical-align: middle; font-size: 0.95rem; }
         .item-id { font-family: monospace; font-weight: bold; font-size: 1rem; color: #0d6efd; }
+        
+        /* 異常文字樣式 */
+        .issue-text { color: #dc3545; font-weight: bold; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <div class="container-fluid" style="max-width: 1000px;">
+    <div class="container-fluid" style="max-width: 1100px;">
         <div class="header-bar">
             <div>
                 <h4 class="m-0 fw-bold">📦 倉管收貨檢驗看板</h4>
             </div>
             <div class="text-end">
                 <div id="update-time" style="font-size: 0.9rem; opacity: 0.9;">更新中...</div>
-                <small style="opacity: 0.7; font-size: 0.75rem;"></small>
+                <small style="opacity: 0.7; font-size: 0.75rem;">Source: GitHub</small>
             </div>
         </div>
 
@@ -117,7 +94,7 @@
 
             <div class="search-container">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="快速搜尋：料號、廠商、品名、判定結果...">
+                <input type="text" id="globalSearch" class="form-control form-control-lg search-input" placeholder="搜尋：料號、廠商、品名、異常原因...">
             </div>
 
             <div class="tab-content" id="pills-tabContent">
@@ -138,7 +115,6 @@
 
         async function init() {
             try {
-                // 加時間戳記防止快取
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
                 if (!response.ok) throw new Error("無法讀取資料庫");
                 
@@ -165,7 +141,6 @@
             let finishedDataMap = {};
 
             data.forEach(item => {
-                // 使用 Apps Script 清洗過的乾淨 Key
                 let type = item.type || "";
                 let dateStr = (item.date || "").substring(0, 10);
                 let status = item.status || "";
@@ -177,10 +152,9 @@
                     vendor: item.vendor || "-",
                     name: item.name || "未知品項",
                     status: status,
-                    issue: item.issue || ""
+                    issue: item.issue || "" // 異常狀況內容
                 };
 
-                // 分流
                 if (type.includes("原料")) {
                     if (!rawDataMap[dateStr]) rawDataMap[dateStr] = [];
                     rawDataMap[dateStr].push(record);
@@ -193,7 +167,6 @@
             renderAccordion('accordionRaw', rawDataMap, '原料');
             renderAccordion('accordionFinished', finishedDataMap, '成品');
 
-            // 啟動搜尋功能
             enableSearch();
 
             document.getElementById('loader').style.display = 'none';
@@ -213,8 +186,6 @@
             sortedDates.forEach((date, index) => {
                 let items = dataMap[date];
                 
-                // ⚠️ 修改：全部預設收合 (collapsed)
-                // 不再判斷 isFirst，統一都是 collapsed
                 let collapseClass = "collapse"; 
                 let buttonClass = "accordion-button collapsed";
                 let countBadge = `<span class="badge bg-secondary ms-2 rounded-pill">${items.length} 筆</span>`;
@@ -225,15 +196,16 @@
                     if (s.includes("合格") && !s.includes("不合格")) badgeClass = "bg-pass";
                     if (s.includes("不合格")) badgeClass = "bg-fail";
 
-                    let warnIcon = item.issue ? `<span class="text-danger fw-bold ms-1" title="${item.issue}">⚠️</span>` : "";
+                    // 處理異常文字顯示
+                    let issueDisplay = item.issue ? `<span class="issue-text">${item.issue}</span>` : "";
 
                     return `
                         <tr>
                             <td class="item-id">${item.id}</td>
                             <td class="d-none d-sm-table-cell">${item.vendor}</td>
-                            <td>${item.name} ${warnIcon}</td>
-                            <td class="text-end"><span class="status-badge ${badgeClass}">${s}</span></td>
-                        </tr>
+                            <td>${item.name}</td>
+                            <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
+                            <td>${issueDisplay}</td> </tr>
                     `;
                 }).join("");
 
@@ -249,11 +221,11 @@
                                 <table class="table table-hover mb-0 table-striped">
                                     <thead class="table-light">
                                         <tr>
-                                            <th width="20%">料號</th>
-                                            <th width="25%" class="d-none d-sm-table-cell">廠商</th>
-                                            <th width="35%">品名</th>
-                                            <th width="20%" class="text-end">判定</th>
-                                        </tr>
+                                            <th width="15%">料號</th>
+                                            <th width="20%" class="d-none d-sm-table-cell">廠商</th>
+                                            <th width="25%">品名</th>
+                                            <th width="15%" class="text-center">判定</th>
+                                            <th width="25%">異常狀況</th> </tr>
                                     </thead>
                                     <tbody>${rows}</tbody>
                                 </table>
@@ -265,7 +237,7 @@
             container.innerHTML = html;
         }
 
-        // 🔍 搜尋功能邏輯
+        // 搜尋功能
         function enableSearch() {
             const searchInput = document.getElementById('globalSearch');
             
@@ -280,36 +252,31 @@
                     rows.forEach(row => {
                         const text = row.innerText.toLowerCase();
                         if (text.includes(keyword)) {
-                            row.style.display = ''; // 顯示符合的列
+                            row.style.display = '';
                             hasMatch = true;
                         } else {
-                            row.style.display = 'none'; // 隱藏不符合的列
+                            row.style.display = 'none';
                         }
                     });
 
-                    // 處理摺疊面板
                     const collapseDiv = accItem.querySelector('.accordion-collapse');
                     const btn = accItem.querySelector('.accordion-button');
 
                     if (hasMatch) {
-                        accItem.style.display = ''; // 顯示該日期區塊
-                        
-                        // 如果有搜尋關鍵字，自動展開方便查看
+                        accItem.style.display = '';
                         if (keyword !== "") {
                             collapseDiv.classList.add('show');
                             btn.classList.remove('collapsed');
                             btn.setAttribute('aria-expanded', 'true');
                         }
                     } else {
-                        accItem.style.display = 'none'; // 隱藏該日期區塊
+                        accItem.style.display = 'none';
                     }
 
-                    // 如果搜尋被清空，恢復全收合狀態 (可選，這裡設定為保持展開或讓使用者自己關)
                     if (keyword === "") {
                          collapseDiv.classList.remove('show');
                          btn.classList.add('collapsed');
                          btn.setAttribute('aria-expanded', 'false');
-                         // 恢復所有列顯示
                          rows.forEach(r => r.style.display = '');
                     }
                 });
