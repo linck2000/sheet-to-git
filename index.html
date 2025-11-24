@@ -6,104 +6,108 @@
     <title>倉管驗收檢驗看板</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #e9ecef; padding: 10px; font-family: "Microsoft JhengHei", sans-serif; }
+        body { background-color: #f1f3f5; padding: 15px; font-family: "Microsoft JhengHei", sans-serif; }
         
-        /* 頂部標題區 */
         .header-bar {
-            background-color: #34495e;
+            background-color: #2c3e50;
             color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* 分頁按鈕樣式 */
+        /* 分頁按鈕優化 */
         .nav-pills .nav-link {
             border-radius: 50px;
-            padding: 10px 25px;
+            padding: 12px 30px;
             font-weight: bold;
-            color: #555;
-            background-color: #fff;
-            border: 1px solid #ced4da;
-            margin-right: 10px;
+            color: #666;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 0 10px;
+            transition: all 0.3s;
         }
-        .nav-pills .nav-link.active {
-            background-color: #3498db; /* 原料用藍色 */
-            color: white;
-            border-color: #3498db;
+        .nav-pills .nav-link:hover { background-color: #f8f9fa; }
+        
+        .nav-pills .nav-link.active#pills-raw-tab {
+            background-color: #0d6efd; color: white; border-color: #0d6efd; box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
         }
-        /* 成品分頁激活時改用綠色 */
-        #pills-finished-tab.active {
-            background-color: #27ae60;
-            border-color: #27ae60;
+        .nav-pills .nav-link.active#pills-finished-tab {
+            background-color: #198754; color: white; border-color: #198754; box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
         }
 
-        /* 日期摺疊卡片 */
-        .accordion-item { border: none; margin-bottom: 10px; border-radius: 8px !important; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .accordion-button { font-size: 1.1rem; font-weight: bold; background-color: #fff; }
-        .accordion-button:not(.collapsed) {
-            background-color: #eaf2f8; color: #2980b9; box-shadow: none;
-        }
-        /* 成品區的日期展開顏色 */
-        .finished-goods-section .accordion-button:not(.collapsed) {
-            background-color: #e8f8f5; color: #1e8449;
-        }
+        /* 摺疊卡片 */
+        .accordion-item { border: none; margin-bottom: 12px; border-radius: 8px !important; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .accordion-button { font-size: 1.05rem; font-weight: bold; color: #444; background-color: #fff; }
+        
+        /* 展開時的顏色 */
+        .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0d6efd; box-shadow: none; }
+        .finished-goods-section .accordion-button:not(.collapsed) { background-color: #d1e7dd; color: #0f5132; }
 
         /* 狀態標籤 */
-        .status-badge { padding: 5px 10px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; display: inline-block; min-width: 60px; text-align: center;}
-        .bg-pass { background-color: #d4efdf; color: #1e8449; border: 1px solid #a9dfbf; }
-        .bg-fail { background-color: #fadbd8; color: #943126; border: 1px solid #f5b7b1; }
-        .bg-warn { background-color: #fcf3cf; color: #9a7d0a; border: 1px solid #f9e79f; }
+        .status-badge { 
+            padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: bold; 
+            display: inline-block; min-width: 70px; text-align: center;
+        }
+        .bg-pass { background-color: #d4efdf; color: #1e8449; } /* 綠 */
+        .bg-fail { background-color: #fadbd8; color: #c0392b; } /* 紅 */
+        .bg-wait { background-color: #fcf3cf; color: #b7950b; } /* 黃 */
 
-        .table th { background-color: #f8f9fa; font-size: 0.9rem; color: #6c757d; }
+        /* 表格微調 */
+        .table th { background-color: #f8f9fa; color: #777; font-weight: 600; font-size: 0.9rem; }
         .table td { vertical-align: middle; font-size: 0.95rem; }
+        
+        /* 料號字體 */
+        .item-id { font-family: monospace; font-weight: bold; font-size: 1rem; color: #0d6efd; }
     </style>
 </head>
 <body>
 
     <div class="container-fluid" style="max-width: 1000px;">
         <div class="header-bar">
-            <h4 class="m-0 fw-bold">📦 倉管收貨檢驗看板</h4>
-            <small id="update-time">更新中...</small>
+            <div>
+                <h4 class="m-0 fw-bold">📦 倉管收貨檢驗看板</h4>
+                <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 5px;">資料來源: GitHub / Google Sheets</div>
+            </div>
+            <div class="text-end">
+                <div id="update-time" class="fw-bold">更新中...</div>
+                <button onclick="location.reload()" class="btn btn-sm btn-outline-light mt-1">🔄 刷新</button>
+            </div>
         </div>
 
         <div id="loader" class="text-center py-5">
             <div class="spinner-border text-primary" role="status"></div>
-            <p class="mt-2 text-muted">正在智能分析資料...</p>
+            <p class="mt-3 text-muted">正在同步檢驗資料...</p>
         </div>
 
         <div id="main-content" style="display: none;">
             
             <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-raw-tab" data-bs-toggle="pill" data-bs-target="#pills-raw" type="button" role="tab">
+                <li class="nav-item">
+                    <button class="nav-link active" id="pills-raw-tab" data-bs-toggle="pill" data-bs-target="#pills-raw" type="button">
                         📦 原料進貨
                     </button>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-finished-tab" data-bs-toggle="pill" data-bs-target="#pills-finished" type="button" role="tab">
+                <li class="nav-item">
+                    <button class="nav-link" id="pills-finished-tab" data-bs-toggle="pill" data-bs-target="#pills-finished" type="button">
                         🏭 成品生產
                     </button>
                 </li>
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
-                
-                <div class="tab-pane fade show active" id="pills-raw" role="tabpanel">
+                <div class="tab-pane fade show active" id="pills-raw">
                     <div class="accordion" id="accordionRaw"></div>
                 </div>
-
-                <div class="tab-pane fade finished-goods-section" id="pills-finished" role="tabpanel">
+                <div class="tab-pane fade finished-goods-section" id="pills-finished">
                     <div class="accordion" id="accordionFinished"></div>
                 </div>
-
             </div>
         </div>
-        
-        <div id="debug-info" class="mt-4 p-3 bg-dark text-white rounded" style="display:none; font-family: monospace; font-size: 0.8rem;"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -113,79 +117,52 @@
 
         async function init() {
             try {
+                // 加時間戳記防止快取
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
-                if (!response.ok) throw new Error("資料讀取失敗");
-                const rawData = await response.json();
+                if (!response.ok) throw new Error("無法讀取資料庫");
                 
+                const data = await response.json();
+                
+                // 更新時間顯示
                 const now = new Date();
                 document.getElementById('update-time').innerText = 
-                    `${now.getMonth()+1}/${now.getDate()} ${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+                    `${String(now.getMonth()+1).padStart(2,'0')}/${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
 
-                processData(rawData);
+                processData(data);
 
             } catch (error) {
-                document.getElementById('loader').innerHTML = `<p class="text-danger">❌ 錯誤: ${error.message}</p>`;
+                document.getElementById('loader').innerHTML = `<h5 class="text-danger">❌ 資料讀取失敗</h5><p>${error.message}</p>`;
             }
         }
 
         function processData(data) {
-            if (data.length === 0) {
-                alert("資料是空的！");
+            if (!data || data.length === 0) {
+                document.getElementById('loader').innerHTML = `<h5 class="text-warning">📭 目前沒有檢驗資料</h5>`;
                 return;
             }
 
-            // --- 智能欄位偵測 (Smart Detection) ---
-            const keys = Object.keys(data[0]);
-            
-            // 1. 嘗試用名稱抓取
-            let typeKey = keys.find(k => k.includes("原料") || k.includes("成品")); // 找分類欄
-            let vendorKey = keys.find(k => k.includes("廠商"));
-            let dateKey = keys.find(k => k.includes("日") || k.includes("Date"));
-            let idKey = keys.find(k => k.includes("料號") || k.includes("ID"));
-            let nameKey = keys.find(k => k.includes("品名"));
-            let statusKey = keys.find(k => k.includes("判定"));
-
-            // 2. 如果名稱抓不到，用「內容」來猜 (暴力偵測)
-            if (!typeKey || !statusKey) {
-                 // 掃描前 20 筆資料
-                 for (let i = 0; i < Math.min(data.length, 20); i++) {
-                    keys.forEach(key => {
-                        let val = String(data[i][key] || "");
-                        // 找有 "原料" 或 "成品" 字眼的欄位 -> 分類欄
-                        if (!typeKey && (val.includes("原料") || val.includes("成品"))) typeKey = key;
-                        // 找有 "合格" 或 "不合格" 字眼的欄位 -> 判定欄
-                        if (!statusKey && (val.includes("合格") || val.includes("不合格"))) statusKey = key;
-                    });
-                 }
-            }
-
-            // 顯示偵測結果 (Debug用)
-            let debugMsg = `偵測欄位:\n分類: ${typeKey}\n日期: ${dateKey}\n廠商: ${vendorKey}\n料號: ${idKey}\n品名: ${nameKey}\n判定: ${statusKey}`;
-            console.log(debugMsg);
-            
-            // 如果真的找不到，給預設值 (避免程式掛掉)
-            if(!typeKey) typeKey = keys[0]; 
-            if(!dateKey) dateKey = keys[2]; 
-
-            // --- 開始分類資料 ---
             let rawDataMap = {};
             let finishedDataMap = {};
 
             data.forEach(item => {
-                let type = String(item[typeKey] || "").trim();
-                let dateStr = String(item[dateKey] || "").trim().substring(0, 10);
-                let status = String(item[statusKey] || "").trim();
+                // 因為後端 Apps Script 已經把 Key 清洗過了，這裡直接用！
+                // 結構: { type, vendor, date, id, name, status, issue }
+                
+                let type = item.type || "";
+                let dateStr = (item.date || "").substring(0, 10);
+                let status = item.status || "";
 
-                if (!status && !dateStr) return;
+                if (!type || !dateStr) return; // 跳過無效資料
 
                 let record = {
-                    id: String(item[idKey] || "-"),
-                    vendor: String(item[vendorKey] || "-"),
-                    name: String(item[nameKey] || "未知品項"),
-                    status: status
+                    id: item.id || "-",
+                    vendor: item.vendor || "-",
+                    name: item.name || "未知品項",
+                    status: status,
+                    issue: item.issue || ""
                 };
 
-                // 分流邏輯
+                // 分流：原料 vs 成品
                 if (type.includes("原料")) {
                     if (!rawDataMap[dateStr]) rawDataMap[dateStr] = [];
                     rawDataMap[dateStr].push(record);
@@ -195,7 +172,6 @@
                 }
             });
 
-            // 渲染畫面
             renderAccordion('accordionRaw', rawDataMap, '原料');
             renderAccordion('accordionFinished', finishedDataMap, '成品');
 
@@ -203,36 +179,41 @@
             document.getElementById('main-content').style.display = 'block';
         }
 
-        function renderAccordion(elementId, dataMap, categoryName) {
+        function renderAccordion(elementId, dataMap, label) {
             const container = document.getElementById(elementId);
-            const sortedDates = Object.keys(dataMap).sort().reverse();
+            const sortedDates = Object.keys(dataMap).sort().reverse(); // 日期新 -> 舊
 
             if (sortedDates.length === 0) {
-                container.innerHTML = `<div class="text-center text-muted py-5">
-                    <h5>📭 無${categoryName}資料</h5>
-                    <p>請確認資料表中的「原料/成品」欄位是否正確。</p>
-                </div>`;
+                container.innerHTML = `<div class="text-center py-5 text-muted">無${label}檢驗紀錄</div>`;
                 return;
             }
 
             let html = "";
             sortedDates.forEach((date, index) => {
                 let items = dataMap[date];
-                // 第一個日期預設展開
-                let isFirst = index === 0;
+                
+                // 預設展開第一個日期
+                let isFirst = (index === 0);
                 let collapseClass = isFirst ? "collapse show" : "collapse";
                 let buttonClass = isFirst ? "accordion-button" : "accordion-button collapsed";
                 let countBadge = `<span class="badge bg-secondary ms-2 rounded-pill">${items.length} 筆</span>`;
 
-                // 產生表格列
+                // 產生每一列
                 let rows = items.map(item => {
-                    let badgeClass = item.status.includes("不合格") ? "bg-fail" : (item.status.includes("合格") ? "bg-pass" : "bg-warn");
+                    let s = item.status;
+                    let badgeClass = "bg-wait"; // 預設黃色
+                    if (s.includes("合格") && !s.includes("不合格")) badgeClass = "bg-pass";
+                    if (s.includes("不合格")) badgeClass = "bg-fail";
+
+                    // 如果有異常狀況，加個紅色驚嘆號提醒
+                    let warnIcon = item.issue ? `<span class="text-danger fw-bold ms-1" title="${item.issue}">⚠️</span>` : "";
+
                     return `
                         <tr>
-                            <td class="fw-bold text-primary">${item.id}</td>
-                            <td class="d-none d-sm-table-cell">${item.vendor}</td> <td>${item.name}
-                                <div class="d-sm-none text-muted" style="font-size:0.8rem">${item.vendor}</div> </td>
-                            <td class="text-end"><span class="status-badge ${badgeClass}">${item.status}</span></td>
+                            <td class="item-id">${item.id}</td>
+                            <td class="d-none d-sm-table-cell">${item.vendor}</td>
+                            <td>${item.name} ${warnIcon}</td>
+                            <td class="text-end"><span class="status-badge ${badgeClass}">${s}</span></td>
                         </tr>
                     `;
                 }).join("");
@@ -246,11 +227,11 @@
                         </h2>
                         <div id="collapse-${elementId}-${index}" class="${collapseClass}" data-bs-parent="#${elementId}">
                             <div class="accordion-body p-0">
-                                <table class="table table-striped table-hover mb-0">
+                                <table class="table table-hover mb-0 table-striped">
                                     <thead class="table-light">
                                         <tr>
                                             <th width="20%">料號</th>
-                                            <th width="25%" class="d-none d-sm-table-cell">供應商</th>
+                                            <th width="25%" class="d-none d-sm-table-cell">廠商</th>
                                             <th width="35%">品名</th>
                                             <th width="20%" class="text-end">判定</th>
                                         </tr>
