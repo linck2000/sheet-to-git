@@ -6899,12 +6899,100 @@
   {
     "type": "成品",
     "vendor": "遠冠",
-    "date": "2025/11/24",
+    "date": "2025/11/25",
+    "expiry": "",
+    "batch": "１２５１１２４０２７",
+    "id": "ME-330038",
+    "name": "傳香紅燒肉(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/26",
+    "expiry": "",
+    "batch": "１２５１１２４０２８",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/27",
+    "expiry": "",
+    "batch": "１２５１１２４０２９",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/28",
     "expiry": "",
     "batch": "",
     "id": "SA-320109",
     "name": "辣椒湯包(180)",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/29",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-220004",
+    "name": "蝦泥(包)(60)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/30",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/12/1",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/12/3",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
