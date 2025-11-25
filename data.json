@@ -6941,6 +6941,28 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-200019",
+    "name": "蝦泥(大心)300g(60)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-200019",
+    "name": "蝦泥(大心)300g(60)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "成品",
     "vendor": "遠冠",
     "date": "2025/11/24",
@@ -6982,6 +7004,39 @@
     "id": "ME-220004",
     "name": "泰北香腸(90)",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-250001",
+    "name": "透抽(60)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-250001",
+    "name": "透抽(60)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-250001",
+    "name": "透抽(60)",
+    "status": "待驗中",
     "issue": ""
   },
   {
