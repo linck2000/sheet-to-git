@@ -7221,7 +7221,40 @@
     "date": "2025/11/24",
     "expiry": "",
     "batch": "",
-    "id": "ME-330001-3",
+    "id": "ME-320007",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-320007",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-320007",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/24",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-320007",
     "name": "豬絞肉PIG",
     "status": "合格",
     "issue": ""
