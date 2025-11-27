@@ -11983,6 +11983,28 @@
     "vendor": "遠冠",
     "date": "2025/11/26",
     "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/26",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/11/26",
+    "expiry": "",
     "batch": "1251126013",
     "id": "SE-420047",
     "name": "薑片(180)",
