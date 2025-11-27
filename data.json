@@ -10450,6 +10450,17 @@
     "issue": ""
   },
   {
+    "type": "V",
+    "vendor": "V",
+    "date": "V",
+    "expiry": "V",
+    "batch": "V",
+    "id": "V",
+    "name": "V",
+    "status": "V",
+    "issue": "V"
+  },
+  {
     "type": "原料",
     "vendor": "M004金煜實業有限公司",
     "date": "2025/11/27",
