@@ -10450,17 +10450,6 @@
     "issue": ""
   },
   {
-    "type": "V",
-    "vendor": "V",
-    "date": "V",
-    "expiry": "V",
-    "batch": "V",
-    "id": "V",
-    "name": "V",
-    "status": "V",
-    "issue": "V"
-  },
-  {
     "type": "原料",
     "vendor": "M004金煜實業有限公司",
     "date": "2025/11/27",
@@ -10732,17 +10721,6 @@
     "batch": "",
     "id": "VE-330003",
     "name": "青木瓜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "V123厚利有限公司",
-    "date": "2025/11/27",
-    "expiry": "",
-    "batch": "",
-    "id": "VE-320006",
-    "name": "四季豆",
     "status": "待驗中",
     "issue": ""
   }
