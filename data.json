@@ -12598,7 +12598,7 @@
     "type": "原料",
     "vendor": "V029黃博群",
     "date": "2025/11/28",
-    "expiry": "",
+    "expiry": "#REF!",
     "batch": "",
     "id": "VE-300023",
     "name": "茄子",
