@@ -18698,5 +18698,148 @@
     "name": "洋蔥咖哩醬(4)",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-200016",
+    "name": "炸背脂丁(45)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-330041",
+    "name": "辣椒雞湯(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-330038",
+    "name": "傳香紅燒肉(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SE-200016",
+    "name": "滷花生(傳香)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-200157",
+    "name": "滷肉(傳香)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "VE-200031",
+    "name": "滷豆干(傳香)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-200102",
+    "name": "麻辣基底醬(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-200082",
+    "name": "三杯雞腿醃料(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-200033",
+    "name": "蝦醬醃醬(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-310016",
+    "name": "椒麻雞醃料(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-310023",
+    "name": "糖醋排骨醃料1(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-310024",
+    "name": "糖醋排骨醃料2(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-220004",
+    "name": "蝦泥(包)(60)",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
