@@ -18841,5 +18841,104 @@
     "name": "蝦泥(包)(60)",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-320008",
+    "name": "白蝦仁(蝦泥用)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-210001",
+    "name": "牛絞肉(90)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SF-250001",
+    "name": "透抽(60)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-200006",
+    "name": "麻油松阪豬肉片(份)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-310003",
+    "name": "牛肉(熬湯)(已過絞)(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-310011",
+    "name": "板腱(筋膜)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-200047",
+    "name": "松阪油(自)(原)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-220001",
+    "name": "醃松阪豬",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-230009",
+    "name": "雞腿片(180)",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
