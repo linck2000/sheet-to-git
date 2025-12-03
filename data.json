@@ -19919,5 +19919,16 @@
     "name": "豬絞肉PIG",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/3",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210070",
+    "name": "蝦醬(365)",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
