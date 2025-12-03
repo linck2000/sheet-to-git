@@ -18940,5 +18940,82 @@
     "name": "雞腿片(180)",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-230010-1",
+    "name": "胸骨/雞骨",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-300059",
+    "name": "雞腿片原料",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210050",
+    "name": "湯香料包(90)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210079",
+    "name": "黑芝麻醬半(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-200225",
+    "name": "時時香口水雞醬(新)(180)，V",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210041",
+    "name": "涼拌醬A(180)，V",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-200024",
+    "name": "薄荷辣醬(180)，V",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
