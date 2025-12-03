@@ -18632,5 +18632,71 @@
     "name": "椒麻雞醬2",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-320156",
+    "name": "綠咖哩1000g(365)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210059",
+    "name": "綠油(365)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210063",
+    "name": "辣油(365)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-310002",
+    "name": "干鍋醬(365)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-200066",
+    "name": "滷肉飯醬(180)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2025/12/2",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-310033",
+    "name": "洋蔥咖哩醬(4)",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
