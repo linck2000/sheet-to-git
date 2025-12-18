@@ -38393,6 +38393,17 @@
     "type": "成品",
     "vendor": "遠冠",
     "date": "2025/12/17",
+    "expiry": "2026/12/16",
+    "batch": "1251217038",
+    "id": "SF-350055 ",
+    "name": "調味蝦漿Seasoned Shrimp Paste",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "成品",
+    "vendor": "遠冠",
+    "date": "2025/12/17",
     "expiry": "2025/12/17",
     "batch": "1251217045",
     "id": "SF-320008",
