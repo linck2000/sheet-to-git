@@ -43577,7 +43577,7 @@
     "expiry": "",
     "batch": "",
     "id": "SF-350013",
-    "name": "白蝦仁原料200/300",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43588,7 +43588,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-300064",
-    "name": "高麗菜(資運用)",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43599,7 +43599,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-340006",
-    "name": "金針菇5kg/包",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43610,7 +43610,7 @@
     "expiry": "",
     "batch": "",
     "id": "SE-420074",
-    "name": "綿滷花生",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43621,7 +43621,7 @@
     "expiry": "",
     "batch": "",
     "id": "MG-300034",
-    "name": "滷蛋(餐盒用)",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43632,7 +43632,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-300075",
-    "name": "帶皮腿肉丁(900g)",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43643,7 +43643,7 @@
     "expiry": "",
     "batch": "",
     "id": "BD-200007",
-    "name": "七葉蘭糖水",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43654,7 +43654,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-340008",
-    "name": "高麗菜片",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43665,7 +43665,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-320028",
-    "name": "洋蔥絲(半)",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43676,7 +43676,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-200004",
-    "name": "細蔥花",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43687,7 +43687,7 @@
     "expiry": "",
     "batch": "",
     "id": "SE-320125",
-    "name": "蝦米末",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43698,7 +43698,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-320029",
-    "name": "五花肉角",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43709,7 +43709,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-330001",
-    "name": "豬絞肉(PIG)",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43720,7 +43720,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-230002",
-    "name": "雞絞肉",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43731,7 +43731,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-340047",
-    "name": "去骨腿肉塊",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43742,7 +43742,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-330060",
-    "name": "帶骨雞腿",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43753,7 +43753,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-230006",
-    "name": "清雞腿",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43764,7 +43764,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-300119",
-    "name": "清雞胸肉(去皮)120g/塊",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43775,7 +43775,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-230003",
-    "name": "雞胸片",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43786,7 +43786,7 @@
     "expiry": "",
     "batch": "",
     "id": "ME-300085",
-    "name": "小貢丸(27顆)",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43797,7 +43797,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-310016",
-    "name": "薄荷葉",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43808,7 +43808,7 @@
     "expiry": "2025/12/28",
     "batch": "",
     "id": "VE-320015",
-    "name": "七葉蘭",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43819,7 +43819,7 @@
     "expiry": "",
     "batch": "",
     "id": "SA-320145",
-    "name": "牛骨高湯",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43830,7 +43830,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-310016",
-    "name": "薄荷葉",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   },
@@ -43841,7 +43841,7 @@
     "expiry": "",
     "batch": "",
     "id": "VE-300025",
-    "name": "臭豆腐-白色",
+    "name": "#REF!",
     "status": "待驗中",
     "issue": ""
   }
