@@ -61092,5 +61092,137 @@
     "name": "腸衣",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "雲珍企業社",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-300152",
+    "name": "大薄片(4份/包)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "勵碩企業股份有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-300155",
+    "name": "板腱牛排170g",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "BD-200007",
+    "name": "七葉蘭糖水",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "OS-000005",
+    "name": "三杯雞腿肉丁(代工)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "OS-000011",
+    "name": "椒麻雞(代工)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "OS-000014",
+    "name": "咖哩雞湯包(代工)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "VE-300034",
+    "name": "蘿蔔乾丁",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "OS-000008",
+    "name": "醃二節翅(代工)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "欣香國際食品有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-230003",
+    "name": "雞胸片",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "世泓股份有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-310025",
+    "name": "牛肉片",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "世泓股份有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-210003",
+    "name": "瑪莎曼牛肉",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "世泓股份有限公司",
+    "date": "2026/1/2",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-210004",
+    "name": "椰汁牛肉",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
