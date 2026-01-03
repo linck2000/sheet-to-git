@@ -62940,5 +62940,38 @@
     "name": "黃金泡菜(560g)，V",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "#REF!",
+    "date": "#REF!",
+    "expiry": "#REF!",
+    "batch": "",
+    "id": "#REF!",
+    "name": "#REF!",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "#REF!",
+    "date": "#REF!",
+    "expiry": "#REF!",
+    "batch": "",
+    "id": "#REF!",
+    "name": "#REF!",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "#REF!",
+    "date": "#REF!",
+    "expiry": "#REF!",
+    "batch": "",
+    "id": "#REF!",
+    "name": "#REF!",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
