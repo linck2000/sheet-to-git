@@ -62883,18 +62883,18 @@
     "batch": "",
     "id": "BB-300026",
     "name": "去皮甘蔗32cm(內場用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "旭騰號",
     "date": "2026/1/3",
-    "expiry": "",
+    "expiry": "2026/1/8",
     "batch": "",
     "id": "MG-320014",
     "name": "客家粄條",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -62905,7 +62905,7 @@
     "batch": "",
     "id": "VE-300003",
     "name": "青尖椒",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
