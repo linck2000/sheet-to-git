@@ -70392,7 +70392,7 @@
     "type": "原料",
     "vendor": "歐嬤德式美食有限公司",
     "date": "2026-01-08",
-    "expiry": "",
+    "expiry": "2026/6/21",
     "batch": "",
     "id": "SA-300012",
     "name": "辣味牛肉醬",
@@ -71551,6 +71551,39 @@
     "batch": "1260108129",
     "id": "ME-330041",
     "name": "辣椒雞湯",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-08",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-08",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-08",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
