@@ -72496,18 +72496,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "空心菜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "黃博群",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "空心菜",
+    "name": "dj/ vup h94",
     "status": "待驗中",
     "issue": ""
   },
@@ -72518,7 +72507,7 @@
     "expiry": "2027/1/8",
     "batch": "1260109001",
     "id": "SA-210065",
-    "name": "辣椒醬(365)",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
@@ -73751,6 +73740,17 @@
     "batch": "",
     "id": "ME-200156",
     "name": "川燙熟豬肚條",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
