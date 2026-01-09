@@ -55,6 +55,9 @@
         .table td { vertical-align: middle; font-size: 0.95rem; }
         .item-id { font-family: monospace; font-weight: bold; font-size: 1rem; color: #0d6efd; }
         .issue-text { color: #dc3545; font-weight: bold; font-size: 0.9rem; }
+
+        /* 🔥 新增：序號欄位樣式 */
+        .index-col { font-weight: bold; color: #6c757d; text-align: center; width: 50px; }
     </style>
 </head>
 <body>
@@ -150,7 +153,7 @@
                     vendor: item.vendor || "-",
                     name: item.name || "未知品項",
                     expiry: item.expiry || "",
-                    batch: item.batch || "", // 批號
+                    batch: item.batch || "",
                     status: status,
                     issue: item.issue || ""
                 };
@@ -164,11 +167,8 @@
                 }
             });
 
-            // ⚠️ 關鍵修改：呼叫時傳入不同的參數
-            // 原料 -> 標籤: 入貨日, 欄位標題: 有效日期, 資料KEY: expiry
+            // 這裡維持原樣，保留效期/批號的切換邏輯
             renderAccordion('accordionRaw', rawDataMap, '原料', '入貨日', '有效日期', 'expiry');
-            
-            // 成品 -> 標籤: 製造日, 欄位標題: 批號, 資料KEY: batch
             renderAccordion('accordionFinished', finishedDataMap, '成品', '製造日', '批號', 'batch');
 
             enableSearch();
@@ -177,7 +177,6 @@
             document.getElementById('main-content').style.display = 'block';
         }
 
-        // 新增了 colLabel (標題名稱) 和 dataKey (要抓哪個欄位的資料)
         function renderAccordion(elementId, dataMap, label, datePrefix, colLabel, dataKey) {
             const container = document.getElementById(elementId);
             const sortedDates = Object.keys(dataMap).sort().reverse(); 
@@ -195,23 +194,24 @@
                 let buttonClass = "accordion-button collapsed";
                 let countBadge = `<span class="badge bg-secondary ms-2 rounded-pill">${items.length} 筆</span>`;
 
-                let rows = items.map(item => {
+                // 🔥 修改重點：加入 (item, i) 參數，i 就是從 0 開始的序號
+                let rows = items.map((item, i) => {
                     let s = item.status;
                     let badgeClass = "bg-wait"; 
                     if (s.includes("合格") && !s.includes("不合格")) badgeClass = "bg-pass";
                     if (s.includes("不合格")) badgeClass = "bg-fail";
 
                     let issueDisplay = item.issue ? `<span class="issue-text">${item.issue}</span>` : "";
-                    
-                    // ⚠️ 這裡會根據 dataKey 動態抓取 (item.expiry 或 item.batch)
                     let dynamicColValue = item[dataKey] || "-";
 
                     return `
                         <tr>
+                            <td class="index-col">${i + 1}</td>
                             <td class="item-id">${item.id}</td>
                             <td class="d-none d-sm-table-cell">${item.vendor}</td>
                             <td>${item.name}</td>
-                            <td>${dynamicColValue}</td> <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
+                            <td>${dynamicColValue}</td>
+                            <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
                             <td>${issueDisplay}</td>
                         </tr>
                     `;
@@ -229,10 +229,12 @@
                                 <table class="table table-hover mb-0 table-striped">
                                     <thead class="table-light">
                                         <tr>
+                                            <th width="5%" class="text-center">#</th>
                                             <th width="12%">料號</th>
                                             <th width="18%" class="d-none d-sm-table-cell">廠商</th>
                                             <th width="20%">品名</th>
-                                            <th width="15%">${colLabel}</th> <th width="15%" class="text-center">判定</th>
+                                            <th width="15%">${colLabel}</th>
+                                            <th width="10%" class="text-center">判定</th>
                                             <th width="20%">異常狀況</th>
                                         </tr>
                                     </thead>
