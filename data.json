@@ -72079,29 +72079,18 @@
     "batch": "",
     "id": "SA-320145",
     "name": "牛骨高湯",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "碁富食品股份有限公司",
     "date": "2026-01-09",
-    "expiry": "2026/11/3",
+    "expiry": "",
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "碁富食品股份有限公司",
-    "date": "2026-01-09",
-    "expiry": "2026/11/9",
-    "batch": "",
-    "id": "ME-200123",
-    "name": "豬骨高湯(1kg)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -73443,6 +73432,17 @@
     "batch": "",
     "id": "ME-200156",
     "name": "川燙熟豬肚條",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
