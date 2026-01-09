@@ -72491,12 +72491,23 @@
   },
   {
     "type": "原料",
-    "vendor": "黃柏群",
+    "vendor": "黃博群",
     "date": "2026-01-09",
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "黃博群",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "空心菜",
     "status": "待驗中",
     "issue": ""
   },
@@ -73740,17 +73751,6 @@
     "batch": "",
     "id": "ME-200156",
     "name": "川燙熟豬肚條",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
