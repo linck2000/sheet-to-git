@@ -74135,7 +74135,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "空心菜87",
+    "name": "空心菜8",
     "status": "待驗中",
     "issue": ""
   },
@@ -74146,7 +74146,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜45",
     "status": "待驗中",
     "issue": ""
   },
@@ -74157,7 +74157,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜48",
     "status": "待驗中",
     "issue": ""
   },
@@ -74168,7 +74168,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜49",
     "status": "待驗中",
     "issue": ""
   },
@@ -74179,7 +74179,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜86",
     "status": "待驗中",
     "issue": ""
   },
@@ -74190,7 +74190,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜32",
     "status": "待驗中",
     "issue": ""
   },
@@ -74201,7 +74201,18 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "空心菜38",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-10",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "空心菜37",
     "status": "待驗中",
     "issue": ""
   },
@@ -74708,17 +74719,6 @@
     "batch": "1260110079",
     "id": "SE-420047",
     "name": "薑片(180)",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-10",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   },
