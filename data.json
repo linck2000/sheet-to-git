@@ -76593,28 +76593,6 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-12",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-420074",
-    "name": "綿滷花生",
-    "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-12",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-420074",
-    "name": "綿滷花生",
-    "status": "合格",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-01-12",
@@ -76650,7 +76628,7 @@
   {
     "type": "原料",
     "vendor": "歐嬤德式美食有限公司",
-    "date": "2026-01-12",
+    "date": "2026/1/12",
     "expiry": "",
     "batch": "",
     "id": "SE-420106",
@@ -77008,6 +76986,39 @@
     "id": "ME-300017",
     "name": "牛肉丁3.5kg",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-12",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-12",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-12",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
