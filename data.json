@@ -76948,11 +76948,11 @@
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-01-12",
-    "expiry": "",
+    "expiry": "260815",
     "batch": "",
     "id": "ME-210004",
     "name": "椰汁牛肉",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -76963,6 +76963,17 @@
     "batch": "",
     "id": "ME-300017",
     "name": "牛肉丁3.5kg",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-12",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
