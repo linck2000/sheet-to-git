@@ -76655,19 +76655,19 @@
     "batch": "",
     "id": "ME-310018",
     "name": "牛筋",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "勵碩企業股份有限公司",
     "date": "2026-01-12",
-    "expiry": "",
+    "expiry": "2026/9/1",
     "batch": "",
     "id": "ME-340090",
     "name": "安格斯牛排1.6cm",
-    "status": "待驗中",
-    "issue": ""
+    "status": "不合格",
+    "issue": "破包"
   },
   {
     "type": "原料",
