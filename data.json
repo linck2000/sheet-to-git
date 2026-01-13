@@ -77550,36 +77550,36 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
+    "vendor": "台灣有明食品股份有限公司",
+    "date": "2026/1/13",
+    "expiry": "2026/12/8",
+    "batch": "",
+    "id": "ME-300055",
+    "name": "雞豬白湯",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
     "vendor": "台灣有明食品股份有限公司",
     "date": "2026-01-13",
-    "expiry": "",
+    "expiry": "2026/11/13",
     "batch": "",
     "id": "ME-300055",
-    "name": "",
-    "status": "待驗中",
+    "name": "豚骨高湯TA5615(濃縮)",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "台灣有明食品股份有限公司",
     "date": "2026-01-13",
-    "expiry": "",
-    "batch": "",
-    "id": "ME-300055",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-13",
-    "expiry": "",
+    "expiry": "2026/12/9",
     "batch": "",
     "id": "ME-300057",
-    "name": "",
-    "status": "待驗中",
+    "name": "豚骨高湯TA5615(濃縮)",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -78701,6 +78701,17 @@
     "batch": "",
     "id": "ME-200003",
     "name": "綠咖哩中翅",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-13",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
