@@ -77484,7 +77484,18 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-01-13",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
     "vendor": "",
     "date": "2026-01-13",
     "expiry": "",
@@ -78701,17 +78712,6 @@
     "batch": "",
     "id": "ME-200003",
     "name": "綠咖哩中翅",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-13",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
