@@ -77551,11 +77551,22 @@
   },
   {
     "type": "",
+    "vendor": "台灣有明食品股份有限公司",
+    "date": "2026-01-13",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-300055",
+    "name": "雞豬白湯",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
     "vendor": "",
     "date": "2026-01-13",
     "expiry": "",
     "batch": "",
-    "id": "",
+    "id": "ME-300055",
     "name": "",
     "status": "待驗中",
     "issue": ""
@@ -77566,18 +77577,7 @@
     "date": "2026-01-13",
     "expiry": "",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-13",
-    "expiry": "",
-    "batch": "",
-    "id": "",
+    "id": "ME-300057",
     "name": "",
     "status": "待驗中",
     "issue": ""
