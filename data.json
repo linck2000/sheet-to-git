@@ -80028,7 +80028,51 @@
     "type": "原料",
     "vendor": "泰立富食品股份有限公司",
     "date": "2026-01-14",
-    "expiry": "",
+    "expiry": "2026/3/23",
+    "batch": "",
+    "id": "ME-230010",
+    "name": "胸骨/雞骨",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "泰立富食品股份有限公司",
+    "date": "2026-01-14",
+    "expiry": "2026/3/25",
+    "batch": "",
+    "id": "ME-230010",
+    "name": "胸骨/雞骨",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "泰立富食品股份有限公司",
+    "date": "2026-01-14",
+    "expiry": "2026/4/1",
+    "batch": "",
+    "id": "ME-230010",
+    "name": "胸骨/雞骨",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "泰立富食品股份有限公司",
+    "date": "2026-01-14",
+    "expiry": "2026/4/2",
+    "batch": "",
+    "id": "ME-230010",
+    "name": "胸骨/雞骨",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "泰立富食品股份有限公司",
+    "date": "2026-01-14",
+    "expiry": "4/3",
     "batch": "",
     "id": "ME-230010",
     "name": "胸骨/雞骨",
@@ -80428,50 +80472,6 @@
     "batch": "",
     "id": "VE-310010",
     "name": "芹菜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-14",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-14",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-14",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-14",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
