@@ -79976,7 +79976,7 @@
     "expiry": "",
     "batch": "",
     "id": "SF-350034",
-    "name": "",
+    "name": "1010白蝦(51/60)",
     "status": "待驗中",
     "issue": ""
   },
@@ -80406,6 +80406,17 @@
     "batch": "",
     "id": "VE-310010",
     "name": "芹菜",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-14",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
