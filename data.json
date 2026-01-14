@@ -79794,8 +79794,8 @@
     "issue": ""
   },
   {
-    "type": "半成品",
-    "vendor": "遠冠",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-14",
     "expiry": "",
     "batch": "",
@@ -79805,35 +79805,35 @@
     "issue": ""
   },
   {
-    "type": "半成品",
-    "vendor": "遠冠",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-14",
     "expiry": "",
     "batch": "",
-    "id": "SF-250001",
-    "name": "透抽(60)",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "半成品",
-    "vendor": "遠冠",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-14",
     "expiry": "",
     "batch": "",
-    "id": "SF-250001",
-    "name": "透抽(60)",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "半成品",
-    "vendor": "遠冠",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-14",
     "expiry": "",
     "batch": "",
-    "id": "SF-250001",
-    "name": "透抽(60)",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
