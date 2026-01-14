@@ -79944,7 +79944,18 @@
     "batch": "",
     "id": "ME-330001",
     "name": "豬絞肉(PIG)",
-    "status": "待驗中",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "香里食品企業股份有限公司",
+    "date": "2026-01-14",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-330001",
+    "name": "豬絞肉(PIG)",
+    "status": "合格",
     "issue": ""
   },
   {
