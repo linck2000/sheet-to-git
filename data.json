@@ -79962,22 +79962,44 @@
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-01-14",
-    "expiry": "",
+    "expiry": "2026/3/15",
     "batch": "",
     "id": "VE-300198",
     "name": "水煮豆干",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-01-14",
-    "expiry": "",
+    "expiry": "2026/12/21",
     "batch": "",
     "id": "VE-300034",
     "name": "蘿蔔乾丁",
-    "status": "待驗中",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-14",
+    "expiry": "2026/12/22",
+    "batch": "",
+    "id": "VE-300034",
+    "name": "蘿蔔乾丁",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-14",
+    "expiry": "2026/1/12",
+    "batch": "",
+    "id": "VE-300034",
+    "name": "蘿蔔乾丁",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -80351,28 +80373,6 @@
     "batch": "",
     "id": "VE-310010",
     "name": "芹菜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-14",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-14",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
