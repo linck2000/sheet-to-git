@@ -79577,10 +79577,10 @@
     "type": "",
     "vendor": "",
     "date": "2026-01-14",
-    "expiry": "",
+    "expiry": "2026/1/22",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "MG-320014 ",
+    "name": "客家粄條",
     "status": "待驗中",
     "issue": ""
   },
@@ -81694,6 +81694,28 @@
     "id": "SE-320074 ",
     "name": "南薑",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-15",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-15",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
