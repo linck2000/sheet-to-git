@@ -81697,7 +81697,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
@@ -81708,7 +81708,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
@@ -81719,7 +81719,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
@@ -81730,7 +81730,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
@@ -81741,7 +81741,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
@@ -81752,57 +81752,35 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
     "batch": "",
     "id": "VE-210002",
-    "name": "空心菜11",
+    "name": "空心菜96",
     "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
     "batch": "",
     "id": "VE-210002",
-    "name": "空心菜11",
+    "name": "空心菜168",
     "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "黃博群",
     "date": "2026-01-15",
     "expiry": "",
     "batch": "",
     "id": "VE-210002",
-    "name": "空心菜11",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "黃博群",
-    "date": "2026/1/15",
-    "expiry": "",
-    "batch": "",
-    "id": "VE-210002",
-    "name": "空心菜11",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "黃博群",
-    "date": "2026/1/15",
-    "expiry": "",
-    "batch": "",
-    "id": "VE-210002",
-    "name": "空心菜11",
+    "name": "空心菜195",
     "status": "待驗中",
     "issue": ""
   }
