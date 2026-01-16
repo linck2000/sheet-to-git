@@ -82859,17 +82859,6 @@
     "batch": "",
     "id": "VE-320015",
     "name": "七葉蘭",
-    "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "佛統企業股份有限公司",
-    "date": "2026-01-16",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   },
@@ -83366,6 +83355,17 @@
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-16",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
