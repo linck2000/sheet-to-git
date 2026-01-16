@@ -82720,28 +82720,6 @@
     "issue": ""
   },
   {
-    "type": "半成品",
-    "vendor": "遠冠",
-    "date": "2026-01-16",
-    "expiry": "",
-    "batch": "",
-    "id": "ME-220016",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "半成品",
-    "vendor": "遠冠",
-    "date": "2026-01-16",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "三柳柳國際餐飲股份有限公司",
     "date": "2026-01-16",
@@ -83663,6 +83641,28 @@
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-16",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-16",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
