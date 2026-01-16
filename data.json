@@ -82720,6 +82720,28 @@
     "issue": ""
   },
   {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-01-16",
+    "expiry": "2026/4/15",
+    "batch": "1260116091",
+    "id": "ME-220016",
+    "name": "蒸排骨丁",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-01-16",
+    "expiry": "2026/1/17",
+    "batch": "1260116092",
+    "id": "ME-320034",
+    "name": "醃排骨丁",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "三柳柳國際餐飲股份有限公司",
     "date": "2026-01-16",
@@ -83294,6 +83316,72 @@
   {
     "type": "原料",
     "vendor": "御軒食品有限公司",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
     "date": "2026-01-16",
     "expiry": "",
     "batch": "",
@@ -83306,72 +83394,6 @@
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-01-16",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御軒食品有限公司",
-    "date": "2026-01-09",
     "expiry": "",
     "batch": "",
     "id": "",
@@ -83641,28 +83663,6 @@
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
     "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-16",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-16",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
     "issue": ""
   }
 ]
