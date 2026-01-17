@@ -84080,7 +84080,7 @@
     "batch": "",
     "id": "VE-320005",
     "name": "紫洋蔥",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -84102,18 +84102,18 @@
     "batch": "",
     "id": "VE-300003",
     "name": "青尖椒",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "旭騰號",
     "date": "2026-01-17",
-    "expiry": "",
+    "expiry": "2026/1/24",
     "batch": "",
     "id": "MG-320014",
     "name": "客家粄條",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -84124,18 +84124,18 @@
     "batch": "",
     "id": "BB-300026",
     "name": "去皮甘蔗32cm(內場用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-01-17",
-    "expiry": "",
+    "expiry": "2026/1/27",
     "batch": "",
     "id": "MG-330002",
     "name": "均質蛋白液",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
