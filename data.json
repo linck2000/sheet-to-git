@@ -85085,25 +85085,25 @@
     "issue": "乾扁大於30%"
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "厚利有限公司",
     "date": "2026-01-17",
-    "expiry": "",
+    "expiry": "2026/1/23",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "VE-300010",
+    "name": "去頭泰國椒(小)-湯香料包用",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "厚利有限公司",
     "date": "2026-01-17",
-    "expiry": "",
+    "expiry": "2026/1/23",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "VE-300002",
+    "name": "泰國椒(小紅/資運)",
+    "status": "合格",
     "issue": ""
   }
 ]
