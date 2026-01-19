@@ -86243,10 +86243,21 @@
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-01-19",
-    "expiry": "",
+    "expiry": "2026/10/19",
     "batch": "",
     "id": "ME-300016",
     "name": "牛肉絲2.8kg",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-19",
+    "expiry": "2026/11/4",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
@@ -86292,6 +86303,17 @@
     "id": "ME-340090",
     "name": "安格斯牛排1.6cm",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-19",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
