@@ -89096,29 +89096,62 @@
     "batch": "",
     "id": "ME-230006",
     "name": "清雞腿",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "超秦企業股份有限公司",
     "date": "2026-01-21",
-    "expiry": "",
+    "expiry": "2026/10/23",
     "batch": "",
     "id": "ME-330059",
     "name": "翅中(中節翅)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "超秦企業股份有限公司",
     "date": "2026-01-21",
-    "expiry": "",
+    "expiry": "2026/10/28",
+    "batch": "",
+    "id": "ME-330059",
+    "name": "翅中(中節翅)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "超秦企業股份有限公司",
+    "date": "2026-01-21",
+    "expiry": "2026/10/29",
+    "batch": "",
+    "id": "ME-330059",
+    "name": "翅中(中節翅)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "超秦企業股份有限公司",
+    "date": "2026-01-21",
+    "expiry": "2026/10/30",
+    "batch": "",
+    "id": "ME-330059",
+    "name": "翅中(中節翅)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "超秦企業股份有限公司",
+    "date": "2026-01-21",
+    "expiry": "2026/1/26",
     "batch": "",
     "id": "ME-340047",
     "name": "去骨腿肉塊",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89129,7 +89162,7 @@
     "batch": "",
     "id": "VE-320006",
     "name": "四季豆",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89283,39 +89316,6 @@
     "batch": "",
     "id": "VE-310010",
     "name": "芹菜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-21",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-21",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-21",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
