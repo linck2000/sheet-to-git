@@ -89173,7 +89173,7 @@
     "batch": "",
     "id": "ME-310025",
     "name": "牛肉片",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89184,28 +89184,50 @@
     "batch": "",
     "id": "ME-310025",
     "name": "牛肉片",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-01-21",
-    "expiry": "",
+    "expiry": "2026/8/15",
     "batch": "",
     "id": "ME-210004",
     "name": "椰汁牛肉",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-01-21",
-    "expiry": "",
+    "expiry": "2026/12/25",
     "batch": "",
     "id": "ME-210004",
     "name": "椰汁牛肉",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-21",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-21",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
@@ -89239,28 +89261,6 @@
     "batch": "",
     "id": "VE-310010",
     "name": "芹菜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-21",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-21",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
