@@ -88865,7 +88865,7 @@
     "batch": "",
     "id": "VE-300219",
     "name": "蒜苗-細(資運用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -88876,7 +88876,7 @@
     "batch": "",
     "id": "VE-300218",
     "name": "綠辣椒(資運用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -88887,7 +88887,7 @@
     "batch": "",
     "id": "VE-310002",
     "name": "香菜",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89640,13 +89640,13 @@
   },
   {
     "type": "原料",
-    "vendor": "",
+    "vendor": "Theppadungporn Coconut Co., Ltd.",
     "date": "2026-01-21",
-    "expiry": "",
+    "expiry": "271101",
     "batch": "",
     "id": "SE-300012",
     "name": "辣醬",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   }
 ]
