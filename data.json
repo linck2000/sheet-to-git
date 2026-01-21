@@ -89591,7 +89591,7 @@
     "batch": "",
     "id": "VE-320002",
     "name": "紅蘿蔔-內場規格",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89602,7 +89602,7 @@
     "batch": "",
     "id": "VE-340018",
     "name": "去頭紅辣椒(資運用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89613,7 +89613,7 @@
     "batch": "",
     "id": "VE-310010",
     "name": "芹菜",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -89641,7 +89641,7 @@
   {
     "type": "原料",
     "vendor": "Theppadungporn Coconut Co., Ltd.",
-    "date": "2026/1/21",
+    "date": "2026-01-21",
     "expiry": "2027/11/01",
     "batch": "",
     "id": "SE-300012",
