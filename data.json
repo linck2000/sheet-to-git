@@ -90805,14 +90805,14 @@
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "宗美蔬果行",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-22",
-    "expiry": "2026/1/26",
+    "expiry": "",
     "batch": "",
     "id": "VE-340081 ",
-    "name": "小黃瓜(3公斤/箱)",
-    "status": "合格",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
