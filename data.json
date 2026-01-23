@@ -91729,17 +91729,6 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-23",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-01-23",
@@ -92154,6 +92143,17 @@
     "batch": "",
     "id": "VE-330003",
     "name": "青木瓜",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-23",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
