@@ -91622,22 +91622,22 @@
     "type": "原料",
     "vendor": "香里食品企業股份有限公司",
     "date": "2026-01-23",
-    "expiry": "",
+    "expiry": "2027/1/20",
     "batch": "",
     "id": "ME-320029",
     "name": "五花肉角",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "香里食品企業股份有限公司",
     "date": "2026-01-23",
-    "expiry": "",
+    "expiry": "2026/1/28",
     "batch": "",
     "id": "ME-300004",
     "name": "大腸",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -91710,10 +91710,32 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-01-23",
-    "expiry": "",
+    "expiry": "2026/6/26",
     "batch": "",
     "id": "VE-300028",
     "name": "腸衣",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "松和食品有限公司",
+    "date": "2026-01-23",
+    "expiry": "2026/7/19",
+    "batch": "",
+    "id": "VE-300028",
+    "name": "腸衣",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-23",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
@@ -92132,28 +92154,6 @@
     "batch": "",
     "id": "VE-330003",
     "name": "青木瓜",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-23",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-23",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
