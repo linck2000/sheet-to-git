@@ -92125,36 +92125,36 @@
     "issue": ""
   },
   {
-    "type": "原料",
+    "type": "",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-01-23",
     "expiry": "2027/4/28",
     "batch": "",
     "id": "ME-310010        ",
     "name": "牛肚",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "樹森開發股份有限公司",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-23",
     "expiry": "2027/3/22",
     "batch": "",
     "id": "ME-310018        ",
     "name": "牛筋",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "樹森開發股份有限公司",
+    "type": "",
+    "vendor": "",
     "date": "2026-01-23",
-    "expiry": "2026/5/25",
+    "expiry": "",
     "batch": "",
-    "id": "ME-310008\t",
-    "name": "牛柳(原料)",
-    "status": "合格",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
