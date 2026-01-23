@@ -92123,5 +92123,38 @@
     "name": "青木瓜",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-01-23",
+    "expiry": "2027/4/28",
+    "batch": "",
+    "id": "ME-310010        ",
+    "name": "牛肚",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-23",
+    "expiry": "2027/3/22",
+    "batch": "",
+    "id": "ME-310018        ",
+    "name": "牛筋",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-23",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
