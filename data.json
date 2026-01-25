@@ -94237,25 +94237,25 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "宗美蔬果行",
     "date": "2026-01-25",
-    "expiry": "",
+    "expiry": "2026/1/29",
     "batch": "",
     "id": " VE-340081          ",
     "name": "小黃瓜(3公斤/箱)   ",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "宗美蔬果行",
     "date": "2026-01-25",
-    "expiry": "",
+    "expiry": "2026/1/28",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "BD-200024 ",
+    "name": "新鮮草莓(350g/盒)",
+    "status": "合格",
     "issue": ""
   }
 ]
