@@ -94435,6 +94435,17 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-26",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-01-26",
@@ -94459,7 +94470,7 @@
   {
     "type": "原料",
     "vendor": "富允食品有限公司",
-    "date": "2026-01-26",
+    "date": "2026/1/26",
     "expiry": "",
     "batch": "",
     "id": "SE-320125",
@@ -95410,6 +95421,39 @@
     "batch": "1260126089",
     "id": "ME-200170",
     "name": "(熟)泰北香腸",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-26",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-26",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-01-26",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
