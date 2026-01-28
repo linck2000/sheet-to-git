@@ -98156,11 +98156,22 @@
     "type": "原料",
     "vendor": "展鮮水產有限公司",
     "date": "2026-01-28",
-    "expiry": "",
+    "expiry": "2026/12/4",
     "batch": "",
     "id": "SF-200001",
     "name": "鱈魚丸",
-    "status": "待驗中",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "展鮮水產有限公司",
+    "date": "2026-01-28",
+    "expiry": "2026/12/1",
+    "batch": "",
+    "id": "SF-200001",
+    "name": "鱈魚丸",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -98244,22 +98255,55 @@
     "type": "原料",
     "vendor": "香里食品企業股份有限公司",
     "date": "2026-01-28",
-    "expiry": "",
+    "expiry": "2027/1/4",
     "batch": "",
     "id": "ME-330001",
     "name": "豬絞肉(PIG)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "香里食品企業股份有限公司",
     "date": "2026-01-28",
-    "expiry": "",
+    "expiry": "2027/1/11",
+    "batch": "",
+    "id": "ME-330001",
+    "name": "豬絞肉(PIG)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "香里食品企業股份有限公司",
+    "date": "2026-01-28",
+    "expiry": "2027/1/13",
+    "batch": "",
+    "id": "ME-330001",
+    "name": "豬絞肉(PIG)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "香里食品企業股份有限公司",
+    "date": "2026-01-28",
+    "expiry": "2027/1/5",
+    "batch": "",
+    "id": "ME-330001",
+    "name": "豬絞肉(PIG)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "香里食品企業股份有限公司",
+    "date": "2026-01-28",
+    "expiry": "2026/2/2",
     "batch": "",
     "id": "ME-300004",
     "name": "大腸",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -98348,6 +98392,28 @@
     "id": "ME-340090",
     "name": "安格斯牛排1.6cm",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-28",
+    "expiry": "",
+    "batch": "",
+    "id": "MG-300034",
+    "name": "滷蛋(餐盒用)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-01-28",
+    "expiry": "",
+    "batch": "",
+    "id": "MG-300034",
+    "name": "滷蛋(餐盒用)",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -98497,11 +98563,11 @@
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-01-28",
-    "expiry": "",
+    "expiry": "2026/12/8",
     "batch": "",
     "id": "VE-300165",
     "name": "蜜芋頭丁(公斤)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -98809,72 +98875,6 @@
     "batch": "",
     "id": "VE-300212",
     "name": "去頭紅辣椒(契作)",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-28",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-28",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-28",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-28",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-28",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-01-28",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
