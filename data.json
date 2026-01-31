@@ -103132,7 +103132,7 @@
     "batch": "",
     "id": "VE-320006",
     "name": "四季豆",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -103166,61 +103166,6 @@
     "id": "VE-340018",
     "name": "去頭紅辣椒(資運用)",
     "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "KKOOL INTERTRADE Co.,Ltd",
-    "date": "2026-01-31",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-300091",
-    "name": "紅毛丹",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "KKOOL INTERTRADE Co.,Ltd",
-    "date": "2026-01-31",
-    "expiry": "",
-    "batch": "",
-    "id": "BD-300115",
-    "name": "菠蘿蜜(CHAOKOH)",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "Theppadungporn Coconut Co., Ltd.",
-    "date": "2026-01-31",
-    "expiry": "",
-    "batch": "",
-    "id": "BD-300001",
-    "name": "椰漿1000ml",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "Theppadungporn Coconut Co., Ltd.",
-    "date": "2026-01-31",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-300012",
-    "name": "辣醬",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "ZHANJIANG GUOLIAN AQUATIC PRODUCTS CO.,LTD",
-    "date": "2026-01-31",
-    "expiry": "",
-    "batch": "",
-    "id": "SF-320024",
-    "name": "大蝦仁(隻)",
-    "status": "待驗中",
     "issue": ""
   },
   {
