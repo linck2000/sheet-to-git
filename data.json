@@ -104107,11 +104107,11 @@
     "type": "原料",
     "vendor": "云巧",
     "date": "2026-02-01",
-    "expiry": "",
+    "expiry": "2026/2/7",
     "batch": "",
     "id": "",
-    "name": "",
-    "status": "待驗中",
+    "name": "蒜苗",
+    "status": "合格",
     "issue": ""
   }
 ]
