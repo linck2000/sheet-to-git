@@ -104720,6 +104720,28 @@
     "issue": ""
   },
   {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-02-02",
+    "expiry": "2026/7/31",
+    "batch": "",
+    "id": "ME-320007",
+    "name": "梅花肉片",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-02-02",
+    "expiry": "2026/7/31",
+    "batch": "",
+    "id": "ME-330001",
+    "name": "豬絞肉(PIG)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "富允食品有限公司",
     "date": "2026-02-02",
@@ -105321,28 +105343,6 @@
     "batch": "",
     "id": "VE-340006",
     "name": "金針菇5kg/包",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-02",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-02",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
