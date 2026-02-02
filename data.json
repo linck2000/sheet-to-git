@@ -105348,23 +105348,23 @@
   },
   {
     "type": "原料",
-    "vendor": "",
+    "vendor": "欣香國際食品有限公司",
     "date": "2026-02-02",
     "expiry": "",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "ME-230003",
+    "name": "雞胸片",
     "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
-    "vendor": "",
+    "vendor": "樹森開發股份有限公司",
     "date": "2026-02-02",
     "expiry": "",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "ME-300016",
+    "name": "牛肉絲2.8kg",
     "status": "待驗中",
     "issue": ""
   }
