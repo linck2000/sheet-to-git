@@ -105020,22 +105020,22 @@
     "type": "",
     "vendor": "",
     "date": "2026-02-02",
-    "expiry": "",
+    "expiry": "2026/7/31",
     "batch": "1260202063",
     "id": "ME-320007",
     "name": "梅花肉片",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "",
     "vendor": "",
     "date": "2026-02-02",
-    "expiry": "",
+    "expiry": "2026/7/31",
     "batch": "1260202064",
     "id": "ME-330001",
     "name": "豬絞肉(PIG)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
