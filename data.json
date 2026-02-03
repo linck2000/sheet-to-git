@@ -106469,24 +106469,24 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "厚利有限公司",
     "date": "2026-02-03",
-    "expiry": "",
+    "expiry": "2026/2/10",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "VE-320004",
+    "name": "洋蔥",
     "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "厚利有限公司",
     "date": "2026-02-03",
-    "expiry": "",
+    "expiry": "2026/2/10",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "VE-320005",
+    "name": "紫洋蔥",
     "status": "待驗中",
     "issue": ""
   },
@@ -106810,10 +106810,21 @@
     "issue": ""
   },
   {
+    "type": "原料",
+    "vendor": "禾康興業股份有限公司",
+    "date": "2026-02-03",
+    "expiry": "2026/7/22",
+    "batch": "",
+    "id": "SA-210114 ",
+    "name": "蒜油(含蒜酥)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "",
     "vendor": "",
     "date": "2026-02-03",
-    "expiry": "",
+    "expiry": "2002/7/5",
     "batch": "",
     "id": "",
     "name": "",
