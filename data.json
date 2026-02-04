@@ -108064,7 +108064,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "富允",
     "date": "2026-02-04",
     "expiry": "",
@@ -108075,7 +108075,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "富允",
     "date": "2026-02-04",
     "expiry": "",
@@ -108086,7 +108086,7 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "富允",
     "date": "2026-02-04",
     "expiry": "",
@@ -108097,47 +108097,47 @@
     "issue": ""
   },
   {
-    "type": "",
+    "type": "原料",
     "vendor": "富允",
     "date": "2026-02-04",
-    "expiry": "",
+    "expiry": "2027/8/15",
     "batch": "",
     "id": "SE-320105",
     "name": "乾蝦米(河粉配料/蝦米末)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "富允",
     "date": "2026-02-04",
-    "expiry": "",
+    "expiry": "2026/5/23",
     "batch": "",
     "id": "\tSE-320125\t",
     "name": "蝦米末",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "富允",
     "date": "2026-02-04",
-    "expiry": "",
+    "expiry": "2026/6/28",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "\tSE-320125\t",
+    "name": "蝦米末",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "富允",
     "date": "2026-02-04",
-    "expiry": "",
+    "expiry": "2026/7/29",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "\tSE-320125\t",
+    "name": "蝦米末",
+    "status": "合格",
     "issue": ""
   }
 ]
