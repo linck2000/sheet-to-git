@@ -108194,5 +108194,38 @@
     "name": "紅蘿蔔-內場規格",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-04",
+    "expiry": "2026/7/22",
+    "batch": "",
+    "id": "\tME-310008\t",
+    "name": "牛柳(原料)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-04",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-04",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
