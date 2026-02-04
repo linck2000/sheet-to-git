@@ -108062,5 +108062,49 @@
     "name": "去骨腿肉塊",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "富允",
+    "date": "VE-340008",
+    "expiry": "",
+    "batch": "255",
+    "id": "高麗菜片",
+    "name": "份",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "富允",
+    "date": "VE-320028",
+    "expiry": "",
+    "batch": "70",
+    "id": "洋蔥絲(半)",
+    "name": "份",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "富允",
+    "date": "VE-320016",
+    "expiry": "",
+    "batch": "24",
+    "id": "七葉蘭(包雞用)",
+    "name": "公斤",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "富允",
+    "date": "SE-320105",
+    "expiry": "",
+    "batch": "36",
+    "id": "乾蝦米(河粉配料/蝦米末)",
+    "name": "公斤",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
