@@ -111279,22 +111279,44 @@
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/12/24",
     "batch": "",
     "id": "SE-300014",
     "name": "脫皮辣椒3kg",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/12/25",
+    "batch": "",
+    "id": "SE-300014",
+    "name": "脫皮辣椒3kg",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-02-06",
+    "expiry": "2027/1/14",
+    "batch": "",
+    "id": "SE-300014",
+    "name": "脫皮辣椒3kg",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-02-06",
+    "expiry": "2027/8/28",
     "batch": "",
     "id": "SE-300036",
     "name": "覆盆子果泥(入菜)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -111427,28 +111449,6 @@
     "id": "ME-210004",
     "name": "椰汁牛肉",
     "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-06",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-06",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
     "issue": ""
   }
 ]
