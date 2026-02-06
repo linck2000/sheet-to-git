@@ -110557,7 +110557,7 @@
     "batch": "",
     "id": "SA-320145",
     "name": "牛骨高湯",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -110568,62 +110568,62 @@
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "碁富食品股份有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/11/27",
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "碁富食品股份有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/11/24",
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "碁富食品股份有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/11/22",
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "碁富食品股份有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/11/16",
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "碁富食品股份有限公司",
     "date": "2026-02-06",
-    "expiry": "",
+    "expiry": "2026/12/6",
     "batch": "",
     "id": "ME-200123",
     "name": "豬骨高湯(1kg)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -111350,6 +111350,17 @@
     "id": "ME-210004",
     "name": "椰汁牛肉",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-06",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
