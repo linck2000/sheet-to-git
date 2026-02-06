@@ -111255,6 +111255,28 @@
   },
   {
     "type": "原料",
+    "vendor": "旭騰號",
+    "date": "2026-02-06",
+    "expiry": "",
+    "batch": "",
+    "id": "VE-310002",
+    "name": "香菜",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "旭騰號",
+    "date": "2026-02-06",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
     "vendor": "台灣芳源開發有限公司",
     "date": "2026-02-06",
     "expiry": "2027/12/23",
@@ -111504,28 +111526,6 @@
     "id": "ME-210004",
     "name": "椰汁牛肉",
     "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-06",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-06",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
     "issue": ""
   }
 ]
