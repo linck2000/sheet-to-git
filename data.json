@@ -113916,6 +113916,28 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-09",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "宗美蔬果行",
     "date": "2026-02-09",
@@ -115188,28 +115210,6 @@
     "batch": "1260209078",
     "id": "SA-200211",
     "name": "黃金泡菜(560g)",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
