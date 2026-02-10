@@ -116710,47 +116710,47 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "月桂有限公司",
     "date": "2026-02-10",
     "expiry": "2027/12/20",
     "batch": "",
     "id": "BB-200037 ",
     "name": "百香果原汁(全籽)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "月桂有限公司",
     "date": "2026-02-10",
     "expiry": "2027/6/7",
     "batch": "",
     "id": "ME-300076 ",
     "name": "牛肉貢丸(300g)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "月桂有限公司",
     "date": "2026-02-10",
     "expiry": "2027/7/4",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "ME-300076 ",
+    "name": "牛肉貢丸(300g)",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "月桂有限公司",
     "date": "2026-02-10",
     "expiry": "2027/8/3",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "ME-300076 ",
+    "name": "牛肉貢丸(300g)",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -116856,11 +116856,11 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-02-10",
-    "expiry": "",
+    "expiry": "2026/3/15",
     "batch": "",
     "id": "VE-300121",
     "name": "真品雞蛋豆腐",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -116960,6 +116960,17 @@
     "id": "SF-210003",
     "name": "大頭鰱魚頭",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-10",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
