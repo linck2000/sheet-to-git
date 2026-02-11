@@ -118378,7 +118378,7 @@
     "batch": "",
     "id": "ME-310025",
     "name": "牛肉片",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -118389,7 +118389,7 @@
     "batch": "",
     "id": "ME-300017",
     "name": "牛肉丁3.5kg",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -118400,7 +118400,7 @@
     "batch": "",
     "id": "ME-300017",
     "name": "牛肉丁3.5kg",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -118411,7 +118411,7 @@
     "batch": "",
     "id": "ME-300017",
     "name": "牛肉丁3.5kg",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -118422,7 +118422,7 @@
     "batch": "",
     "id": "ME-310012",
     "name": "牛腱",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -118433,40 +118433,62 @@
     "batch": "",
     "id": "ME-310010",
     "name": "牛肚",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-02-11",
-    "expiry": "",
+    "expiry": "2027/3/22",
     "batch": "",
     "id": "ME-310018",
     "name": "牛筋",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-02-11",
-    "expiry": "",
+    "expiry": "2026/12/25",
     "batch": "",
     "id": "ME-210004",
     "name": "椰汁牛肉",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-02-11",
-    "expiry": "",
+    "expiry": "2026/7/27",
     "batch": "",
     "id": "ME-310008",
     "name": "牛柳(原料)",
-    "status": "待驗中",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-11",
+    "expiry": "2026/7/29",
+    "batch": "",
+    "id": "ME-310008",
+    "name": "牛柳(原料)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-11",
+    "expiry": "2026/8/2",
+    "batch": "",
+    "id": "ME-310008",
+    "name": "牛柳(原料)",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -118653,28 +118675,6 @@
     "batch": "",
     "id": "OT-400163",
     "name": "薄荷葉",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-11",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-11",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
