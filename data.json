@@ -118312,29 +118312,29 @@
     "batch": "",
     "id": "BD-200007",
     "name": "七葉蘭糖水",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-02-11",
-    "expiry": "2026/10/16",
+    "expiry": "",
     "batch": "",
     "id": "ME-300075",
     "name": "帶皮腿肉丁(900g)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-02-11",
-    "expiry": "2026/10/10",
+    "expiry": "",
     "batch": "",
     "id": "ME-300075",
     "name": "帶皮腿肉丁(900g)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
