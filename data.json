@@ -118393,6 +118393,28 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-11",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-11",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-02-11",
@@ -118631,28 +118653,6 @@
     "batch": "",
     "id": "OT-400163",
     "name": "薄荷葉",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-11",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-11",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
