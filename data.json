@@ -121231,42 +121231,9 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-13",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-13",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-13",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "保證責任彰化縣青農果菜生產合作社",
-    "date": "2026-02-12",
+    "date": "2026-02-13",
     "expiry": "2026/2/16",
     "batch": "",
     "id": "OS-000045",
@@ -121299,7 +121266,7 @@
   {
     "type": "原料",
     "vendor": "香里食品企業股份有限公司",
-    "date": "2026-02-13",
+    "date": "2026-02-12",
     "expiry": "2027/1/28",
     "batch": "",
     "id": "ME-330001",
@@ -121854,6 +121821,39 @@
     "batch": "",
     "id": "VE-320041",
     "name": "去皮紅蔥頭(資運用)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-13",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-13",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-13",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
