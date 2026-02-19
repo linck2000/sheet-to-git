@@ -126654,14 +126654,14 @@
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "云喬果菜行",
+    "type": "",
+    "vendor": "",
     "date": "2026-02-19",
-    "expiry": "2026/2/22",
+    "expiry": "",
     "batch": "",
-    "id": "VE-320008",
-    "name": "老薑",
-    "status": "合格",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
