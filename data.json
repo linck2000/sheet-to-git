@@ -129939,7 +129939,7 @@
     "batch": "",
     "id": "VE-300218",
     "name": "綠辣椒(資運用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -129950,18 +129950,18 @@
     "batch": "",
     "id": "VE-310002",
     "name": "香菜",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "旭騰號",
     "date": "2026-02-24",
     "expiry": "",
     "batch": "",
     "id": "",
     "name": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
