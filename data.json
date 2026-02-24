@@ -131679,5 +131679,49 @@
     "name": "雞腿片(調理用)",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-24",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-330041",
+    "name": "辣椒雞湯",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-24",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-330041",
+    "name": "辣椒雞湯",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-24",
+    "expiry": "",
+    "batch": "",
+    "id": "SA-210042",
+    "name": "涼拌醬B",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-24",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
