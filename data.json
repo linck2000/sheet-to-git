@@ -132630,11 +132630,44 @@
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-02-25",
-    "expiry": "",
+    "expiry": "2026/8/5",
+    "batch": "",
+    "id": "ME-310008",
+    "name": "牛柳(原料)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-25",
+    "expiry": "2026/8/8",
+    "batch": "",
+    "id": "ME-310008",
+    "name": "牛柳(原料)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-25",
+    "expiry": "2027/1/29",
     "batch": "",
     "id": "ME-300016",
     "name": "牛肉絲2.8kg",
-    "status": "待驗中",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "樹森開發股份有限公司",
+    "date": "2026-02-25",
+    "expiry": "2027/2/8",
+    "batch": "",
+    "id": "ME-300017",
+    "name": "牛肉丁3.5kg",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -132645,39 +132678,6 @@
     "batch": "",
     "id": "VE-320002",
     "name": "紅蘿蔔-內場規格",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-25",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-25",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-25",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "status": "待驗中",
     "issue": ""
   }
