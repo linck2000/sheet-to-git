@@ -132576,7 +132576,7 @@
     "vendor": "富允食品有限公司",
     "date": "2026-02-25",
     "expiry": "2026/2/28",
-    "batch": "",
+    "batch": "PO331337",
     "id": "VE-340008",
     "name": "高麗菜片",
     "status": "待驗中",
@@ -132678,6 +132678,39 @@
     "batch": "",
     "id": "VE-320002",
     "name": "紅蘿蔔-內場規格",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
