@@ -134805,28 +134805,6 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-27",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-02-27",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "島宇食品有限公司",
     "date": "2026-02-27",
@@ -134840,34 +134818,67 @@
   {
     "type": "原料",
     "vendor": "旭騰號",
-    "date": "2026-02-28",
+    "date": "2026-02-27",
     "expiry": "2026/3/5",
     "batch": "",
     "id": "VE-300218\t",
     "name": "綠辣椒(資運用)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "旭騰號",
-    "date": "2026-03-01",
-    "expiry": "2026/3/2",
+    "date": "2026-02-27",
+    "expiry": "",
     "batch": "",
     "id": "VE-310002 ",
     "name": "香菜(1公斤)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "旭騰號",
-    "date": "2026-03-02",
-    "expiry": "2026/3/5",
+    "date": "2026-02-27",
+    "expiry": "",
     "batch": "",
     "id": "VE-300219\t",
     "name": "蒜苗-細(資運用)",
-    "status": "合格",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-02-28",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-03-01",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-03-02",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   }
 ]
