@@ -137398,7 +137398,7 @@
     "id": "SF-250001",
     "name": "透抽",
     "status": "合格",
-    "issue": "4F IQF異常，研發通知由3F IQF來速凍"
+    "issue": "4F IQF異常，研發通知分批至3F IQF速凍"
   },
   {
     "type": "半成品",
@@ -137409,7 +137409,7 @@
     "id": "SF-250001",
     "name": "透抽",
     "status": "合格",
-    "issue": "4F IQF異常，研發通知由3F IQF來速凍"
+    "issue": "4F IQF異常，研發通知分批至3F IQF速凍"
   },
   {
     "type": "半成品",
