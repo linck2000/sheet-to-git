@@ -144852,16 +144852,60 @@
     "vendor": "遠冠",
     "date": "2026-03-10",
     "expiry": "2026/9/5",
-    "batch": "1260310059-\n1260310063",
+    "batch": "1260310059",
     "id": "SA-210005",
     "name": "王子魚醬",
     "status": "待驗中",
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-03-10",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-03-10",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-03-10",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-03-10",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "半成品",
     "vendor": "遠冠",
-    "date": "2026/3/10",
+    "date": "2026-03-10",
     "expiry": "2026/9/5",
     "batch": "1260310067",
     "id": "SA-220012",
@@ -145373,17 +145417,6 @@
     "id": "VE-310005",
     "name": "笹葉(粽葉)",
     "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-03-10",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
     "issue": ""
   }
 ]
