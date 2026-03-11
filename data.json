@@ -146153,18 +146153,18 @@
     "batch": "",
     "id": "VE-300218",
     "name": "綠辣椒(資運用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "旭騰號",
     "date": "2026-03-11",
-    "expiry": "",
+    "expiry": "2026/3/14",
     "batch": "",
     "id": "VE-300073",
     "name": "捲葉巴西里",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
