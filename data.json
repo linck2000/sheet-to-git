@@ -151987,25 +151987,25 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "富允食品有限公司",
     "date": "2026-03-16",
-    "expiry": "",
+    "expiry": "2027/2/28",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "ME-300078",
+    "name": "豬頸肉(修清)",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "富允食品有限公司",
     "date": "2026-03-16",
-    "expiry": "",
+    "expiry": "2027/2/28",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "ME-300078",
+    "name": "豬頸肉(修清)",
+    "status": "合格",
     "issue": ""
   }
 ]
