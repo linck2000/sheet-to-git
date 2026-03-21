@@ -156123,25 +156123,25 @@
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "厚利有限公司",
+    "type": "",
+    "vendor": "",
     "date": "2026-03-21",
-    "expiry": "2026/3/24",
-    "batch": "PO00344353",
+    "expiry": "",
+    "batch": "",
     "id": "",
-    "name": "黃洋蔥",
-    "status": "合格",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "厚利有限公司",
+    "type": "",
+    "vendor": "",
     "date": "2026-03-21",
-    "expiry": "2026/3/24",
+    "expiry": "",
     "batch": "",
     "id": "",
-    "name": "紫洋蔥",
-    "status": "合格",
+    "name": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
