@@ -44584,12 +44584,12 @@
   },
   {
     "type": "半成品",
-    "vendor": "調味蝦漿Seasoned Shrimp Paste",
+    "vendor": "遠冠",
     "date": "2025-12-22",
     "expiry": "2026/12/21",
     "batch": "A-1251222036",
     "id": "SF-350055",
-    "name": "",
+    "name": "調味蝦漿Seasoned Shrimp Paste",
     "status": "合格",
     "issue": ""
   },
@@ -46030,7 +46030,7 @@
     "expiry": "2026/12/22",
     "batch": "A-1251223018",
     "id": "SA-320164",
-    "name": "查無此代號",
+    "name": "調味魚露(BOBO河粉醬)",
     "status": "合格",
     "issue": ""
   },
@@ -46052,7 +46052,7 @@
     "expiry": "2026/12/22",
     "batch": "A-1251223020",
     "id": "SA-320177",
-    "name": "查無此代號",
+    "name": "綠咖哩椰香粉Green Curry Coconut Powder",
     "status": "合格",
     "issue": ""
   },
@@ -46074,7 +46074,7 @@
     "expiry": "2026/12/22",
     "batch": "A-1251223021",
     "id": "SA-320179",
-    "name": "查無此代號",
+    "name": "咖哩洋蔥醬(燒雞醬)",
     "status": "合格",
     "issue": ""
   },
@@ -46085,7 +46085,7 @@
     "expiry": "2026/12/22",
     "batch": "A-1251223022",
     "id": "SA-320162",
-    "name": "查無此代號",
+    "name": "梅子醬Plum Sauce",
     "status": "合格",
     "issue": ""
   },
