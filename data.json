@@ -164149,7 +164149,7 @@
     "batch": "",
     "id": "VE-330002",
     "name": "牛蕃茄",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -164237,29 +164237,29 @@
     "batch": "",
     "id": "VE-300003",
     "name": "青尖椒",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "永澄號",
     "date": "2026-03-29",
-    "expiry": "",
+    "expiry": "2026/4/3",
     "batch": "",
     "id": "BB-300026",
     "name": "去皮甘蔗32cm(內場用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "永澄號",
     "date": "2026-03-29",
-    "expiry": "",
+    "expiry": "2026/4/3",
     "batch": "",
     "id": "BB-300025",
     "name": "去皮甘蔗21~23cm(外場飲料用)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
