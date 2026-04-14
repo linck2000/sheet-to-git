@@ -178086,7 +178086,7 @@
     "batch": "1260410001",
     "id": "SA-210118",
     "name": "參巴巴拉煎醬 (180)",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -182424,8 +182424,41 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-04-14",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-04-14",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-04-14",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "半成品",
+    "vendor": "遠冠",
     "date": "2026-04-14",
     "expiry": "",
     "batch": "",
