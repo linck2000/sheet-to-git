@@ -184169,6 +184169,17 @@
     "batch": "",
     "id": "SF-200001",
     "name": "鱈魚丸",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-04-15",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   },
