@@ -185493,25 +185493,36 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "超秦企業股份有限公司",
     "date": "2026-04-17",
     "expiry": "",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "ME-330059",
+    "name": "翅中(中節翅)",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "超秦企業股份有限公司",
     "date": "2026-04-17",
     "expiry": "",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "ME-330059",
+    "name": "翅中(中節翅)",
+    "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "超秦企業股份有限公司",
+    "date": "2026-04-17",
+    "expiry": "",
+    "batch": "",
+    "id": "ME-330059",
+    "name": "翅中(中節翅)",
+    "status": "合格",
     "issue": ""
   },
   {
