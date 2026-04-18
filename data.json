@@ -185043,24 +185043,24 @@
   },
   {
     "type": "原料",
-    "vendor": "月桂有限公司",
+    "vendor": "",
     "date": "2026-04-17",
-    "expiry": "2028/3/27",
+    "expiry": "",
     "batch": "",
     "id": "SA-210009",
     "name": "冷凍檸檬汁(入菜)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
-    "vendor": "月桂有限公司",
+    "vendor": "",
     "date": "2026-04-17",
-    "expiry": "2028/2/2",
+    "expiry": "",
     "batch": "",
     "id": "BB-200029",
     "name": "冷凍檸檬汁(飲)",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
