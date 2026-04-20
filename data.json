@@ -189750,36 +189750,36 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "建發菜園",
     "date": "2026-04-20",
-    "expiry": "",
+    "expiry": "2026/4/26",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "VE-310016",
+    "name": "薄荷葉",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "建發菜園",
     "date": "2026-04-20",
-    "expiry": "",
+    "expiry": "2026/4/24",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "VE-310016",
+    "name": "薄荷葉",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "建發菜園",
     "date": "2026-04-20",
-    "expiry": "",
+    "expiry": "2026/4/24",
     "batch": "",
-    "id": "",
-    "name": "",
-    "status": "待驗中",
+    "id": "VE-310016",
+    "name": "薄荷葉",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -190978,6 +190978,17 @@
     "batch": "",
     "id": "SF-330001",
     "name": "九分頂蛤蜊",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "胡麻園股份有限公司",
+    "date": "2026-04-21",
+    "expiry": "",
+    "batch": "",
+    "id": "BD-300036",
+    "name": "胡麻園芝麻醬",
     "status": "待驗中",
     "issue": ""
   }
