@@ -195158,17 +195158,28 @@
     "batch": "",
     "id": "VE-200004",
     "name": "細蔥花",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "程珀鈞",
-    "date": "2026-04-25",
+    "date": "2026/4/25",
     "expiry": "2026/5/1",
     "batch": "",
     "id": "VE-300064",
     "name": "高麗菜(資運用)",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-04-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
