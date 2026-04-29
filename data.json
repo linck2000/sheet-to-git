@@ -198616,6 +198616,39 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-04-29",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-04-29",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-04-29",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-04-29",
@@ -199426,17 +199459,6 @@
     "batch": "1260430001",
     "id": "SA-320160",
     "name": "豆瓣醬Douban Sauce",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "半成品",
-    "vendor": "遠冠",
-    "date": "2026-04-30",
-    "expiry": "2026/10/26",
-    "batch": "1260430001",
-    "id": "SA-200118",
-    "name": "黃瓜醃醬(180)",
     "status": "待驗中",
     "issue": ""
   }
