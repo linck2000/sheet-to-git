@@ -203756,11 +203756,11 @@
     "type": "原料",
     "vendor": "欣香國際食品有限公司",
     "date": "2026-05-04",
-    "expiry": "",
+    "expiry": "2027/4/9",
     "batch": "",
     "id": "ME-230003",
     "name": "雞胸片",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -203771,6 +203771,28 @@
     "batch": "",
     "id": "VE-310016",
     "name": "薄荷葉",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-05-04",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-05-04",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "status": "待驗中",
     "issue": ""
   }
