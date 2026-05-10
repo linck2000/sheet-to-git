@@ -114,6 +114,10 @@
     <script>
         const apiURL = './data.json'; 
 
+        function getQcNo(item) {
+            return item.qcNo || item.qc_number || item.qcNumber || item.qc || item["QC單號"] || "-";
+        }
+
         async function init() {
             try {
                 const response = await fetch(apiURL + "?t=" + new Date().getTime());
@@ -154,6 +158,7 @@
                     name: item.name || "未知品項",
                     expiry: item.expiry || "",
                     batch: item.batch || "",
+                    qcNo: getQcNo(item),
                     status: status,
                     issue: item.issue || ""
                 };
@@ -211,6 +216,7 @@
                             <td class="d-none d-sm-table-cell">${item.vendor}</td>
                             <td>${item.name}</td>
                             <td>${dynamicColValue}</td>
+                            <td>${item.qcNo}</td>
                             <td class="text-center"><span class="status-badge ${badgeClass}">${s}</span></td>
                             <td>${issueDisplay}</td>
                         </tr>
@@ -232,10 +238,11 @@
                                             <th width="5%" class="text-center">#</th>
                                             <th width="12%">料號</th>
                                             <th width="18%" class="d-none d-sm-table-cell">廠商</th>
-                                            <th width="20%">品名</th>
-                                            <th width="15%">${colLabel}</th>
+                                            <th width="18%">品名</th>
+                                            <th width="13%">${colLabel}</th>
+                                            <th width="12%">QC單號</th>
                                             <th width="10%" class="text-center">判定</th>
-                                            <th width="20%">異常狀況</th>
+                                            <th width="12%">異常狀況</th>
                                         </tr>
                                     </thead>
                                     <tbody>${rows}</tbody>
