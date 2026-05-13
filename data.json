@@ -230904,6 +230904,18 @@
     "issue": ""
   },
   {
+    "type": "半成品",
+    "vendor": "遠冠",
+    "date": "2026-05-11",
+    "expiry": "2027/5/7",
+    "batch": "A1-2605108001",
+    "id": "SA-320260",
+    "name": "鮮味河粉醬Umami Noodle Sauce",
+    "qcNo": "QC419935",
+    "status": "合格",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "英屬維京群島商沙威隆國際股份有限公司台灣分公司",
     "date": "2026-05-11",
@@ -231907,18 +231919,6 @@
     "batch": "1260512001",
     "id": "ME-330001",
     "name": "豬絞肉(PIG)",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-05-11",
-    "expiry": "2027/5/10",
-    "batch": "A1-2605108001",
-    "id": "SA-320260",
-    "name": "鮮味河粉醬Umami Noodle Sauce",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
