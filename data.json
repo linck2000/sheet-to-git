@@ -233686,5 +233686,17 @@
     "qcNo": "QC420194",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-05-13",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
