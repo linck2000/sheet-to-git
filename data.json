@@ -233912,19 +233912,19 @@
     "id": "VE-320030",
     "name": "蒜仁",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "華盛貿易有限公司",
     "date": "2026-05-14",
-    "expiry": "",
+    "expiry": "2026/5/20",
     "batch": "",
     "id": "VE-220001",
     "name": "蒜仁 (餐廳用)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
