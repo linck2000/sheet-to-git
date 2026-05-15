@@ -235275,24 +235275,24 @@
     "type": "原料",
     "vendor": "超秦企業股份有限公司",
     "date": "2026-05-15",
-    "expiry": "",
+    "expiry": "2027/1/29",
     "batch": "",
     "id": "ME-330012",
     "name": "二節翅W6",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "超秦企業股份有限公司",
     "date": "2026-05-15",
-    "expiry": "",
+    "expiry": "2027/3/9",
     "batch": "",
     "id": "ME-330060",
     "name": "帶骨雞腿",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
