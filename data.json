@@ -233792,7 +233792,7 @@
     "id": "VE-330003",
     "name": "青木瓜",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -234955,8 +234955,8 @@
     "batch": "",
     "id": "VE-330003",
     "name": "青木瓜",
-    "qcNo": "",
-    "status": "待驗中",
+    "qcNo": "Yuting",
+    "status": "合格",
     "issue": ""
   },
   {
