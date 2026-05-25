@@ -248494,5 +248494,17 @@
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "建發菜園",
+    "date": "2026-05-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
