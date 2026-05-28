@@ -252888,6 +252888,30 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-05-29",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-05-29",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "半成品",
     "vendor": "遠冠",
     "date": "2026-05-29",
@@ -253532,19 +253556,19 @@
     "id": "SE-300081",
     "name": "金標生抽王",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "津鼎有限公司",
     "date": "2026-05-29",
-    "expiry": "",
+    "expiry": "2028/1/30",
     "batch": "",
     "id": "SE-300080",
     "name": "金標老抽王(冠益)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
