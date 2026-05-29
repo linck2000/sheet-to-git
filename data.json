@@ -254175,24 +254175,24 @@
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-05-29",
-    "expiry": "",
+    "expiry": "2028/1/30",
     "batch": "",
     "id": "BB-200037",
     "name": "百香果原汁(全籽)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-05-29",
-    "expiry": "",
+    "expiry": "2028/1/5",
     "batch": "",
     "id": "BB-200040",
     "name": "100%柳橙原汁",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
