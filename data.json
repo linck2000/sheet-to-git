@@ -258603,24 +258603,24 @@
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-06-01",
-    "expiry": "",
+    "expiry": "2027/3/16",
     "batch": "",
     "id": "ME-300016",
     "name": "牛肉絲2.8kg",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-06-01",
-    "expiry": "",
+    "expiry": "2027/5/3",
     "batch": "",
     "id": "ME-310018",
     "name": "牛筋",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
