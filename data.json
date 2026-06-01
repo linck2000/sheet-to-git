@@ -258615,24 +258615,24 @@
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-06-01",
-    "expiry": "",
+    "expiry": "2027/5/3",
     "batch": "",
     "id": "ME-310018",
     "name": "牛筋",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "香里食品企業股份有限公司",
     "date": "2026-06-01",
-    "expiry": "",
+    "expiry": "2027/5/28",
     "batch": "",
     "id": "ME-320029",
     "name": "五花肉角",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
