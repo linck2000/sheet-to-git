@@ -274784,31 +274784,31 @@
     "id": "OS-000014",
     "name": "咖哩雞湯包(代工)C",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-06-12",
-    "expiry": "26/10/16",
+    "expiry": "2026/10/16",
     "batch": "",
     "id": "OS-000014",
     "name": "咖哩雞湯包(代工)D",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "御軒食品有限公司",
     "date": "2026-06-12",
-    "expiry": "2026/11/14",
+    "expiry": "",
     "batch": "",
     "id": "OS-000014",
     "name": "咖哩雞湯包(代工)A",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
