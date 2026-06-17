@@ -280820,19 +280820,19 @@
     "id": "ME-310031",
     "name": "冷凍牛腩",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "裕賀食品股份有限公司",
     "date": "2026-06-17",
-    "expiry": "",
+    "expiry": "2027/8/3",
     "batch": "",
     "id": "ME-310031",
     "name": "冷凍牛腩",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
