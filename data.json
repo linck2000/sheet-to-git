@@ -282567,36 +282567,36 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2026/11/5",
     "batch": "",
     "id": "SE-320024",
     "name": "丁香粒",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2028/4/7",
     "batch": "",
     "id": "SE-320026",
     "name": "八角",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2027/4/6",
     "batch": "",
     "id": "SE-320027",
     "name": "三奈",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -283496,7 +283496,7 @@
     "id": "SE-420243",
     "name": "唐雙和味露",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
