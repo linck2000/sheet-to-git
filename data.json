@@ -282656,19 +282656,19 @@
     "id": "SE-320072",
     "name": "青花椒(阿詩瑪)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2027/2/2",
     "batch": "",
     "id": "SE-320080",
     "name": "紅花椒粒",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
