@@ -282776,19 +282776,19 @@
     "id": "SE-420037",
     "name": "味全特級醬油",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2029/2/5",
     "batch": "",
     "id": "SE-420055",
     "name": "玉山茅台酒0.3L",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
