@@ -282428,31 +282428,31 @@
     "id": "SE-310015",
     "name": "紹興酒",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2029/3/6",
     "batch": "",
     "id": "SE-310016",
     "name": "黃酒",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2029/5/15",
     "batch": "",
     "id": "SE-310020",
     "name": "千豐甘樹子(400G)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
