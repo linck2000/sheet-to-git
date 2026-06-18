@@ -282788,19 +282788,19 @@
     "id": "SE-420055",
     "name": "玉山茅台酒0.3L",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-06-18",
-    "expiry": "",
+    "expiry": "2028/3/30",
     "batch": "",
     "id": "SE-420124",
     "name": "龍宏糖醋良京(380g/罐)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -283783,6 +283783,30 @@
     "batch": "",
     "id": "ME-300131",
     "name": "190-220g腿排肉",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-18",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-18",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
