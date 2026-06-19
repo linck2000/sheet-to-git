@@ -284784,6 +284784,30 @@
     "issue": ""
   },
   {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-19",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-19",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "原料",
     "vendor": "駿騰蔬果企業社",
     "date": "2026-06-19",
@@ -287179,18 +287203,6 @@
     "batch": "",
     "id": "VE-340099",
     "name": "生菜(廣A)4公斤/箱",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "黃博群",
-    "date": "2026-06-21",
-    "expiry": "2026/6/24",
-    "batch": "",
-    "id": "VE-320006",
-    "name": "四季豆",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
