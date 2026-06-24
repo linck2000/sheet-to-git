@@ -291759,13 +291759,13 @@
     "type": "原料",
     "vendor": "僑瑞興業有限公司",
     "date": "碎花生",
-    "expiry": "2026/9/22",
+    "expiry": "",
     "batch": "",
     "id": "VE-200005",
     "name": "花生碎角(生)",
     "qcNo": "",
     "status": "待驗中",
-    "issue": "無PO"
+    "issue": ""
   },
   {
     "type": "半成品",
