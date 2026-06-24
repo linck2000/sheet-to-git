@@ -291164,19 +291164,19 @@
     "id": "ME-310008",
     "name": "牛柳(原料)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-06-24",
-    "expiry": "",
+    "expiry": "2026/11/19",
     "batch": "",
     "id": "ME-220028",
     "name": "牛肉塊",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -291187,6 +291187,18 @@
     "batch": "",
     "id": "ME-210003",
     "name": "瑪莎曼牛肉",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-24",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
