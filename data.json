@@ -292752,15 +292752,15 @@
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "云喬果菜行",
+    "type": "",
+    "vendor": "",
     "date": "2026-06-25",
-    "expiry": "2026/6/30",
+    "expiry": "",
     "batch": "",
-    "id": "VE-340063",
-    "name": "嫩薑(時時香)",
-    "qcNo": "QC446986",
-    "status": "合格",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
