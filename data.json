@@ -287767,7 +287767,7 @@
     "batch": "1260621001",
     "id": "ME-200136",
     "name": "舒肥雞胸肉(雞肉飯)(180)",
-    "qcNo": "",
+    "qcNo": "QC447745",
     "status": "合格",
     "issue": ""
   },
@@ -293214,7 +293214,7 @@
     "expiry": "",
     "batch": "",
     "id": "",
-    "name": "",
+    "name": "夜巴濃辣椒油",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
@@ -293226,13 +293226,61 @@
     "expiry": "",
     "batch": "",
     "id": "",
+    "name": "Matsman咖哩",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
     "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "原料",
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-06-25",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "半成品",
     "vendor": "遠冠",
     "date": "2026-06-25",
     "expiry": "2027/6/24",
@@ -293894,7 +293942,7 @@
   {
     "type": "半成品",
     "vendor": "遠冠",
-    "date": "2026-06-25",
+    "date": "2026-06-26",
     "expiry": "2026/9/22",
     "batch": "1260625002",
     "id": "SF-200006",
@@ -294511,18 +294559,6 @@
     "batch": "",
     "id": "VE-340057",
     "name": "冷凍馬蹄丁",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "福和生鮮農產股份有限公司",
-    "date": "2026-06-26",
-    "expiry": "",
-    "batch": "",
-    "id": "BD-300075",
-    "name": "生鮮芒果丁",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
