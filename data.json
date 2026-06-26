@@ -294296,19 +294296,19 @@
     "id": "VE-340008",
     "name": "高麗菜片",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "富允食品有限公司",
+    "type": "",
+    "vendor": "",
     "date": "2026-06-26",
-    "expiry": "2026/6/29",
+    "expiry": "",
     "batch": "",
-    "id": "VE-340008",
-    "name": "高麗菜片",
+    "id": "",
+    "name": "",
     "qcNo": "",
-    "status": "不合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
