@@ -294387,24 +294387,24 @@
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-06-26",
-    "expiry": "",
+    "expiry": "2028/4/30",
     "batch": "",
     "id": "BB-200037",
     "name": "百香果原汁(全籽)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-06-26",
-    "expiry": "",
+    "expiry": "2027/12/16",
     "batch": "",
     "id": "VE-340013",
     "name": "冷凍芋頭丁",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
