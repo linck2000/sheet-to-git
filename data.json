@@ -298066,5 +298066,17 @@
     "qcNo": "QC449363",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-06-27",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
