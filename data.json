@@ -302595,12 +302595,12 @@
     "type": "原料",
     "vendor": "富允食品有限公司",
     "date": "2026-07-01",
-    "expiry": "2028/4/30",
+    "expiry": "",
     "batch": "",
     "id": "SE-320105",
     "name": "乾蝦米(河粉配料/蝦米末)",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -302720,7 +302720,7 @@
     "id": "ME-210004",
     "name": "椰汁牛肉",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -302732,7 +302732,7 @@
     "id": "ME-210004",
     "name": "椰汁牛肉",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -302744,43 +302744,43 @@
     "id": "ME-210003",
     "name": "瑪莎曼牛肉",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-07-01",
-    "expiry": "2027/6/7",
+    "expiry": "",
     "batch": "",
     "id": "ME-310025",
     "name": "牛肉片",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-07-01",
-    "expiry": "2028/3/28",
+    "expiry": "",
     "batch": "",
     "id": "ME-310012",
     "name": "牛腱",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-07-01",
-    "expiry": "2027/6/7",
+    "expiry": "",
     "batch": "",
     "id": "ME-310018",
     "name": "牛筋",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
