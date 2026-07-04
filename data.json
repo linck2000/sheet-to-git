@@ -308758,5 +308758,17 @@
     "qcNo": "QC453655",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-07-04",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
