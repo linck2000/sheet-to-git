@@ -304179,24 +304179,24 @@
     "type": "原料",
     "vendor": "程珀鈞",
     "date": "2026-07-02",
-    "expiry": "2026/7/7",
+    "expiry": "2026/7/5",
     "batch": "",
     "id": "VE-210002",
     "name": "空心菜",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "嘉義縣新港鄉農會",
     "date": "2026-07-02",
-    "expiry": "2026/7/7",
+    "expiry": "2026/7/5",
     "batch": "",
     "id": "VE-210002",
     "name": "空心菜",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
