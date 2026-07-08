@@ -313759,32 +313759,32 @@
     "batch": "",
     "id": "OS-000015",
     "name": "四季豆(時時香)(代工)",
-    "qcNo": "QC456086",
-    "status": "合格",
+    "qcNo": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "富允食品有限公司",
     "date": "2026-07-08",
-    "expiry": "2026/7/11",
+    "expiry": "",
     "batch": "",
     "id": "",
     "name": "",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "富允食品有限公司",
     "date": "2026-07-08",
-    "expiry": "2026/7/11",
+    "expiry": "",
     "batch": "",
     "id": "",
     "name": "",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   }
 ]
