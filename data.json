@@ -311976,28 +311976,28 @@
     "issue": "外觀不良 大於10%，研發開特允收"
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "華盛貿易有限公司",
     "date": "2026-07-07",
-    "expiry": "",
+    "expiry": "2026/7/13",
     "batch": "",
-    "id": "",
-    "name": "",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
+    "id": "VE-320030",
+    "name": "蒜仁",
+    "qcNo": "QC456251",
+    "status": "合格",
+    "issue": "研發開特允收"
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "華盛貿易有限公司",
     "date": "2026-07-07",
-    "expiry": "",
+    "expiry": "2026/7/13",
     "batch": "",
-    "id": "",
-    "name": "",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
+    "id": "VE-220001",
+    "name": "蒜仁 (餐廳用)",
+    "qcNo": "QC456251",
+    "status": "合格",
+    "issue": "研發開特允收"
   },
   {
     "type": "原料",
