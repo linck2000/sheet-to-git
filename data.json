@@ -315615,22 +315615,10 @@
     "type": "原料",
     "vendor": "僑瑞興業有限公司",
     "date": "2026-07-09",
-    "expiry": "2027/5/17",
+    "expiry": "椰子糖",
     "batch": "",
     "id": "SA-300009",
     "name": "椰子糖",
-    "qcNo": "",
-    "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-07-09",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
