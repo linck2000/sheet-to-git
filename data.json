@@ -319006,5 +319006,17 @@
     "qcNo": "",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-07-11",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
