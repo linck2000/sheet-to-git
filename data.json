@@ -318297,19 +318297,7 @@
     "name": "排骨滷包185g(180)",
     "qcNo": "",
     "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "",
-    "vendor": "",
-    "date": "2026-07-11",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
+    "issue": "1包異常"
   },
   {
     "type": "半成品",
