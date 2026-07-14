@@ -322628,19 +322628,19 @@
     "id": "ME-300076",
     "name": "牛肉貢丸(300g)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "月桂有限公司",
     "date": "2026-07-14",
-    "expiry": "",
+    "expiry": "2028/1/7",
     "batch": "",
     "id": "ME-300076",
     "name": "牛肉貢丸(300g)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -322651,6 +322651,18 @@
     "batch": "",
     "id": "VE-300004",
     "name": "冷凍潤餅皮",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-07-14",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
