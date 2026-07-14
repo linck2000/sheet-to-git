@@ -322772,17 +322772,17 @@
     "id": "VE-300064",
     "name": "高麗菜(資運用)",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "程珀鈞",
+    "type": "",
+    "vendor": "",
     "date": "2026-07-14",
-    "expiry": "2026/7/20",
+    "expiry": "",
     "batch": "",
-    "id": "VE-300064",
-    "name": "高麗菜(資運用)",
+    "id": "",
+    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
