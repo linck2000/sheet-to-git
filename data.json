@@ -324670,5 +324670,17 @@
     "qcNo": "",
     "status": "合格",
     "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "御軒食品有限公司",
+    "date": "2026-07-15",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
