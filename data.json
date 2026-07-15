@@ -324526,5 +324526,41 @@
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-07-15",
+    "expiry": "",
+    "batch": "",
+    "id": "MG-300082",
+    "name": "無鹽薯絲",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-07-15",
+    "expiry": "",
+    "batch": "",
+    "id": "MG-300085",
+    "name": "裹漿脆薯",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-07-15",
+    "expiry": "",
+    "batch": "",
+    "id": "BB-300178",
+    "name": "冷凍葡萄柚汁",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
