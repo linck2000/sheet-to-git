@@ -327284,19 +327284,19 @@
     "id": "ME-330060",
     "name": "帶骨雞腿",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "超秦企業股份有限公司",
     "date": "2026-07-17",
-    "expiry": "",
+    "expiry": "2027/7/12",
     "batch": "",
     "id": "ME-230006",
     "name": "清雞腿",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
