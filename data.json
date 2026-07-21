@@ -333716,19 +333716,19 @@
     "id": "VE-300017",
     "name": "豆乾丁",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-07-21",
-    "expiry": "",
+    "expiry": "2026/8/19",
     "batch": "",
     "id": "VE-300040",
     "name": "白豆干(12入)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
