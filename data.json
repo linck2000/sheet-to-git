@@ -331352,7 +331352,7 @@
     "id": "SA-210042",
     "name": "涼拌醬B(365)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -332265,6 +332265,30 @@
     "name": "富味鄉P3芝麻香油",
     "qcNo": "",
     "status": "合格",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-07-20",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-07-20",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
