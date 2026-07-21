@@ -333754,5 +333754,17 @@
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "月桂有限公司",
+    "date": "2026-07-21",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
