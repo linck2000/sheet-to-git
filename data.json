@@ -337179,24 +337179,24 @@
     "type": "原料",
     "vendor": "葆御食品有限公司",
     "date": "2026-07-23",
-    "expiry": "",
+    "expiry": "2027/11/12",
     "batch": "",
     "id": "SA-220024",
     "name": "炸雞粉二",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
-    "vendor": "",
+    "vendor": "葆御食品有限公司",
     "date": "2026-07-23",
-    "expiry": "",
+    "expiry": "2028/1/20",
     "batch": "",
     "id": "SA-220024",
     "name": "炸雞粉二",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   }
 ]
