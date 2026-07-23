@@ -336560,43 +336560,31 @@
     "id": "SE-420106",
     "name": "洋蔥湯(130g)",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "歐嬤德式美食有限公司",
     "date": "2026-07-23",
-    "expiry": "2026/12/12",
+    "expiry": "",
     "batch": "",
     "id": "SE-200017",
     "name": "南瓜濃湯2KG",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "歐嬤德式美食有限公司",
     "date": "2026-07-23",
-    "expiry": "2026/12/28",
+    "expiry": "",
     "batch": "",
     "id": "SE-200019",
     "name": "奶油蘑菇雞腿湯2KG",
     "qcNo": "",
-    "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "歐嬤德式美食有限公司",
-    "date": "2026-07-23",
-    "expiry": "2026/10/21",
-    "batch": "",
-    "id": "ME-300139",
-    "name": "炭烤豬肋排(以片計)",
-    "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
