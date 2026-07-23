@@ -337181,8 +337181,20 @@
     "date": "2026-07-23",
     "expiry": "",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "炸雞粉二",
+    "name": "炸雞粉二",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-07-23",
+    "expiry": "",
+    "batch": "",
+    "id": "炸雞粉二",
+    "name": "炸雞粉二",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
