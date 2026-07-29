@@ -347007,12 +347007,12 @@
     "type": "原料",
     "vendor": "樹森開發股份有限公司",
     "date": "2026-07-29",
-    "expiry": "2027/6/15",
+    "expiry": "",
     "batch": "",
     "id": "ME-340152",
     "name": "美國板腱Select",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
