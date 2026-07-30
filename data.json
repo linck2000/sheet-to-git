@@ -347588,7 +347588,7 @@
     "id": "SF-210002",
     "name": "鱈魚片",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -347647,6 +347647,18 @@
     "batch": "",
     "id": "VE-200015",
     "name": "油豆腐",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-07-30",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
