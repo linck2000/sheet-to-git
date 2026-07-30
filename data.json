@@ -347792,7 +347792,7 @@
     "id": "MG-300127",
     "name": "大漢堡(布里歐)(個)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -347804,31 +347804,31 @@
     "id": "MG-300124",
     "name": "25%布里歐吐司(片)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "Y003_樂子國際資運",
     "date": "2026-07-30",
-    "expiry": "",
+    "expiry": "2026/8/16",
     "batch": "",
     "id": "MG-430048",
     "name": "BR三麥酸種麵包",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "Y003_樂子國際資運",
     "date": "2026-07-30",
-    "expiry": "",
+    "expiry": "2026/8/16",
     "batch": "",
     "id": "MG-300076",
     "name": "長棍",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
