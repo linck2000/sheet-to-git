@@ -347720,7 +347720,7 @@
     "id": "SE-300082",
     "name": "松子",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -347732,7 +347732,7 @@
     "id": "SE-300274",
     "name": "Frischli 酸奶",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -347744,7 +347744,7 @@
     "id": "VE-300068",
     "name": "黃金菜脯3000g",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -347756,31 +347756,31 @@
     "id": "SE-420081",
     "name": "龍宏糖醋良京(10500公克/箱)",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "御相企業有限公司",
     "date": "2026-07-30",
-    "expiry": "",
+    "expiry": "2028/5/14",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "SE-320063",
+    "name": "冷凍香茅切段3cm/5Kkg",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
+    "type": "原料",
+    "vendor": "御相企業有限公司",
     "date": "2026-07-30",
-    "expiry": "",
+    "expiry": "2028/6/2",
     "batch": "",
-    "id": "",
-    "name": "",
+    "id": "SE-320074",
+    "name": "南薑",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -350335,30 +350335,6 @@
     "batch": "",
     "id": "SE-320021",
     "name": "Matsman咖哩",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御相企業有限公司",
-    "date": "2026/7/31",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-320063",
-    "name": "冷凍香茅切段3cm/5Kkg",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "御相企業有限公司",
-    "date": "2026/7/31",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-320074",
-    "name": "南薑",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
