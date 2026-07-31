@@ -350715,24 +350715,24 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-07-31",
-    "expiry": "",
+    "expiry": "2027/6/1",
     "batch": "",
     "id": "SE-320027",
     "name": "三奈",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-07-31",
-    "expiry": "",
+    "expiry": "2028/4/6",
     "batch": "",
     "id": "SE-320050",
     "name": "玉米粉400g",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
