@@ -350667,24 +350667,24 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-07-31",
-    "expiry": "",
+    "expiry": "2029/5/13",
     "batch": "",
     "id": "SE-320005",
     "name": "台鹽碘鹽1kg",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-07-31",
-    "expiry": "",
+    "expiry": "2028/6/22",
     "batch": "",
     "id": "SE-320011",
     "name": "小磨坊調和白胡椒粉1kg",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
