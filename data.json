@@ -351012,6 +351012,30 @@
     "issue": ""
   },
   {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-07-31",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-07-31",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "半成品",
     "vendor": "遠冠",
     "date": "2026-07-31",
