@@ -351901,6 +351901,30 @@
   },
   {
     "type": "原料",
+    "vendor": "",
+    "date": "2026-07-31",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-07-31",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
     "vendor": "駿騰蔬果企業社",
     "date": "2026-08-01",
     "expiry": "2026/8/5",
