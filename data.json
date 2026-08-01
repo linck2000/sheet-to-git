@@ -351036,18 +351036,6 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
-    "date": "2026-07-31",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "Theppadungporn Coconut Co., Ltd",
     "date": "2026-07-31",
@@ -351770,7 +351758,7 @@
   {
     "type": "原料",
     "vendor": "展鮮水產有限公司",
-    "date": "2026-08-01",
+    "date": "2026-07-31",
     "expiry": "2026/8/4",
     "batch": "",
     "id": "SF-330001",
