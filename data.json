@@ -353496,18 +353496,6 @@
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "Yan Wal Yun Corporation Group Co., Ltd.",
-    "date": "2026-08-02",
-    "expiry": "2027/6/17",
-    "batch": "",
-    "id": "SE-300022 ",
-    "name": "蠔油(仁和園)4.5L",
-    "qcNo": "",
-    "status": "合格",
-    "issue": ""
-  },
-  {
     "type": "半成品",
     "vendor": "遠冠",
     "date": "2026-08-02",
@@ -354038,7 +354026,7 @@
   {
     "type": "原料",
     "vendor": "英屬維京群島商沙威隆國際股份有限公司台灣分公司",
-    "date": "2026-08-03",
+    "date": "2026-08-02",
     "expiry": "",
     "batch": "",
     "id": "OT-400134",
