@@ -354843,12 +354843,12 @@
     "type": "原料",
     "vendor": "Rayong Fish Sauce Industry Co.,Ltd.",
     "date": "2026-08-03",
-    "expiry": "2027/6/4",
+    "expiry": "",
     "batch": "",
     "id": "SE-300299",
     "name": "魚露RFI(4500ml)",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
