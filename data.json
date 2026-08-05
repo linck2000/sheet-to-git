@@ -357996,27 +357996,15 @@
     "issue": ""
   },
   {
-    "type": "原料",
-    "vendor": "茗仁茶莊",
+    "type": "",
+    "vendor": "",
     "date": "2026-08-05",
-    "expiry": "2027/9/20",
+    "expiry": "",
     "batch": "",
     "id": "BB-200025",
-    "name": "茗仁鐵觀音",
-    "qcNo": "QC474609",
-    "status": "合格",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "茗仁茶莊",
-    "date": "2026-08-05",
-    "expiry": "2027/9/5",
-    "batch": "",
-    "id": "BB-300012",
-    "name": "翠玉",
-    "qcNo": "QC474609",
-    "status": "合格",
+    "name": " 茗仁鐵觀音",
+    "qcNo": "",
+    "status": "待驗中",
     "issue": ""
   },
   {
