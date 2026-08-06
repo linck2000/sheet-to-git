@@ -359551,7 +359551,7 @@
     "batch": "",
     "id": "VE-340173",
     "name": "高麗菜(2KG)",
-    "qcNo": "",
+    "qcNo": "QC475323",
     "status": "合格",
     "issue": ""
   },
@@ -359763,12 +359763,12 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-08-06",
-    "expiry": "",
+    "expiry": "2026/11/26",
     "batch": "",
     "id": "VE-300028",
     "name": "腸衣",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
@@ -360152,19 +360152,19 @@
     "id": "SE-320063",
     "name": "冷凍香茅切段3cm/5Kkg",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "御相企業有限公司",
     "date": "2026-08-06",
-    "expiry": "",
+    "expiry": "2028/3/14",
     "batch": "",
     "id": "SE-320074",
     "name": "南薑",
     "qcNo": "",
-    "status": "待驗中",
+    "status": "合格",
     "issue": ""
   },
   {
