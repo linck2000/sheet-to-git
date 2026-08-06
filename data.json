@@ -363958,5 +363958,53 @@
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "(VD)瓦城餐飲管理有限公司",
+    "date": "2026-08-06",
+    "expiry": "",
+    "batch": "",
+    "id": "DC-400319",
+    "name": "銀色湯匙(分餐勺)(100支/箱)",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "(VD)瓦城餐飲管理有限公司",
+    "date": "2026-08-06",
+    "expiry": "",
+    "batch": "",
+    "id": "DC-400320",
+    "name": "金色小汁勺(100支/箱)",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "(VD)瓦城餐飲管理有限公司",
+    "date": "2026-08-06",
+    "expiry": "",
+    "batch": "",
+    "id": "DC-400420_US",
+    "name": "304不鏽鋼9cm迷你調味勺(12支/包) 304 Stainless Steel 9cm Mini Seasoning Spoon (12 pcs/pack)",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "(VD)瓦城餐飲管理有限公司",
+    "date": "2026-08-06",
+    "expiry": "",
+    "batch": "",
+    "id": "DE-400108",
+    "name": "圓止滑托盤16吋(12個/箱)",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
   }
 ]
