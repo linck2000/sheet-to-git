@@ -363140,7 +363140,7 @@
     "id": "SE-420030",
     "name": "虎牌醬青",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -363152,7 +363152,7 @@
     "id": "SE-420037",
     "name": "味全特級醬油",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
@@ -363171,48 +363171,48 @@
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-08-07",
-    "expiry": "2027/5/23",
+    "expiry": "",
     "batch": "",
     "id": "SE-420070",
     "name": "乾燥石栗250g",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-08-07",
-    "expiry": "2028/5/21",
+    "expiry": "",
     "batch": "",
     "id": "SE-420124",
     "name": "龍宏糖醋良京(380g/罐)",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-08-07",
-    "expiry": "2028/7/30",
+    "expiry": "",
     "batch": "",
     "id": "SE-420258",
     "name": "富味鄉P3芝麻香油",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "原料",
     "vendor": "松和食品有限公司",
     "date": "2026-08-07",
-    "expiry": "2028/8/2",
+    "expiry": "",
     "batch": "",
     "id": "SE-420261",
     "name": "日正麻油",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
