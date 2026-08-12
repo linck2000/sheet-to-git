@@ -368744,19 +368744,19 @@
     "id": "ME-320007",
     "name": "梅花肉片(180)",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
     "type": "半成品",
     "vendor": "遠冠",
     "date": "2026-08-11",
-    "expiry": "2027/2/6",
+    "expiry": "",
     "batch": "1260811001",
     "id": "ME-330001",
     "name": "豬絞肉PIG",
     "qcNo": "",
-    "status": "合格",
+    "status": "待驗中",
     "issue": ""
   },
   {
