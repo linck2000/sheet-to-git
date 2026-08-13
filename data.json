@@ -375372,6 +375372,42 @@
     "issue": ""
   },
   {
+    "type": "原料",
+    "vendor": "津鼎有限公司",
+    "date": "2026-08-14",
+    "expiry": "",
+    "batch": "",
+    "id": "SE-300259",
+    "name": "茴香子250g美廚",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "津鼎有限公司",
+    "date": "2026-08-14",
+    "expiry": "",
+    "batch": "",
+    "id": "SE-300262",
+    "name": "SO甜碎瓜",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "津鼎有限公司",
+    "date": "2026-08-14",
+    "expiry": "",
+    "batch": "",
+    "id": "SE-300268",
+    "name": "MAILLE魅雅芥茉籽醬(有籽)845g",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
     "type": "半成品",
     "vendor": "遠冠",
     "date": "2026-08-13",
@@ -378091,42 +378127,6 @@
     "batch": "",
     "id": "SE-300256",
     "name": "美廚綠胡椒粒",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "津鼎有限公司",
-    "date": "2026-08-14",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-300259",
-    "name": "茴香子250g美廚",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "津鼎有限公司",
-    "date": "2026-08-14",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-300262",
-    "name": "SO甜碎瓜",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
-    "type": "原料",
-    "vendor": "津鼎有限公司",
-    "date": "2026-08-14",
-    "expiry": "",
-    "batch": "",
-    "id": "SE-300268",
-    "name": "MAILLE魅雅芥茉籽醬(有籽)845g",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
