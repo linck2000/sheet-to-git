@@ -381876,18 +381876,6 @@
     "issue": ""
   },
   {
-    "type": "",
-    "vendor": "",
-    "date": "2026-08-17",
-    "expiry": "",
-    "batch": "",
-    "id": "",
-    "name": "",
-    "qcNo": "",
-    "status": "待驗中",
-    "issue": ""
-  },
-  {
     "type": "原料",
     "vendor": "歐嬤德式美食有限公司",
     "date": "2026-08-17",
@@ -382123,6 +382111,30 @@
     "batch": "",
     "id": "ME-320047",
     "name": "湘式豬排對切",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-08-17",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "",
+    "vendor": "",
+    "date": "2026-08-17",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
     "qcNo": "",
     "status": "待驗中",
     "issue": ""
