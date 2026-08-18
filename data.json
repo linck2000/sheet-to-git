@@ -383941,6 +383941,30 @@
   },
   {
     "type": "原料",
+    "vendor": "",
+    "date": "2026-08-18",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
+    "vendor": "",
+    "date": "2026-08-18",
+    "expiry": "",
+    "batch": "",
+    "id": "",
+    "name": "",
+    "qcNo": "",
+    "status": "待驗中",
+    "issue": ""
+  },
+  {
+    "type": "原料",
     "vendor": "易德食食品有限公司",
     "date": "2026-08-18",
     "expiry": "",
